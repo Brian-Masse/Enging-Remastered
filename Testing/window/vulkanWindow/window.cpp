@@ -13,7 +13,7 @@ class HelloTriangleApplication
 public:
     void run()
     {
-        initWindow();\
+        initWindow();
         initVulkan();
         mainLoop();
         cleanup();

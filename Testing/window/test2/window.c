@@ -33,7 +33,7 @@ activate(GtkApplication *app,
 int main(int argc,
          char **argv)
 {
-    GtkApplication *app;
+    GApplication *app;
     int status;
 
     app = gtk_application_new("org.gtk.example", G_APPLICATION_FLAGS_NONE);
