@@ -1,0 +1,3 @@
+/Users/brianmasse/Developer/Software/GE-Remastered/builds/CMakeFiles/test.dir
+/Users/brianmasse/Developer/Software/GE-Remastered/builds/CMakeFiles/edit_cache.dir
+/Users/brianmasse/Developer/Software/GE-Remastered/builds/CMakeFiles/rebuild_cache.dir
