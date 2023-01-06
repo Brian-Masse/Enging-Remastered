@@ -10,7 +10,6 @@ int main()
     printf("tet");
 
     printf("%d\n", test);
-    // prinnf("penis\n" 0n");
 
     return 0;
 }
