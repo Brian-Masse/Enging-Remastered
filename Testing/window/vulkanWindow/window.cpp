@@ -56,7 +56,10 @@ private:
 
 int main()
 {
+
     HelloTriangleApplication app;
+
+    printf("this is running in the wrong place!");
 
     try
     {

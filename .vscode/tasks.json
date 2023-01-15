@@ -13,8 +13,11 @@
        "-I${workspaceFolder}/dependencies/include",
        "-L${workspaceFolder}/dependencies/library",
        "${workspaceFolder}/dependencies/library/libglfw.3.3.dylib",
+       "${workspaceFolder}/dependencies/library/Vulkan/libvulkan.1.3.231.dylib",
+
+       
     //    "${workspaceFolder}/testing/window/vulkanWindow/window.cpp",
-       "${fileDirname}/*.cpp",
+       "${fileDirname}/test.cpp",
 
        "-o",
        "${workspaceFolder}/builds/app.app",
