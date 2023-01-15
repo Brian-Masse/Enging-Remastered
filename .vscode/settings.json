@@ -2,6 +2,7 @@
     "files.associations": {
         "vector": "cpp",
         "stdio.h": "c",
-        "compiling.h": "c"
+        "compiling.h": "c",
+        "iostream": "cpp"
     }
 }

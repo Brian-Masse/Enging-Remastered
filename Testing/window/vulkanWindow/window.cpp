@@ -5,6 +5,8 @@
 #include <stdexcept>
 #include <cstdlib>
 
+using namespace std;
+
 const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
 
@@ -58,11 +60,12 @@ int main()
 
     try
     {
+
         app.run();
     }
-    catch (const std::exception &e)
+    catch (const exception &e)
     {
-        std::cerr << e.what() << std::endl;
+        cerr << e.what() << std::endl;
         return EXIT_FAILURE;
     }
 

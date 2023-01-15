@@ -17,7 +17,7 @@
        "${fileDirname}/*.cpp",
 
        "-o",
-       "${workspaceFolder}/builds/app",
+       "${workspaceFolder}/builds/app.app",
        "-framework",
        "OpenGL",
        "-framework",
