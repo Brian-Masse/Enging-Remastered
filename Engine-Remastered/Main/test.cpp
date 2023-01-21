@@ -43,6 +43,14 @@ private:
 
     void createInstance()
     {
+
+        // // need to add these extension to conform to the required VK_KHR_PORTABILITY_subset
+        char extensionName0[] = "VK_KHR_portability_enumeration";
+        char extensionName1[] = "VK_KHR_get_physical_device_properties2";
+        char extensionName2[] = "VK_KHR_surface";
+
+        const char *const extensions[3] = {extensionName0, extensionName1, extensionName2};
+
         VkApplicationInfo appInfo{};
         appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
         appInfo.pApplicationName = "Engine-Remastered";
@@ -55,23 +63,25 @@ private:
         // global - applies to the entire program, not a specific computer
         VkInstanceCreateInfo createInfo{};
         createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+        createInfo.flags = VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
         createInfo.pApplicationInfo = &appInfo;
 
+        // If there is an issue with instancing, check here, I manually inputted all the GLFW required extensions in the extensions array
         uint32_t glfwExtensionCount = 0;
         const char **glfwExtensions;
-
         glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
 
-        createInfo.enabledExtensionCount = glfwExtensionCount;
-        createInfo.ppEnabledExtensionNames = glfwExtensions;
+        createInfo.enabledExtensionCount = 3;
+        createInfo.ppEnabledExtensionNames = extensions;
         createInfo.enabledLayerCount = 0; // number of validation layers
 
         // pointer to information, custom allocator callbacks, and an instance to store the VKInstance (global class property)
-        // VkResult result = vkCreateInstance(&createInfo, nullptr, &instance);
-        // if (result != VK_SUCCESS)
-        // {
-        //     throw std::runtime_error("failed to create instance!");
-        // }
+        VkResult result = vkCreateInstance(&createInfo, nullptr, &instance);
+        if (result != VK_SUCCESS)
+        {
+            cout << result << endl;
+            throw std::runtime_error("failed to create instance!");
+        }
     }
 
     void mainLoop()
