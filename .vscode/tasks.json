@@ -10,31 +10,34 @@
        "-fdiagnostics-color=always",
        "-Wall",
        "-g",
+       "-w",
        "-I${workspaceFolder}/dependencies/include",
        "-L${workspaceFolder}/dependencies/library",
        "${workspaceFolder}/dependencies/library/libglfw.3.3.dylib",
        "${workspaceFolder}/dependencies/library/Vulkan/libvulkan.1.3.231.dylib",
 
-       
     //    "${workspaceFolder}/testing/window/vulkanWindow/window.cpp",
-       "${fileDirname}/test.cpp",
+       "${fileDirname}/*.cpp",
 
        "-o",
-       "${workspaceFolder}/builds/app.app",
-       "-framework",
-       "OpenGL",
-       "-framework",
-       "Cocoa",
-       "-framework",
-       "IOKit",
-       "-framework",
-       "CoreVideo",
-       "-framework",
-       "CoreFoundation",
-       "-Wno-deprecated"
+       "${workspaceFolder}/builds/app",
+      //  "-framework",
+      //  "OpenGL",
+      //  "-framework",
+      //  "Cocoa",
+      //  "-framework",
+      //  "IOKit",
+      //  "-framework",
+      //  "CoreVideo",
+      //  "-framework",
+      //  "CoreFoundation",
+      //  "-Wno-deprecated"
       ],
       "options": {
-       "cwd": "${fileDirname}"
+       "cwd": "${fileDirname}",
+       "logging": {
+         "moduleLoad": false
+     }
       },
       "problemMatcher": ["$gcc"],
       "group": {
@@ -43,84 +46,84 @@
       },
       "detail": "compiler: /usr/bin/clang++"
      },
-     {
-        "type": "cppbuild",
-        "label": "C: clang build the active Dir",
-        "command": "/usr/bin/clang",
-        "args": [
-         "-fdiagnostics-color=always",
-         "-Wall",
-         "-g",
-         "-I${workspaceFolder}/dependencies/include",
-         "-L${workspaceFolder}/dependencies/library",
-         "${workspaceFolder}/dependencies/library/libglfw.3.3.dylib",
-      //    "${workspaceFolder}/testing/window/vulkanWindow/window.cpp",
-         "${fileDirname}/*.c",
+   //   {
+   //      "type": "cppbuild",
+   //      "label": "C: clang build the active Dir",
+   //      "command": "/usr/bin/clang",
+   //      "args": [
+   //       "-fdiagnostics-color=always",
+   //       "-Wall",
+   //       "-g",
+   //       "-I${workspaceFolder}/dependencies/include",
+   //       "-L${workspaceFolder}/dependencies/library",
+   //       "${workspaceFolder}/dependencies/library/libglfw.3.3.dylib",
+   //    //    "${workspaceFolder}/testing/window/vulkanWindow/window.cpp",
+   //       "${fileDirname}/*.c",
   
-         "-o",
-         "${workspaceFolder}/builds/app",
-         "-framework",
-         "OpenGL",
-         "-framework",
-         "Cocoa",
-         "-framework",
-         "IOKit",
-         "-framework",
-         "CoreVideo",
-         "-framework",
-         "CoreFoundation",
-         "-Wno-deprecated"
-        ],
-        "options": {
-         "cwd": "${fileDirname}"
-        },
-        "problemMatcher": ["$gcc"],
-        "group": {
-         "kind": "build",
-         "isDefault": true
-        },
-        "detail": "compiler: /usr/bin/clang"
-       },
-       {
-        "type": "cppbuild",
-      "label": "C/C++: clang++ build active Dir",
-      "command": "/usr/bin/clang++",
-      "args": [
-    //    "-std=c++17",
-       "-fdiagnostics-color=always",
-       "-Wall",
-       "-x",
-       "c",
-       "-I${workspaceFolder}/dependencies/include",
-       "-L${workspaceFolder}/dependencies/library",
-    //    "${workspaceFolder}/dependencies/library/libglfw.3.3.dylib",
-    //    "${workspaceFolder}/testing/window/vulkanWindow/window.cpp",
-       "${fileDirname}/*.cpp",
-       "${fileDirname}/*.c",
+   //       "-o",
+   //       "${workspaceFolder}/builds/app",
+   //       "-framework",
+   //       "OpenGL",
+   //       "-framework",
+   //       "Cocoa",
+   //       "-framework",
+   //       "IOKit",
+   //       "-framework",
+   //       "CoreVideo",
+   //       "-framework",
+   //       "CoreFoundation",
+   //       "-Wno-deprecated"
+   //      ],
+   //      "options": {
+   //       "cwd": "${fileDirname}"
+   //      },
+   //      "problemMatcher": ["$gcc"],
+   //      "group": {
+   //       "kind": "build",
+   //       "isDefault": true
+   //      },
+   //      "detail": "compiler: /usr/bin/clang"
+   //     },
+   //     {
+   //      "type": "cppbuild",
+   //    "label": "C/C++: clang++ build active Dir",
+   //    "command": "/usr/bin/clang++",
+   //    "args": [
+   //  //    "-std=c++17",
+   //     "-fdiagnostics-color=always",
+   //     "-Wall",
+   //     "-x",
+   //     "c",
+   //     "-I${workspaceFolder}/dependencies/include",
+   //     "-L${workspaceFolder}/dependencies/library",
+   //  //    "${workspaceFolder}/dependencies/library/libglfw.3.3.dylib",
+   //  //    "${workspaceFolder}/testing/window/vulkanWindow/window.cpp",
+   //     "${fileDirname}/*.cpp",
+   //     "${fileDirname}/*.c",
 
-       "-o",
-       "${workspaceFolder}/builds/app",
-       "-framework",
-       "OpenGL",
-       "-framework",
-       "Cocoa",
-       "-framework",
-       "IOKit",
-       "-framework",
-       "CoreVideo",
-       "-framework",
-       "CoreFoundation",
-       "-Wno-deprecated"
-      ],
-      "options": {
-       "cwd": "${fileDirname}"
-      },
-      "problemMatcher": ["$gcc"],
-      "group": {
-       "kind": "build",
-       "isDefault": true
-      },
-      "detail": "compiler: /usr/bin/clang++"
-       }
-    ]
+   //     "-o",
+   //     "${workspaceFolder}/builds/app",
+   //     "-framework",
+   //     "OpenGL",
+   //     "-framework",
+   //     "Cocoa",
+   //     "-framework",
+   //     "IOKit",
+   //     "-framework",
+   //     "CoreVideo",
+   //     "-framework",
+   //     "CoreFoundation",
+   //     "-Wno-deprecated"
+   //    ],
+   //    "options": {
+   //     "cwd": "${fileDirname}"
+   //    },
+   //    "problemMatcher": ["$gcc"],
+   //    "group": {
+   //     "kind": "build",
+   //     "isDefault": true
+   //    },
+   //    "detail": "compiler: /usr/bin/clang++"
+   //     }
+    ],    
    }
