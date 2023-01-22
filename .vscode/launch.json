@@ -10,7 +10,7 @@
       "request": "launch",
       "program": "${workspaceFolder}/builds/app",
       "args": [],
-      "stopAtEntry": true,
+      "stopAtEntry": false,
       "logging": {
         "moduleLoad": false
       },

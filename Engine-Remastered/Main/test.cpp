@@ -6,6 +6,7 @@
 #include <cstdlib>   // EXIT SUCCESS / FAILURE macros
 #include <vector>
 #include <cstring>
+#include <optional>
 
 using namespace std;
 
@@ -56,6 +57,7 @@ private:
     GLFWwindow *window;
     VkInstance instance;
     VkDebugUtilsMessengerEXT debugMessenger; 
+    VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
 
     // MARK: Initialization
     void initWindow()
@@ -71,6 +73,7 @@ private:
     {
         createInstance();
         setupMessenger();
+        pickPhysicalDevice();
     }
 
     void createInstance()
@@ -188,6 +191,67 @@ private:
         cerr << "validation layer: " << pCallbackData->pMessage << endl;
 
         return VK_FALSE;
+    }
+
+    //MARK: Physical Device Selection:
+    void pickPhysicalDevice() {
+        uint32_t deviceCount = 0;
+        vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
+
+        if (deviceCount == 0) { throw std::runtime_error("failed to find GPUs with Vulkan support!"); }
+
+        vector<VkPhysicalDevice> devices(deviceCount);
+        vkEnumeratePhysicalDevices(instance, &deviceCount, devices.data());
+
+        for (const auto& device : devices) {
+            if (isDeviceSuitable( device )) {
+                physicalDevice = device;
+                break;
+            }
+        }
+        
+        if (physicalDevice == VK_NULL_HANDLE) { throw runtime_error("Failed to find a compatible GPU for Vulkan!"); }
+    }
+
+    bool isDeviceSuitable( VkPhysicalDevice device ) {
+
+        VkPhysicalDeviceProperties deviceProperties;
+        vkGetPhysicalDeviceProperties(device, &deviceProperties);
+
+        VkPhysicalDeviceFeatures deviceFeatures;
+        vkGetPhysicalDeviceFeatures(device, &deviceFeatures);
+
+        //preform an special checks for the device using the above information
+
+        QueueFamilyIndicies indicies = findQueueFamilies(device);
+
+        return indicies.graphicsFamily.has_value();
+
+    }
+
+    //all actions are handled and put into queues, queues can only accept certain commands as a function of what queue family they are a part of
+    // have to find what queue families are supported on each device
+
+    struct QueueFamilyIndicies {
+        optional<uint32_t> graphicsFamily;
+    };
+
+    QueueFamilyIndicies findQueueFamilies( VkPhysicalDevice device ) {
+        QueueFamilyIndicies indicies;
+
+        uint32_t queueFamilyCount;
+        vkGetPhysicalDeviceQueueFamilyProperties(device, &queueFamilyCount, nullptr);
+
+        vector<VkQueueFamilyProperties> queueFamilies(queueFamilyCount);
+        vkGetPhysicalDeviceQueueFamilyProperties(device, &queueFamilyCount, queueFamilies.data());
+
+        int i = 0;
+        for (const auto& queueFamily : queueFamilies) {
+            if ( queueFamily.queueFlags && VK_QUEUE_GRAPHICS_BIT ) { indicies.graphicsFamily = i; break; }
+            i ++;
+        }
+
+        return indicies;
     }
 
     // MARK: Mainloop
