@@ -58,6 +58,9 @@ private:
     VkInstance instance;
     VkDebugUtilsMessengerEXT debugMessenger; 
     VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+    VkDevice device;
+
+    VkQueue graphicsQueue;
 
     // MARK: Initialization
     void initWindow()
@@ -74,6 +77,7 @@ private:
         createInstance();
         setupMessenger();
         pickPhysicalDevice();
+        createLogicalDevice();
     }
 
     void createInstance()
@@ -231,7 +235,6 @@ private:
 
     //all actions are handled and put into queues, queues can only accept certain commands as a function of what queue family they are a part of
     // have to find what queue families are supported on each device
-
     struct QueueFamilyIndicies {
         optional<uint32_t> graphicsFamily;
     };
@@ -254,6 +257,35 @@ private:
         return indicies;
     }
 
+    //MARK: Logical Device
+    void createLogicalDevice() {
+        QueueFamilyIndicies indices = findQueueFamilies(physicalDevice);
+
+        //the queues we want to create in a specific family
+        VkDeviceQueueCreateInfo queueCreateInfo{};
+        queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+        queueCreateInfo.queueFamilyIndex = indices.graphicsFamily.value();
+        queueCreateInfo.queueCount = 1;
+
+        float queuePriority = 1.0f;
+        queueCreateInfo.pQueuePriorities = &queuePriority;
+
+        VkPhysicalDeviceFeatures deviceFeatures; // specify the features you want
+
+        VkDeviceCreateInfo createInfo{};
+        createInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+        
+        createInfo.queueCreateInfoCount = 1;
+        createInfo.pQueueCreateInfos = &queueCreateInfo;
+        createInfo.pEnabledFeatures = &deviceFeatures;
+
+        VkResult result = vkCreateDevice(physicalDevice, &createInfo, nullptr, &device);
+        if (result != VK_SUCCESS) { throw runtime_error("Failed to create Logical Device"); }
+
+        vkGetDeviceQueue(device, indices.graphicsFamily.value(), 0, &graphicsQueue);
+
+    }
+
     // MARK: Mainloop
     void mainLoop()
     {
@@ -265,9 +297,9 @@ private:
     // MARK: Cleanup
     void cleanup()
     {
-        if (enableValidationLayers) {
-            DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr);
-        }
+        if (enableValidationLayers) { DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr); }
+
+        vkDestroyDevice(device, nullptr);
         vkDestroyInstance(instance, nullptr);
         glfwDestroyWindow(window);
         glfwTerminate();
