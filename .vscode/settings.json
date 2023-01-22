@@ -78,4 +78,5 @@
         "algorithm": "cpp",
         "concepts": "cpp"
     },
+    "cmake.configureOnOpen": false,
 }
