@@ -70,6 +70,7 @@ private:
     void initVulkan()
     {
         createInstance();
+        setupMessenger();
     }
 
     void createInstance()
@@ -95,9 +96,14 @@ private:
         createInfo.enabledExtensionCount = extensions.size();
         createInfo.ppEnabledExtensionNames = extensions.data();
 
+        VkDebugUtilsMessengerCreateInfoEXT debugCreateInfo;
+
         if (enableValidationLayers) {
             createInfo.enabledLayerCount = validationLayers.size();
             createInfo.ppEnabledLayerNames = validationLayers.data();
+
+            populateDebugMessengerCreateInfo(debugCreateInfo);
+            createInfo.pNext = (VkDebugUtilsMessengerCreateInfoEXT*) &debugCreateInfo;
         }
         else { createInfo.enabledLayerCount = 0; }
 
@@ -134,16 +140,20 @@ private:
         return true;
     }
 
-    void setupMessenger() {
-        if (!enableValidationLayers) { return; } 
-
+    void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo) {
         //this lists the types of messages (severity and type) that this messenger can receive
-        VkDebugUtilsMessengerCreateInfoEXT createInfo{};
+        createInfo = {};
         createInfo.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
         createInfo.messageSeverity = VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT;
         createInfo.messageType = VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT;
         createInfo.pfnUserCallback = debugCallback;
-        createInfo.pUserData = nullptr; // Optional
+    }
+
+    void setupMessenger() {
+        if (!enableValidationLayers) { return; } 
+        
+        VkDebugUtilsMessengerCreateInfoEXT createInfo{};
+        populateDebugMessengerCreateInfo(createInfo);
 
         VkResult result = CreateDebugUtilsMessengerEXT(instance, &createInfo, nullptr, &debugMessenger);
         if (result != VK_SUCCESS) { throw runtime_error("failed to setup debug Messenger"); }
