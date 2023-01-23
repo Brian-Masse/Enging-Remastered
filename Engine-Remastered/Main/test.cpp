@@ -65,9 +65,11 @@ private:
     GLFWwindow *window;
     VkSurfaceKHR surface;
     VkSwapchainKHR swapChain;
-    vector<VkImage> swapChainImages;
     VkFormat swapChainImageFormat;
     VkExtent2D swapChainExtent;
+
+    vector<VkImage> swapChainImages;
+    vector<VkImageView> swapChainImageViews;
 
     VkQueue graphicsQueue;
     VkQueue presentQueue;
@@ -90,6 +92,7 @@ private:
         pickPhysicalDevice();
         createLogicalDevice();
         createSwapChain();
+        createImageViews();
     }
 
     void createInstance()
@@ -270,7 +273,7 @@ private:
         return requiredExtensions.empty();
     }
 
-    //swapchain details
+    //MARK: Swapchain
     const vector<const char*> deviceExtensions = {
         VK_KHR_SWAPCHAIN_EXTENSION_NAME
     };
@@ -394,6 +397,30 @@ private:
         swapChainExtent = swapExtent;
     } 
 
+    void createImageViews() {
+        swapChainImageViews.resize(swapChainImages.size());
+        for (size_t i = 0; i < swapChainImages.size(); i++) {
+            VkImageViewCreateInfo createInfo{};
+            createInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
+            createInfo.image = swapChainImages[i];
+            createInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
+            createInfo.format = swapChainImageFormat;
+
+            createInfo.components.r = VK_COMPONENT_SWIZZLE_IDENTITY;
+            createInfo.components.g = VK_COMPONENT_SWIZZLE_IDENTITY;
+            createInfo.components.b = VK_COMPONENT_SWIZZLE_IDENTITY;
+            createInfo.components.a = VK_COMPONENT_SWIZZLE_IDENTITY;
+
+            createInfo.components.r = VK_COMPONENT_SWIZZLE_IDENTITY;
+            createInfo.components.g = VK_COMPONENT_SWIZZLE_IDENTITY;
+            createInfo.components.b = VK_COMPONENT_SWIZZLE_IDENTITY;
+            createInfo.components.a = VK_COMPONENT_SWIZZLE_IDENTITY;
+
+            VkResult result = vkCreateImageView(device, &createInfo, nullptr, &swapChainImageViews[i]);
+            if (result != VK_SUCCESS) { throw runtime_error("failed to create an ImageView"); }
+        }
+    }
+
 
     //all actions are handled and put into queues, queues can only accept certain commands as a function of what queue family they are a part of
     // have to find what queue families are supported on each device
@@ -487,6 +514,7 @@ private:
     {
         if (enableValidationLayers) { DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr); }
 
+        for (auto& imageView : swapChainImageViews) { vkDestroyImageView(device, imageView, nullptr); }
         vkDestroySwapchainKHR(device, swapChain, nullptr);
         vkDestroyDevice(device, nullptr);
         vkDestroySurfaceKHR(instance, surface, nullptr);
