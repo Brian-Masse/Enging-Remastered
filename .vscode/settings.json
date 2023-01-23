@@ -79,5 +79,5 @@
     "concepts": "cpp"
   },
   "cmake.configureOnOpen": false,
-  "cSpell.words": ["VKAPI"]
+  "cSpell.words": ["SWAPCHAIN", "VKAPI"]
 }
