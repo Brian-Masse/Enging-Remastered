@@ -1,0 +1,2 @@
+/Users/brianmasse/Developer/packages/Vulkan/VulkanSDK/macOS/bin/glslc shader.vert -o SPVFiles/vert.spv
+/Users/brianmasse/Developer/packages/Vulkan/VulkanSDK/macOS/bin/glslc shader.frag -o SPVFiles/frag.spv
