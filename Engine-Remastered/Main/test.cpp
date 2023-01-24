@@ -10,6 +10,7 @@
 #include <set>
 #include <limits>
 #include <algorithm>
+#include <fstream>
 
 using namespace std;
 
@@ -28,6 +29,23 @@ void DestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT
     if (func != nullptr) {
         func(instance, debugMessenger, pAllocator);
     }
+}
+
+//loading the binary SPV shader files in
+static vector<char> readFile(const string& fileName) {
+    ifstream file(fileName, ios::ate | ios::binary);
+
+    if (!file.is_open()) { throw runtime_error( "Failed to open the file" );}
+
+    //will read the file from the bottom, and create a buffer based on length;
+    size_t fileSize = (size_t) file.tellg();
+    vector<char> buffer(fileSize);
+
+    file.seekg(0);
+    file.read( buffer.data(), fileSize );
+
+    file.close();
+    return buffer;
 }
 
 // MARK: Application
@@ -93,6 +111,7 @@ private:
         createLogicalDevice();
         createSwapChain();
         createImageViews();
+        createGraphicsPipeline();
     }
 
     void createInstance()
@@ -411,10 +430,12 @@ private:
             createInfo.components.b = VK_COMPONENT_SWIZZLE_IDENTITY;
             createInfo.components.a = VK_COMPONENT_SWIZZLE_IDENTITY;
 
-            createInfo.components.r = VK_COMPONENT_SWIZZLE_IDENTITY;
-            createInfo.components.g = VK_COMPONENT_SWIZZLE_IDENTITY;
-            createInfo.components.b = VK_COMPONENT_SWIZZLE_IDENTITY;
-            createInfo.components.a = VK_COMPONENT_SWIZZLE_IDENTITY;
+
+            createInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+            createInfo.subresourceRange.baseMipLevel = 0;
+            createInfo.subresourceRange.levelCount = 1;
+            createInfo.subresourceRange.baseArrayLayer = 0;
+            createInfo.subresourceRange.layerCount = 1;
 
             VkResult result = vkCreateImageView(device, &createInfo, nullptr, &swapChainImageViews[i]);
             if (result != VK_SUCCESS) { throw runtime_error("failed to create an ImageView"); }
@@ -499,6 +520,46 @@ private:
         vkGetDeviceQueue(device, indices.graphicsFamily.value(), 0, &graphicsQueue);
         vkGetDeviceQueue(device, indices.presentFamily.value(), 0, &presentQueue);
 
+    }
+
+    //MARK: Pipeline
+    void createGraphicsPipeline() {
+        auto vertShaderCode = readFile("GraphicsPipeline/SPVFiles/vert.spv");
+        auto fragShaderCode = readFile("GraphicsPipeline/SPVFiles/frag.spv");
+
+        VkShaderModule vertShaderModule = createShaderModule( vertShaderCode );
+        VkShaderModule fragShaderModule = createShaderModule( fragShaderCode );
+
+        VkPipelineShaderStageCreateInfo vertStageCreateInfo = {};
+        vertStageCreateInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
+        vertStageCreateInfo.stage = VK_SHADER_STAGE_VERTEX_BIT;
+        vertStageCreateInfo.module = vertShaderModule;
+        vertStageCreateInfo.pName = "main";        //the entry point to the shader (function)
+
+        VkPipelineShaderStageCreateInfo fragStageCreateInfo = {};
+        fragStageCreateInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
+        fragStageCreateInfo.stage = VK_SHADER_STAGE_FRAGMENT_BIT;
+        fragStageCreateInfo.module = fragShaderModule;
+        fragStageCreateInfo.pName = "main";  
+
+        VkPipelineShaderStageCreateInfo shaderStages[] = { vertStageCreateInfo, fragStageCreateInfo };
+
+
+        vkDestroyShaderModule(device, vertShaderModule, nullptr);
+        vkDestroyShaderModule(device, fragShaderModule, nullptr);
+    }
+
+    VkShaderModule createShaderModule( const vector<char>& code ) {
+        VkShaderModuleCreateInfo createInfo = {};
+        createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
+        createInfo.codeSize = code.size();
+        createInfo.pCode = reinterpret_cast<const uint32_t*>(code.data());
+
+        VkShaderModule shaderModule;
+        VkResult result = vkCreateShaderModule(device, &createInfo, nullptr, &shaderModule);
+        if (result != VK_SUCCESS) { throw runtime_error("Unsuccessful creating a ShaderModule"); }
+
+        return shaderModule;
     }
 
     // MARK: Mainloop
