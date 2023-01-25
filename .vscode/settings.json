@@ -79,5 +79,14 @@
     "concepts": "cpp"
   },
   "cmake.configureOnOpen": false,
-  "cSpell.words": ["subresource", "SWAPCHAIN", "VKAPI"]
+  "cSpell.words": [
+    "framebuffer",
+    "multisampling",
+    "Rasterization",
+    "subpass",
+    "subresource",
+    "SWAPCHAIN",
+    "VKAPI"
+  ],
+  "cSpell.ignoreWords": ["Multisample", "subpasses"]
 }
