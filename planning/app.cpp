@@ -12,24 +12,7 @@
 #include <algorithm>
 #include <fstream>
 
-using namespace std;
-
-//MARK: Proxy Functions
-
-//The function to create a messenger is in an extension, this function safely retrieves it
-VkResult CreateDebugUtilsMessengerEXT(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pDebugMessenger) {
-    auto func = (PFN_vkCreateDebugUtilsMessengerEXT) vkGetInstanceProcAddr(instance, "vkCreateDebugUtilsMessengerEXT");
-    if (func != nullptr) { return func(instance, pCreateInfo, pAllocator, pDebugMessenger);
-
-    } else { return VK_ERROR_EXTENSION_NOT_PRESENT; }
-}
-
-void DestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT debugMessenger, const VkAllocationCallbacks* pAllocator) {
-    auto func = (PFN_vkDestroyDebugUtilsMessengerEXT) vkGetInstanceProcAddr(instance, "vkDestroyDebugUtilsMessengerEXT");
-    if (func != nullptr) {
-        func(instance, debugMessenger, pAllocator);
-    }
-}
+#include "ProxyFunctions/proxy.h"
 
 //loading the binary SPV shader files in
 static vector<char> readFile(const string& fileName) {
@@ -47,6 +30,8 @@ static vector<char> readFile(const string& fileName) {
     file.close();
     return buffer;
 }
+
+using namespace std;
 
 // MARK: Application
 class HelloTriangleApplication
