@@ -16,22 +16,22 @@ using namespace std;
 
 //MARK: Proxy Functions
 
-//loading the binary SPV shader files in
-vector<char> readFile(const string& fileName) {
-    ifstream file(fileName, ios::ate | ios::binary);
+// //loading the binary SPV shader files in
+// vector<char> readFile(const string& fileName) {
+//     ifstream file(fileName, ios::ate | ios::binary);
 
-    if (!file.is_open()) { throw runtime_error( "Failed to open the file" );}
+//     if (!file.is_open()) { throw runtime_error( "Failed to open the file" );}
 
-    //will read the file from the bottom, and create a buffer based on length;
-    size_t fileSize = (size_t) file.tellg();
-    vector<char> buffer(fileSize);
+//     //will read the file from the bottom, and create a buffer based on length;
+//     size_t fileSize = (size_t) file.tellg();
+//     vector<char> buffer(fileSize);
 
-    file.seekg(0);
-    file.read( buffer.data(), fileSize );
+//     file.seekg(0);
+//     file.read( buffer.data(), fileSize );
 
-    file.close();
-    return buffer;
-}
+//     file.close();
+//     return buffer;
+// }
 
 //The function to create a messenger is in an extension, this function safely retrieves it
 VkResult CreateDebugUtilsMessengerEXT(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pDebugMessenger) {

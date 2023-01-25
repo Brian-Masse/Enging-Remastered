@@ -14,6 +14,7 @@
 SwapChainSupportDetails HelloTriangleApplication::querySwapChainSupport( VkPhysicalDevice device ) {
     SwapChainSupportDetails details;
 
+
     vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, surface, &details.capabilities);
 
     uint32_t formatCount;

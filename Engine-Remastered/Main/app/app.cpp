@@ -5,11 +5,6 @@
 #include <stdexcept> // for error handling
 #include <cstdlib>   // EXIT SUCCESS / FAILURE macros
 #include <vector>
-#include <cstring>
-#include <optional>
-#include <set>
-#include <limits>
-#include <algorithm>
 
 #include "app.h"
 #include "../ProxyFunctions/proxy.h"

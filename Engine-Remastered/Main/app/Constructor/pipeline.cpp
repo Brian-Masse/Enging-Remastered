@@ -5,17 +5,35 @@
 #include <stdexcept>
 #include <algorithm>
 #include <vector>
+#include <fstream>
 
 #include "../app.h"
-#include "../../ProxyFunctions/proxy.h"
+// #include "../../ProxyFunctions/proxy.h"
 
 using namespace std;
+
+//loading the binary SPV shader files in
+vector<char> readFile(const string& fileName) {
+    ifstream file(fileName, ios::ate | ios::binary);
+
+    if (!file.is_open()) { throw runtime_error( "Failed to open the file" );}
+
+    //will read the file from the bottom, and create a buffer based on length;
+    size_t fileSize = (size_t) file.tellg();
+    vector<char> buffer(fileSize);
+
+    file.seekg(0);
+    file.read( buffer.data(), fileSize );
+
+    file.close();
+    return buffer;
+}
 
 //MARK: Pipeline
 void HelloTriangleApplication::createGraphicsPipeline() {
 
-    auto vertShaderCode = readFile("../GraphicsPipeline/SPVFiles/vert.spv");
-    auto fragShaderCode = readFile("../GraphicsPipeline/SPVFiles/frag.spv");
+    auto vertShaderCode = readFile("GraphicsPipeline/SPVFiles/vert.spv");
+    auto fragShaderCode = readFile("GraphicsPipeline/SPVFiles/frag.spv");
 
     //programmable functions
 
