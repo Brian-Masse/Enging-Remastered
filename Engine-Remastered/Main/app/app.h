@@ -80,6 +80,10 @@ private:
     VkQueue graphicsQueue;
     VkQueue presentQueue;
 
+    VkSemaphore imageAvailableSemaphore;
+    VkSemaphore renderFinishedSemaphore;
+    VkFence inFlightFence; 
+
     // MARK: Initialization
     void initWindow();
     void initVulkan();
@@ -133,10 +137,14 @@ private:
     VkShaderModule createShaderModule( const vector<char>& code );
     void createRenderPass();
 
-    //MARK: Drawing
+    //MARK: Commands
     void createCommandPool();
     void createCommandBuffer();
-    void recordCommandBuffer();
+    void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
+
+    //MARK: Draw
+    void createSyncFunctions();
+    void drawFrame();
     
     // MARK: Mainloop
     void mainLoop();

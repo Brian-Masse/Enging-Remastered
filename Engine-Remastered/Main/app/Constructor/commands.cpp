@@ -80,7 +80,7 @@ void HelloTriangleApplication::recordCommandBuffer(VkCommandBuffer commandBuffer
 
     vkCmdEndRenderPass(commandBuffer);
 
-    VkResult result = vkEndCommandBuffer(commandBuffer);
-    if (result != VK_SUCCESS) { throw runtime_error("Failed to record the commandBuffer!"); }
+    VkResult endResult = vkEndCommandBuffer(commandBuffer);
+    if (endResult != VK_SUCCESS) { throw runtime_error("Failed to record the commandBuffer!"); }
     
 }

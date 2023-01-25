@@ -81,12 +81,14 @@
   "cmake.configureOnOpen": false,
   "cSpell.words": [
     "commandbuffers",
+    "cooresponds",
     "framebuffer",
     "multisampling",
     "Rasterization",
     "subpass",
     "subresource",
     "SWAPCHAIN",
+    "Swapchains",
     "VKAPI"
   ],
   "cSpell.ignoreWords": ["Multisample", "subpasses"]

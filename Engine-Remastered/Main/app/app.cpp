@@ -43,6 +43,18 @@ void HelloTriangleApplication:: initVulkan()
     createFrameBuffers();
     createCommandPool();
     createCommandBuffer();
+    createSyncFunctions();
+}
+
+// MARK: Mainloop
+void HelloTriangleApplication::mainLoop()
+{
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+        drawFrame();
+    }
+
+    vkDeviceWaitIdle(device);
 }
 
 //returns a list of extensions
@@ -136,21 +148,16 @@ QueueFamilyIndicies HelloTriangleApplication::findQueueFamilies( VkPhysicalDevic
     return indicies;
 }
 
-// MARK: Mainloop
-void HelloTriangleApplication::mainLoop()
-{
-    while (!glfwWindowShouldClose(window)) {
-        glfwPollEvents();
-    }
-}
-
 // MARK: Cleanup
 void HelloTriangleApplication::cleanup()
 {
     if (enableValidationLayers) { DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr); }
     for (auto framebuffer : swapChainFramebuffers) {  vkDestroyFramebuffer(device, framebuffer, nullptr); }
-
     for (auto& imageView : swapChainImageViews) { vkDestroyImageView(device, imageView, nullptr); }
+
+    vkDestroySemaphore(device, imageAvailableSemaphore, nullptr);
+    vkDestroySemaphore(device, renderFinishedSemaphore, nullptr);
+    vkDestroyFence(device, inFlightFence, nullptr);
 
     vkDestroyCommandPool(device, commandPool, nullptr);
     vkDestroyPipeline(device, pipeline, nullptr);

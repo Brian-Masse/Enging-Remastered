@@ -194,6 +194,16 @@ VkShaderModule HelloTriangleApplication::createShaderModule( const vector<char>&
 
 //specify frame buffer attachments
 void HelloTriangleApplication::createRenderPass() {
+    // define dependencies
+    VkSubpassDependency dependency{};
+    dependency.srcSubpass = VK_SUBPASS_EXTERNAL; // subpass before or after depending on where it is defined
+    dependency.dstSubpass = 0; // refers to the one and only subpass we create
+    dependency.srcStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT; // specify the stage in the pipeline to wait on
+    dependency.srcAccessMask = 0; 
+    dependency.dstStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
+    dependency.dstAccessMask = VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT;
+
+
     //define attachments
     VkAttachmentDescription colorAttachment{};
     colorAttachment.format = swapChainImageFormat;
@@ -223,6 +233,8 @@ void HelloTriangleApplication::createRenderPass() {
     createInfo.pAttachments = &colorAttachment;
     createInfo.subpassCount = 1;
     createInfo.pSubpasses = &ColorSubpass;
+    createInfo.dependencyCount = 1;
+    createInfo.pDependencies = &dependency;
 
     VkResult result = vkCreateRenderPass(device, &createInfo, nullptr, &renderPass);
     if (result != VK_SUCCESS) { throw runtime_error("Error Creating the Render Pass"); }
