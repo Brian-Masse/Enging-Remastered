@@ -40,6 +40,9 @@ void HelloTriangleApplication:: initVulkan()
     createImageViews();
     createRenderPass();
     createGraphicsPipeline();
+    createFrameBuffers();
+    createCommandPool();
+    createCommandBuffer();
 }
 
 //returns a list of extensions
@@ -145,8 +148,11 @@ void HelloTriangleApplication::mainLoop()
 void HelloTriangleApplication::cleanup()
 {
     if (enableValidationLayers) { DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr); }
+    for (auto framebuffer : swapChainFramebuffers) {  vkDestroyFramebuffer(device, framebuffer, nullptr); }
+
     for (auto& imageView : swapChainImageViews) { vkDestroyImageView(device, imageView, nullptr); }
 
+    vkDestroyCommandPool(device, commandPool, nullptr);
     vkDestroyPipeline(device, pipeline, nullptr);
     vkDestroySwapchainKHR(device, swapChain, nullptr);
     vkDestroyPipelineLayout(device, pipelineLayout, nullptr);

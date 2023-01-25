@@ -80,6 +80,7 @@
   },
   "cmake.configureOnOpen": false,
   "cSpell.words": [
+    "commandbuffers",
     "framebuffer",
     "multisampling",
     "Rasterization",

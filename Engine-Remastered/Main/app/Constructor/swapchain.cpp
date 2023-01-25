@@ -8,12 +8,10 @@
 
 #include "../app.h"
 
-
 //MARK: Swapchain
 
 SwapChainSupportDetails HelloTriangleApplication::querySwapChainSupport( VkPhysicalDevice device ) {
     SwapChainSupportDetails details;
-
 
     vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, surface, &details.capabilities);
 
@@ -148,5 +146,28 @@ void HelloTriangleApplication::createImageViews() {
 
         VkResult result = vkCreateImageView(device, &createInfo, nullptr, &swapChainImageViews[i]);
         if (result != VK_SUCCESS) { throw runtime_error("failed to create an ImageView"); }
+    }
+}
+
+void HelloTriangleApplication::createFrameBuffers() {
+    swapChainFramebuffers.resize( swapChainImages.size() );
+
+    for (size_t i = 0; i < swapChainImages.size(); i++) {
+        VkImageView attachments[] = {
+            swapChainImageViews[i]
+        };
+        
+        VkFramebufferCreateInfo createInfo = {};
+        createInfo.sType = VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO;
+        createInfo.renderPass = renderPass;  // which render pass does the framebuffer need to be compatible with: they roughly use the same number / types of attachments
+        createInfo.attachmentCount = 1;
+        createInfo.pAttachments = attachments;
+        createInfo.width = swapChainExtent.width;
+        createInfo.height = swapChainExtent.height;
+        createInfo.layers = 1;
+
+        VkResult result = vkCreateFramebuffer(device, &createInfo, nullptr, &swapChainFramebuffers[i]);
+        if (result != VK_SUCCESS) { throw runtime_error( "Failed to create a framebuffer" ); }
+
     }
 }

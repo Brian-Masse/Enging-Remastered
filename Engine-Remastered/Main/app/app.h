@@ -62,16 +62,20 @@ private:
 
     GLFWwindow *window;
     VkSurfaceKHR surface;
+    
     VkSwapchainKHR swapChain;
     VkFormat swapChainImageFormat;
     VkExtent2D swapChainExtent;
+    vector<VkImage> swapChainImages;
+    vector<VkImageView> swapChainImageViews;
+    vector<VkFramebuffer> swapChainFramebuffers;
 
     VkRenderPass renderPass;
     VkPipelineLayout pipelineLayout; // this can specify uniform values, which can be passed into shaders at run time to change their behavior.. they must be pre-specified 
     VkPipeline pipeline;
 
-    vector<VkImage> swapChainImages;
-    vector<VkImageView> swapChainImageViews;
+    VkCommandPool commandPool;
+    VkCommandBuffer commandBuffer;
 
     VkQueue graphicsQueue;
     VkQueue presentQueue;
@@ -115,7 +119,9 @@ private:
     VkPresentModeKHR chooseSurfacePresentMode( const vector<VkPresentModeKHR>& availablePresentModes );
     VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
     void createSwapChain();
+
     void createImageViews();
+    void createFrameBuffers();
 
     QueueFamilyIndicies findQueueFamilies( VkPhysicalDevice device );
 
@@ -126,6 +132,11 @@ private:
     void createGraphicsPipeline();
     VkShaderModule createShaderModule( const vector<char>& code );
     void createRenderPass();
+
+    //MARK: Drawing
+    void createCommandPool();
+    void createCommandBuffer();
+    void recordCommandBuffer();
     
     // MARK: Mainloop
     void mainLoop();
