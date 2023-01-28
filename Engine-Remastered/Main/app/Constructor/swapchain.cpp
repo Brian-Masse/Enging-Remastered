@@ -168,6 +168,32 @@ void HelloTriangleApplication::createFrameBuffers() {
 
         VkResult result = vkCreateFramebuffer(device, &createInfo, nullptr, &swapChainFramebuffers[i]);
         if (result != VK_SUCCESS) { throw runtime_error( "Failed to create a framebuffer" ); }
-
     }
+}
+
+void HelloTriangleApplication::recreateSwapChain() {
+
+    int width = 0, height = 0;
+    glfwGetFramebufferSize(window, &width, &height);
+    while (width == 0 || height == 0) {
+        glfwGetFramebufferSize(window, &width, &height);
+        glfwWaitEvents();
+    }
+
+    vkDeviceWaitIdle(device);
+
+    cleanupSwapChain();
+
+    createSwapChain();
+    createImageViews();
+    createFrameBuffers();
+
+}
+
+void HelloTriangleApplication::cleanupSwapChain() {
+
+    for (auto framebuffer : swapChainFramebuffers) {  vkDestroyFramebuffer(device, framebuffer, nullptr); }
+    for (auto& imageView : swapChainImageViews) { vkDestroyImageView(device, imageView, nullptr); }
+    
+    vkDestroySwapchainKHR(device, swapChain, nullptr);
 }

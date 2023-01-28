@@ -12,7 +12,7 @@
 using namespace std;
 
 void HelloTriangleApplication::run()
-{
+{\
     initWindow();
     initVulkan();
     mainLoop();
@@ -24,9 +24,11 @@ void HelloTriangleApplication::initWindow()
 {
     glfwInit();
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API); // prevents it from initializing OpenGL
-    glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 
     window = glfwCreateWindow(WIDTH, HEIGHT, "Vulkan Window", nullptr, nullptr);
+    glfwSetWindowUserPointer(window, this);
+    glfwSetFramebufferSizeCallback(window, frameBufferResizeCallback);
 }
 
 void HelloTriangleApplication:: initVulkan()
@@ -152,8 +154,8 @@ QueueFamilyIndicies HelloTriangleApplication::findQueueFamilies( VkPhysicalDevic
 void HelloTriangleApplication::cleanup()
 {
     if (enableValidationLayers) { DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr); }
-    for (auto framebuffer : swapChainFramebuffers) {  vkDestroyFramebuffer(device, framebuffer, nullptr); }
-    for (auto& imageView : swapChainImageViews) { vkDestroyImageView(device, imageView, nullptr); }
+    
+    cleanupSwapChain();
 
     vkDestroySemaphore(device, imageAvailableSemaphore, nullptr);
     vkDestroySemaphore(device, renderFinishedSemaphore, nullptr);
@@ -161,7 +163,6 @@ void HelloTriangleApplication::cleanup()
 
     vkDestroyCommandPool(device, commandPool, nullptr);
     vkDestroyPipeline(device, pipeline, nullptr);
-    vkDestroySwapchainKHR(device, swapChain, nullptr);
     vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
     vkDestroyRenderPass(device, renderPass, nullptr);
 

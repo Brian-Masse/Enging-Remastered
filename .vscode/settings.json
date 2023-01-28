@@ -76,7 +76,8 @@
     "unordered_set": "cpp",
     "variant": "cpp",
     "algorithm": "cpp",
-    "concepts": "cpp"
+    "concepts": "cpp",
+    "filesystem": "cpp"
   },
   "cmake.configureOnOpen": false,
   "cSpell.words": [

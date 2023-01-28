@@ -69,6 +69,7 @@ private:
     vector<VkImage> swapChainImages;
     vector<VkImageView> swapChainImageViews;
     vector<VkFramebuffer> swapChainFramebuffers;
+    bool frameBufferResized = false;
 
     VkRenderPass renderPass;
     VkPipelineLayout pipelineLayout; // this can specify uniform values, which can be passed into shaders at run time to change their behavior.. they must be pre-specified 
@@ -87,6 +88,10 @@ private:
     // MARK: Initialization
     void initWindow();
     void initVulkan();
+    static void frameBufferResizeCallback(GLFWwindow* window, int width, int height) {
+        auto app = reinterpret_cast<HelloTriangleApplication*>(glfwGetWindowUserPointer(window));
+        app->frameBufferResized = true;
+    }
 
     void createInstance();
     void createSurface();
@@ -123,6 +128,7 @@ private:
     VkPresentModeKHR chooseSurfacePresentMode( const vector<VkPresentModeKHR>& availablePresentModes );
     VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
     void createSwapChain();
+    void recreateSwapChain();
 
     void createImageViews();
     void createFrameBuffers();
@@ -150,5 +156,6 @@ private:
     void mainLoop();
 
     // MARK: Cleanup
+    void cleanupSwapChain();
     void cleanup();
 };

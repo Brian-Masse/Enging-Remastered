@@ -6,17 +6,35 @@
 #include <algorithm>
 #include <vector>
 #include <fstream>
+#include <string>
+#include <sstream>
+#include <mach-o/dyld.h>
 
 #include "../app.h"
 // #include "../../ProxyFunctions/proxy.h"
 
 using namespace std;
 
+
 //loading the binary SPV shader files in
 vector<char> readFile(const string& fileName) {
-    ifstream file(fileName, ios::ate | ios::binary);
 
-    if (!file.is_open()) { throw runtime_error( "Failed to open the file" );}
+    ostringstream pathName;
+
+    char buf [PATH_MAX];
+    uint32_t bufSize = PATH_MAX;
+    if ( _NSGetExecutablePath(buf, &bufSize) != 0 ) { throw runtime_error("error getting executable path"); }
+
+    uint32_t bufLength = strlen(buf);
+    *(buf + bufLength - 3) = '\0'; 
+
+    pathName << buf << "../Engine-Remastered/main/app/GraphicsPipeline/SPVFiles/" << fileName;
+
+    ifstream file(pathName.str(), ios::ate | ios::binary);
+
+    ostringstream oss;
+    oss << "Failed to open file: " << pathName.str() << " from CWD: " << std::filesystem::current_path();
+    if (!file.is_open()) { throw runtime_error( oss.str());}
 
     //will read the file from the bottom, and create a buffer based on length;
     size_t fileSize = (size_t) file.tellg();
@@ -32,8 +50,8 @@ vector<char> readFile(const string& fileName) {
 //MARK: Pipeline
 void HelloTriangleApplication::createGraphicsPipeline() {
 
-    auto vertShaderCode = readFile("GraphicsPipeline/SPVFiles/vert.spv");
-    auto fragShaderCode = readFile("GraphicsPipeline/SPVFiles/frag.spv");
+    auto vertShaderCode = readFile("vert.spv");
+    auto fragShaderCode = readFile("frag.spv");
 
     //programmable functions
 
@@ -65,7 +83,8 @@ void HelloTriangleApplication::createGraphicsPipeline() {
 
     VkPipelineInputAssemblyStateCreateInfo inputAssembly{};
     inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
-    inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST; // how to connect all the vertices together
+    inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_STRIP;
+    // VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST; // how to connect all the vertices together
     inputAssembly.primitiveRestartEnable = VK_FALSE; // possible to break up lines / triangles depending on topology mod
 
     //Viewport & Scissor

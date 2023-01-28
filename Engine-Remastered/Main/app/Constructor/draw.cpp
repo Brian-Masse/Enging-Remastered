@@ -28,10 +28,16 @@ void HelloTriangleApplication::createSyncFunctions() {
 void HelloTriangleApplication::drawFrame() {
 
     vkWaitForFences(device, 1, &inFlightFence, VK_TRUE, UINT64_MAX);
-    vkResetFences(device, 1, &inFlightFence);
 
     uint32_t imageIndex;
-    vkAcquireNextImageKHR(device, swapChain, UINT64_MAX, imageAvailableSemaphore, VK_NULL_HANDLE, &imageIndex);
+    VkResult result = vkAcquireNextImageKHR(device, swapChain, UINT64_MAX, imageAvailableSemaphore, VK_NULL_HANDLE, &imageIndex);
+
+    if (result == VK_ERROR_OUT_OF_DATE_KHR) {
+        recreateSwapChain();
+        return;
+    } else if ( result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR) { throw runtime_error("Failed to acquire Swapchain image"); }
+
+    vkResetFences(device, 1, &inFlightFence);
 
     vkResetCommandBuffer(commandBuffer, 0);
     recordCommandBuffer(commandBuffer, imageIndex);
@@ -69,4 +75,9 @@ void HelloTriangleApplication::drawFrame() {
 
     vkQueuePresentKHR(presentQueue, &presentInfo);
 
+    if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR || frameBufferResized ) { 
+        frameBufferResized = false;
+        recreateSwapChain(); 
+    }
+    else if (result != VK_SUCCESS) { throw std::runtime_error("failed to present swap chain image!"); }
 }
