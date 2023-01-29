@@ -44,6 +44,7 @@ void HelloTriangleApplication:: initVulkan()
     createGraphicsPipeline();
     createFrameBuffers();
     createCommandPool();
+    createVertexBuffer();
     createCommandBuffer();
     createSyncFunctions();
 }
@@ -52,8 +53,10 @@ void HelloTriangleApplication:: initVulkan()
 void HelloTriangleApplication::mainLoop()
 {
     while (!glfwWindowShouldClose(window)) {
+
         glfwPollEvents();
         drawFrame();
+
     }
 
     vkDeviceWaitIdle(device);
@@ -161,6 +164,8 @@ void HelloTriangleApplication::cleanup()
     vkDestroySemaphore(device, renderFinishedSemaphore, nullptr);
     vkDestroyFence(device, inFlightFence, nullptr);
 
+    vkDestroyBuffer(device, vertexBuffer, nullptr);
+    vkFreeMemory(device, vertexBufferMemory, nullptr);
     vkDestroyCommandPool(device, commandPool, nullptr);
     vkDestroyPipeline(device, pipeline, nullptr);
     vkDestroyPipelineLayout(device, pipelineLayout, nullptr);

@@ -1,3 +1,5 @@
+#ifndef APP_H
+
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
@@ -13,6 +15,7 @@
 #include <fstream>
 
 #include "../ProxyFunctions/proxy.h"
+#include "vertexBuffer.h"
 
 using namespace std;
 
@@ -78,6 +81,9 @@ private:
     VkCommandPool commandPool;
     VkCommandBuffer commandBuffer;
 
+    VkBuffer vertexBuffer;
+    VkDeviceMemory vertexBufferMemory;
+
     VkQueue graphicsQueue;
     VkQueue presentQueue;
 
@@ -105,6 +111,7 @@ private:
         VkDebugUtilsMessageTypeFlagsEXT messageType,
         const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,
         void* pUserData) {
+            printf("");
 
             cerr << "validation layer: " << pCallbackData->pMessage << endl;
             return VK_FALSE;
@@ -151,6 +158,19 @@ private:
     //MARK: Draw
     void createSyncFunctions();
     void drawFrame();
+
+    //MARK: VertexBuffer
+    void createVertexBuffer();
+    uint32_t findMemoryType( uint32_t typeFilter, VkMemoryPropertyFlags properties );
+    void mapVertices();
+
+    vector<Vertex> vertices = {
+        {{0.0f, -0.5f}, {1.0f, 0.0f, 0.0f}},
+        {{0.5f, 0.5f}, {0.0f, 1.0f, 0.0f}},
+        {{-0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}}
+    };
+
+    double temp = 0;
     
     // MARK: Mainloop
     void mainLoop();
@@ -159,3 +179,5 @@ private:
     void cleanupSwapChain();
     void cleanup();
 };
+
+#endif

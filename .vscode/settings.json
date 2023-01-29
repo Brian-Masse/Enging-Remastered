@@ -86,6 +86,7 @@
     "framebuffer",
     "multisampling",
     "Rasterization",
+    "SFLOAT",
     "subpass",
     "subresource",
     "SWAPCHAIN",

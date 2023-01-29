@@ -18,12 +18,12 @@
 
         //    "${workspaceFolder}/testing/window/vulkanWindow/window.cpp",
         "main.cpp",
-        "app/app.cpp",
+        "app/*.cpp",
         "app/Constructor/*.cpp",
         "ProxyFunctions/*.cpp",
 
         "-o",
-        "${workspaceFolder}/builds/app.app"
+        "${workspaceFolder}/builds/app"
         //  "-framework",
         //  "OpenGL",
         //  "-framework",
