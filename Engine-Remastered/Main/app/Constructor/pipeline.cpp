@@ -32,7 +32,7 @@ vector<char> readFile(const string& fileName) {
     ifstream file(pathName.str(), ios::ate | ios::binary);
 
     ostringstream oss;
-    oss << "Failed to open file: " << pathName.str() << " from CWD: " << std::filesystem::current_path();
+    oss << "Failed to open file!!: " << pathName.str() << " from CWD: " << std::filesystem::current_path();
     if (!file.is_open()) { throw runtime_error( oss.str());}
 
     //will read the file from the bottom, and create a buffer based on length;
@@ -83,9 +83,10 @@ void HelloTriangleApplication::createGraphicsPipeline() {
     vertexInputInfo.vertexAttributeDescriptionCount = attributeDescriptions.size();
     vertexInputInfo.pVertexAttributeDescriptions = attributeDescriptions.data();
 
+    //assembly
     VkPipelineInputAssemblyStateCreateInfo inputAssembly{};
     inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
-    inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
+    inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_LINE_LIST;
     // VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST; // how to connect all the vertices together
     inputAssembly.primitiveRestartEnable = VK_FALSE; // possible to break up lines / triangles depending on topology mod
 

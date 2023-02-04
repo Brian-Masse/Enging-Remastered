@@ -14,8 +14,8 @@
 #include <algorithm>
 #include <fstream>
 
-#include "../ProxyFunctions/proxy.h"
-#include "vertexBuffer.h"
+#include "proxy.h"
+#include "Buffers/vertexBuffer.h"
 
 using namespace std;
 
@@ -65,31 +65,9 @@ private:
 
     GLFWwindow *window;
     VkSurfaceKHR surface;
-    
-    VkSwapchainKHR swapChain;
-    VkFormat swapChainImageFormat;
-    VkExtent2D swapChainExtent;
-    vector<VkImage> swapChainImages;
-    vector<VkImageView> swapChainImageViews;
-    vector<VkFramebuffer> swapChainFramebuffers;
-    bool frameBufferResized = false;
-
-    VkRenderPass renderPass;
-    VkPipelineLayout pipelineLayout; // this can specify uniform values, which can be passed into shaders at run time to change their behavior.. they must be pre-specified 
-    VkPipeline pipeline;
-
-    VkCommandPool commandPool;
-    VkCommandBuffer commandBuffer;
-
-    VkBuffer vertexBuffer;
-    VkDeviceMemory vertexBufferMemory;
 
     VkQueue graphicsQueue;
     VkQueue presentQueue;
-
-    VkSemaphore imageAvailableSemaphore;
-    VkSemaphore renderFinishedSemaphore;
-    VkFence inFlightFence; 
 
     // MARK: Initialization
     void initWindow();
@@ -125,6 +103,14 @@ private:
     bool checkDeviceExtensionSupport(VkPhysicalDevice device);
 
     //MARK: Swapchain
+    VkSwapchainKHR swapChain;
+    VkFormat swapChainImageFormat;
+    VkExtent2D swapChainExtent;
+    vector<VkImage> swapChainImages;
+    vector<VkImageView> swapChainImageViews;
+    vector<VkFramebuffer> swapChainFramebuffers;
+    bool frameBufferResized = false;
+
     const vector<const char*> deviceExtensions = {
         VK_KHR_SWAPCHAIN_EXTENSION_NAME,
         "VK_KHR_portability_subset"
@@ -146,31 +132,68 @@ private:
     void createLogicalDevice();
 
     //MARK: Pipeline
+    VkRenderPass renderPass;
+    VkPipelineLayout pipelineLayout; // this can specify uniform values, which can be passed into shaders at run time to change their behavior.. they must be pre-specified 
+    VkPipeline pipeline;
+
     void createGraphicsPipeline();
     VkShaderModule createShaderModule( const vector<char>& code );
     void createRenderPass();
 
     //MARK: Commands
+    VkCommandPool commandPool;
+    VkCommandBuffer commandBuffer;
+
     void createCommandPool();
     void createCommandBuffer();
     void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
 
     //MARK: Draw
+    VkSemaphore imageAvailableSemaphore;
+    VkSemaphore renderFinishedSemaphore;
+    VkFence inFlightFence; 
+
     void createSyncFunctions();
     void drawFrame();
 
     //MARK: VertexBuffer
+    VkBuffer vertexBuffer;
+    VkDeviceMemory vertexBufferMemory;
+
     void createVertexBuffer();
+    void createBuffer( VkDeviceSize size, VkBufferUsageFlags flags, VkMemoryPropertyFlags memFlags, VkBuffer& buffer, VkDeviceMemory& bufferMemory );
+    void copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
     uint32_t findMemoryType( uint32_t typeFilter, VkMemoryPropertyFlags properties );
-    void mapVertices();
 
-    vector<Vertex> vertices = {
-        {{0.0f, -0.5f}, {1.0f, 0.0f, 0.0f}},
-        {{0.5f, 0.5f}, {0.0f, 1.0f, 0.0f}},
-        {{-0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}}
-    };
-
+    void mapVertices(VkDeviceSize size, VkDeviceMemory& bufferMemory, const void *);
+    
     double temp = 0;
+
+    std::vector<Vertex> vertices;
+    // = {
+    //     {{0.0f, -0.5f, 1.0}, {1.0f, 0.0f, 0.0f}},
+    //     {{0.5f, 0.5f}, {0.0f, 1.0f, 0.0f}},
+    //     {{-0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}},
+    //     {{-0.5f, 0.5f}, {1.0f, 1.0f, 1.0f}}
+    // };
+
+    void prepareVertices();
+
+
+    //MARK: index buffer
+    VkBuffer indexBuffer;
+    VkDeviceMemory indexBufferMemory;
+
+    void createIndexBuffer();
+
+    const vector<uint16_t> indices = {
+        4, 0, 1, 2, 3,
+        4, 4, 5, 6, 7,
+        4, 8, 9, 10, 11,
+        4, 12, 13, 14, 15,
+        4, 16, 17, 18, 19,
+        4, 20, 21, 22, 23,
+    };
     
     // MARK: Mainloop
     void mainLoop();

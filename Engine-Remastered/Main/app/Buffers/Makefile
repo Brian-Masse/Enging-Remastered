@@ -1,0 +1,14 @@
+#app/buffers
+
+PWD := $(shell pwd)
+
+OBJ_DIR := ${MAIN_PWD}/objectFiles
+
+MAIN_FILES := $(wildcard *.cpp)
+MAIN_OBJ_FILES := $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(MAIN_FILES))
+
+main: ${MAIN_OBJ_FILES}
+
+	
+${OBJ_DIR}/%.o: %.cpp ${APP_H_DEPENDENCIES} ../app.h ${MAIN_FILES}
+	@${CC} ${FLAGS} ${INCLUDE} ${LIBRARIES} -c $< -o $@

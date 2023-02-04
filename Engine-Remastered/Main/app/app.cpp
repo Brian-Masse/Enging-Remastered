@@ -7,13 +7,14 @@
 #include <vector>
 
 #include "app.h"
-#include "../ProxyFunctions/proxy.h"
+#include "../VertexHandler/vertexReader.h"
 
 using namespace std;
 
 void HelloTriangleApplication::run()
-{\
+{
     initWindow();
+    prepareVertices();
     initVulkan();
     mainLoop();
     cleanup();
@@ -45,8 +46,26 @@ void HelloTriangleApplication:: initVulkan()
     createFrameBuffers();
     createCommandPool();
     createVertexBuffer();
+    createIndexBuffer();
     createCommandBuffer();
     createSyncFunctions();
+}
+
+void HelloTriangleApplication::prepareVertices() {
+
+    for ( auto& index: indices ) {
+        vec3 pos = vertices[index].pos;
+
+        cout << index;
+        cout << pos.x << ", " << pos.y << ", " << pos.z << endl;
+    }
+
+    vector<Vertex> vertices = extractVertices("cube.ply");
+    translateVertices(vertices);
+    
+
+    this->vertices = vertices;
+
 }
 
 // MARK: Mainloop
@@ -54,6 +73,28 @@ void HelloTriangleApplication::mainLoop()
 {
     while (!glfwWindowShouldClose(window)) {
 
+        // temp++;
+
+        // double y = cos( temp / 100 ) / 2;
+
+        // vertices[0].pos[0] = y;
+
+        // VkDeviceSize size = sizeof( vertices[0] ) * vertices.size();
+
+        // VkBufferUsageFlags stagingUsageFlags = VK_BUFFER_USAGE_TRANSFER_SRC_BIT;
+        // VkMemoryPropertyFlags stagingMemoryFlags = VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT;
+
+
+        // VkBuffer stagingBuffer;
+        // VkDeviceMemory stagingMemory;
+        // createBuffer(size, stagingUsageFlags, stagingMemoryFlags, stagingBuffer, stagingMemory);
+        // mapVertices(size, stagingMemory, vertices.data());
+
+        // copyBuffer(stagingBuffer, vertexBuffer, size);  //copy the vertex data from CPU-accessible memory to optimized GPU only memory
+
+        // vkDestroyBuffer(device, stagingBuffer, nullptr);
+        // vkFreeMemory(device, stagingMemory, nullptr);
+        
         glfwPollEvents();
         drawFrame();
 
@@ -166,6 +207,9 @@ void HelloTriangleApplication::cleanup()
 
     vkDestroyBuffer(device, vertexBuffer, nullptr);
     vkFreeMemory(device, vertexBufferMemory, nullptr);
+    vkDestroyBuffer(device, indexBuffer, nullptr);
+    vkFreeMemory(device, indexBufferMemory, nullptr);
+
     vkDestroyCommandPool(device, commandPool, nullptr);
     vkDestroyPipeline(device, pipeline, nullptr);
     vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
