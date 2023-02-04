@@ -37,6 +37,8 @@ bool HelloTriangleApplication::isDeviceSuitable( VkPhysicalDevice device ) {
     VkPhysicalDeviceFeatures deviceFeatures;
     vkGetPhysicalDeviceFeatures(device, &deviceFeatures);
 
+    if (!deviceFeatures.fillModeNonSolid) {  return false; }
+
     //preform an special checks for the device using the above information
     QueueFamilyIndicies indicies = findQueueFamilies(device);
 
@@ -89,7 +91,9 @@ void HelloTriangleApplication::createLogicalDevice() {
     queueCreateInfo.queueFamilyIndex = indices.graphicsFamily.value();
     queueCreateInfo.queueCount = 1;
 
-    VkPhysicalDeviceFeatures deviceFeatures{}; // specify the features you want
+
+    VkPhysicalDeviceFeatures deviceFeatures = { .fillModeNonSolid = VK_TRUE };
+    //  specify the features you want
 
     VkDeviceCreateInfo createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;

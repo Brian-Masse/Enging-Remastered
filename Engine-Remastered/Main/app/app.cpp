@@ -53,18 +53,21 @@ void HelloTriangleApplication:: initVulkan()
 
 void HelloTriangleApplication::prepareVertices() {
 
-    for ( auto& index: indices ) {
-        vec3 pos = vertices[index].pos;
+    BufferInformation information = extractInformation("cube.ply");
 
-        cout << index;
-        cout << pos.x << ", " << pos.y << ", " << pos.z << endl;
-    }
+    // for ( auto& index: information.indexBuffer ) {
+    //     vec3 pos = information.vertexBuffer[index].pos;
 
-    vector<Vertex> vertices = extractVertices("cube.ply");
-    translateVertices(vertices);
+    //     cout << index << "::    ";
+    //     cout << pos.x << ", " << pos.y << ", " << pos.z << endl;
+    // }
+
+
+
+    translateVertices(information.vertexBuffer);
     
-
-    this->vertices = vertices;
+    this->vertices = information.vertexBuffer;
+    this->indices = information.indexBuffer;
 
 }
 
@@ -75,7 +78,7 @@ void HelloTriangleApplication::mainLoop()
 
         // temp++;
 
-        // double y = cos( temp / 100 ) / 2;
+        // double y = cos( temp / 100 ) / 1.5;
 
         // vertices[0].pos[0] = y;
 

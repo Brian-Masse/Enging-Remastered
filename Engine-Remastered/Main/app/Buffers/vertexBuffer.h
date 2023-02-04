@@ -45,4 +45,9 @@ struct Vertex {
     }
 };
 
+struct BufferInformation {
+    std::vector<Vertex> vertexBuffer;
+    std::vector<uint16_t> indexBuffer;
+};
+
 #endif
