@@ -64,16 +64,26 @@ void HelloTriangleApplication:: initVulkan()
 void HelloTriangleApplication::prepareVertices() {
 
     BufferInformation information = extractInformation("cube.ply");
-    
 
-    for ( auto& index: information.indexBuffer ) {
-        auto& pos = information.vertexBuffer[index].pos;
+    // for ( auto& index: information.indexBuffer ) {
+    //     auto& pos = information.vertexBuffer[index].pos;
+    //     auto& normal = information.vertexBuffer[index].normal;
 
-        cout << index << ":    " << pos.x << ", " << pos.y << ", " << pos.z << endl;
-    }
+    //     cout << index << ":    " << pos.x << ", " << pos.y << ", " << pos.z << endl;
+    //     cout << normal.x << ", " << normal.y << ", " << normal.z << endl;
+    // }
 
     this->vertices = information.vertexBuffer;
     this->indices = information.indexBuffer;
+
+    // this ->indices = {
+    //     1, 0, 2, 3,
+    //     5, 4, 6, 7,
+    //     9, 8, 10, 11,
+    //     // 13, 12, 14, 15,
+    //     // 16, 17, 18, 19,
+    //     // 20, 21, 22, 23,
+    // };
 
 }
 
@@ -82,9 +92,15 @@ void HelloTriangleApplication::mainLoop()
 {
     while (!glfwWindowShouldClose(window)) {
 
-        // temp++;
+        temp++;
 
-        // double y = cos( temp / 100 ) / 1.5;
+        double x = cos( temp / 100 ) / 2;
+        double y = sin( temp / 100 ) / 2;
+        double z = (cos( temp / 100 ) / 2) + 1.5;
+
+        pushData.cameraPos.x = x;
+        pushData.cameraPos.y = y;
+        // pushData.cameraPos.z = z;
 
         // vertices[0].pos[0] = y;
 

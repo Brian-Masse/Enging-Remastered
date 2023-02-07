@@ -170,18 +170,19 @@ void HelloTriangleApplication::createGraphicsPipeline() {
     colorBlending.blendConstants[3] = 0.0f; // Optional
 
 
+    //MARK: Layout 
     VkPushConstantRange pushConstantRange = {};
     pushConstantRange.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
-    // pushConstantRange.size = sizeof(  )
-
+    pushConstantRange.size = sizeof( PushConstantData );
+    pushConstantRange.offset = 0;
 
 
     VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
     pipelineLayoutInfo.setLayoutCount = 0; // Optional
     pipelineLayoutInfo.pSetLayouts = nullptr; // Optional
-    pipelineLayoutInfo.pushConstantRangeCount = 0; // Optional
-    pipelineLayoutInfo.pPushConstantRanges = nullptr; // Optional
+    pipelineLayoutInfo.pushConstantRangeCount = 1; 
+    pipelineLayoutInfo.pPushConstantRanges = &pushConstantRange;
 
     VkResult layoutResult = vkCreatePipelineLayout(device, &pipelineLayoutInfo, nullptr, &pipelineLayout);
     if (layoutResult != VK_SUCCESS) { throw runtime_error("Error creating the Pipeline Layout"); }

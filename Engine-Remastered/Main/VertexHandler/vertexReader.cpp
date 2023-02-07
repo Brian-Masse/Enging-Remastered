@@ -116,8 +116,13 @@ BufferInformation extractInformation(string fileName) {
         float y = extractFloat(inData, 0, 0);
         float z = extractFloat(inData, 0, 0);
 
-        vertices[i].color = {1.0f, 0.0f, 0.0f};
+        float nx = extractFloat(inData, 0, 0);
+        float ny = extractFloat(inData, 0, 0);
+        float nz = extractFloat(inData, 0, 0);
+
+        vertices[i].color = {1.0f, 1.0f, 1.0f};
         vertices[i].pos = { x, y, z };
+        vertices[i].normal = { nx, ny, nz };
 
         skipLines(inData, 1);
     }

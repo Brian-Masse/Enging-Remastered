@@ -49,6 +49,10 @@ struct QueueFamilyIndicies {
     bool isComplete() { return graphicsFamily.has_value() && presentFamily.has_value(); }
 };
 
+struct PushConstantData {
+    vec3 cameraPos;
+};
+
 
 class HelloTriangleApplication
 {
@@ -79,6 +83,8 @@ private:
 
     VkQueue graphicsQueue;
     VkQueue presentQueue;
+
+    PushConstantData pushData = { {0, 0, -1} };
 
     // MARK: Initialization
     void initWindow();

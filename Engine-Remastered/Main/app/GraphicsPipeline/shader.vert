@@ -3,27 +3,44 @@
 //location of the frame buffer
 // These 2 inputs are vertex specific atributes
 layout(location=0) in vec3 inPosition;
-layout(location=1) in vec3 inColor;
+layout(location=1) in vec3 inNormal;
+layout(location=2) in vec3 inColor;
 
 layout(location = 0) out vec3 fragColor;
 
-vec3 cameraPos = vec3(0, 0, -1);
+layout(push_constant) uniform Push {
+    vec3 cameraPos;
+} push;
+
 float n = 0.7;
 
-float test = 0;
+vec3 light = vec3( -1, -0.7, 0.5 );
 
 //gets called for every vertex  
 void main() {
 
-    float x = inPosition.x;
-    float y = inPosition.y;
-    float z = inPosition.z + 1;
+    float nx = -inNormal.x;
+    float ny = -inNormal.y;
+    float nz = -inNormal.z;
+
+    float vertexNormalMagnitude = sqrt( pow(nx, 2) + pow(ny, 2) + pow(nz, 2) );
+    float LightNormalMagnitude = sqrt( pow(light.x, 2) + pow(light.y, 2) + pow(light.z, 2) );
+
+    float num = (light.x * nx) + (light.y * ny) + (light.z * nz);
+    float proj = num / LightNormalMagnitude;
+    float perc = proj / vertexNormalMagnitude;
+
+
+    float x = (inPosition.x / 1.5) - push.cameraPos.x;
+    float y = (inPosition.y / 1.5) - push.cameraPos.y;
+    float z = (inPosition.z / 1.5) - push.cameraPos.z;
 
     float yf = (n * y) / z;
     float xf = (n * x) / z;
     
 
-    // gl_Position = vec4(xf, yf, z, 1.0);
-    gl_Position = vec4(inPosition.x, inPosition.y, 0.5, 1.0);
-    fragColor = inColor;
+    gl_Position = vec4(xf, yf, z / 2, 1.0);
+    fragColor = vec3( inColor.r * perc, inColor.g * perc, inColor.b * perc );
+    // fragColor = vec3(0.1, 0.1, 0.1);
+    // fragColor = inColor;
 }
