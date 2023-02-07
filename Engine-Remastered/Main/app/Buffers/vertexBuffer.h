@@ -32,7 +32,7 @@ struct Vertex {
 
         attributeDescriptions[0].binding = 0;   //which binding the per vertex data comes
         attributeDescriptions[0].location = 0;  //the location directive in the vertex shader
-        attributeDescriptions[0].format = VK_FORMAT_R32G32_SFLOAT; //the amount of color channels in this macro should match the number of components for the data type (pos)
+        attributeDescriptions[0].format = VK_FORMAT_R32G32B32_SFLOAT; //the amount of color channels in this macro should match the number of components for the data type (pos)
         // the type (SFLOAT, UINT, SINT) should also match data type from vertex information
         attributeDescriptions[0].offset = offsetof(Vertex, pos); // the space from one vertex to the next
         

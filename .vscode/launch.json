@@ -17,7 +17,24 @@
       "cwd": "${fileDirname}",
       "environment": [],
       "externalConsole": false,
-      "preLaunchTask": "C++: clang++ build active Dir",
+      "preLaunchTask": "Make Build",
+      "MIMode": "lldb"
+    },
+
+    {
+      "name": "(lldb) Launch Test",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/builds/testing",
+      "args": [],
+      "stopAtEntry": false,
+      "logging": {
+        "moduleLoad": false
+      },
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "preLaunchTask": "C++: clang++ build testing",
       "MIMode": "lldb"
     }
   ]

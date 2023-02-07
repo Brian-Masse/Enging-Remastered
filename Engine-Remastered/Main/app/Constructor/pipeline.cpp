@@ -96,7 +96,7 @@ void HelloTriangleApplication::createGraphicsPipeline() {
     viewport.y = 0.0f;
     viewport.width = (float) swapChainExtent.width;
     viewport.height = (float) swapChainExtent.height;
-    viewport.minDepth = 0.0f;
+    viewport.minDepth = -1.0f;
     viewport.maxDepth = 1.0f;
 
     VkRect2D scissor{}; // scissor rectangle will cut the pixels outside of it
@@ -161,6 +161,11 @@ void HelloTriangleApplication::createGraphicsPipeline() {
     colorBlending.blendConstants[1] = 0.0f; // Optional
     colorBlending.blendConstants[2] = 0.0f; // Optional
     colorBlending.blendConstants[3] = 0.0f; // Optional
+
+
+    VkPushConstantRange pushConstantRnage = {};
+    pushConstantRnage.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+
 
     VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;

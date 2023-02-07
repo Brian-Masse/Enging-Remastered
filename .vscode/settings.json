@@ -87,6 +87,7 @@
     "multisampling",
     "Rasterization",
     "SFLOAT",
+    "stofloat",
     "subpass",
     "subresource",
     "SWAPCHAIN",

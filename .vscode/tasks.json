@@ -2,6 +2,36 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Make Build",
+      "type": "shell",
+      "command": "make",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/builds"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Build with the Makefile in /builds"
+    },
+
+    {
+      "label": "Make Shaders",
+      "type": "shell",
+      "command": "make shader",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/builds"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "detail": "Build Shaders with the Makefile in /builds"
+    },
+
+    {
       "type": "cppbuild",
       "label": "C++: clang++ build active Dir",
       "command": "/usr/bin/clang++",
@@ -16,11 +46,13 @@
         "../../dependencies/library/libglfw.3.3.dylib",
         "../../dependencies/library/Vulkan/libvulkan.1.3.231.dylib",
 
-        //    "${workspaceFolder}/testing/window/vulkanWindow/window.cpp",
+        // "${workspaceFolder}/testing/window/vulkanWindow/window.cpp",
         "main.cpp",
+        "VertexHandler/*.cpp",
         "app/*.cpp",
+        "app/Buffers/*.cpp",
         "app/Constructor/*.cpp",
-        "ProxyFunctions/*.cpp",
+        // "ProxyFunctions/*.cpp",
 
         "-o",
         "${workspaceFolder}/builds/app"
@@ -42,7 +74,34 @@
       "problemMatcher": ["$gcc"],
       "group": {
         "kind": "build",
-        "isDefault": true
+        "isDefault": false
+      },
+      "detail": "compiler: /usr/bin/clang++"
+    },
+
+    {
+      "type": "cppbuild",
+      "label": "C++: clang++ build testing",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-std=c++17",
+        "-fdiagnostics-color=always",
+        "-Wall",
+        "-g",
+        "-w",
+
+        "testing/testing.cpp",
+
+        "-o",
+        "${workspaceFolder}/builds/testing"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": false
       },
       "detail": "compiler: /usr/bin/clang++"
     }

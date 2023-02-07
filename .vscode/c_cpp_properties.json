@@ -4,8 +4,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/Users/brianmasse/Developer/packages/Vulkan/VulkanSDK/macOS/include",
-                // "/usr/local/Cellar/glfw/3.3.8/include"
+                "/Users/brianmasse/Developer/packages/Vulkan/VulkanSDK/macOS/include"
             ],
             "defines": [],
             "macFrameworkPath": [
@@ -14,7 +13,8 @@
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "macos-clang-x64"
+            "intelliSenseMode": "macos-clang-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
         }
     ],
     "version": 4
