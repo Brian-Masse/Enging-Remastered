@@ -18,8 +18,10 @@
 #include <optional>
 #include <set>
 
+#include "../objects/object.h"
+
 using namespace std;
 
-BufferInformation extractInformation(string fileName);
-vector<Vertex>& translateVertices(vector<Vertex>& vertices);
+
+EngineObject::BufferInformation extractInformation(string fileName);
 

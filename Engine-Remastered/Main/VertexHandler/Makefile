@@ -1,4 +1,4 @@
-#app/Construcors
+#app
 
 PWD := $(shell pwd)
 
@@ -8,7 +8,12 @@ MAIN_FILES := $(wildcard *.cpp)
 MAIN_OBJ_FILES := $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(MAIN_FILES))
 
 main: ${MAIN_OBJ_FILES}
+	echo "THIS IS RUNNING"
+	echo ${MAIN_FILES}
+	echo ${MAIN_OBJ_FILES}
+	echo ${OBJ_DIR}
 
-	
-${OBJ_DIR}/%.o: %.cpp ../app/Buffers/vertexBuffer.h ${MAIN_FILES}
+${OBJ_DIR}/%.o: %.cpp vertexReader.h ${MAIN_FILES}
 	@${CC} ${FLAGS} ${INCLUDE} ${LIBRARIES} -c $< -o $@
+
+

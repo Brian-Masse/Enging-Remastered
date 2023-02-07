@@ -18,7 +18,9 @@
 #include <optional>
 #include <set>
 
-#include "../app/Buffers/vertexBuffer.h"
+// #include "../app/Buffers/vertexBuffer.h"
+#include "vertexReader.h"
+
 
 using namespace std;
 
@@ -44,21 +46,14 @@ ifstream openFile(string fileName) {
 
 //MARK: helperFunctions
 ifstream& skipLines( ifstream& file, int num ) {
-
-    for (int i = 0; i < num; i++) {
-        file.ignore(numeric_limits<streamsize>::max(), '\n');
-    }
+    for (int i = 0; i < num; i++) { file.ignore(numeric_limits<streamsize>::max(), '\n'); }
     return file;
 }
 
 ifstream& goToString( ifstream& file, int num ) {
-    for ( int i = 0; i < num - 1; i++ ) {
-        file.ignore( numeric_limits<streamsize>::max(), ' ' );
-    }
+    for ( int i = 0; i < num - 1; i++ ) { file.ignore( numeric_limits<streamsize>::max(), ' ' ); }
     return file;
 }
-
-
 
 int extractInt( ifstream& file, int row, int column ) {
     string stringNumber;
@@ -84,14 +79,11 @@ float extractFloat( ifstream& file, int row, int column ) {
 
 
 //MARK: ReadFile
-BufferInformation extractInformation(string fileName) {
+EngineObject::BufferInformation extractInformation(string fileName) {
 
     ifstream inData = openFile(fileName);
-    double test;
-    string str;
 
     int vertexCount = extractInt( inData, 4, 3 );
-
 
     // //check how many properties are on each vertex
     string tempString;
@@ -109,7 +101,7 @@ BufferInformation extractInformation(string fileName) {
     int faceCount = extractInt( inData, 0, 3 );
     skipLines(inData, 3);
 
-    vector<Vertex> vertices;
+    vector<EngineObject::Vertex> vertices;
     vertices.resize( vertexCount );
     for (int i = 0; i < vertexCount; i++) {
         float x = extractFloat(inData, 0, 0);
@@ -151,7 +143,7 @@ BufferInformation extractInformation(string fileName) {
         skipLines(inData, 1);
     }
 
-    BufferInformation bufferInformation = {
+    EngineObject::BufferInformation bufferInformation = {
         vertices,
         indices
     };

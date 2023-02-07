@@ -80,8 +80,8 @@ void HelloTriangleApplication::createGraphicsPipeline() {
 
     //fixed functions
 
-    auto bindingDescription = Vertex::getBindingDescription();
-    auto attributeDescriptions = Vertex::getAttributeDescriptions();
+    auto bindingDescription = EngineObject::Vertex::getBindingDescription();
+    auto attributeDescriptions = EngineObject::Vertex::getAttributeDescriptions();
 
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
     vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;

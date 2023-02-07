@@ -18,6 +18,7 @@
 
 #include "app.h"
 #include "../VertexHandler/vertexReader.h"
+// #include "../objects/object.h"
 
 using namespace std;
 
@@ -63,7 +64,7 @@ void HelloTriangleApplication:: initVulkan()
 
 void HelloTriangleApplication::prepareVertices() {
 
-    BufferInformation information = extractInformation("cube.ply");
+    EngineObject::BufferInformation information = extractInformation("cube.ply");
 
     // for ( auto& index: information.indexBuffer ) {
     //     auto& pos = information.vertexBuffer[index].pos;

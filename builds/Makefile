@@ -34,6 +34,7 @@ make:
 	
 	@echo "Starting Build Tasks"
 	@cd ../Engine-Remastered/Main && $(MAKE)
+	cd ../Engine-Remastered/Main/objects && $(MAKE)
 	@cd ../Engine-Remastered/Main/app && $(MAKE)
 	@cd ../Engine-Remastered/Main/app/Buffers && $(MAKE)
 	@cd ../Engine-Remastered/Main/app/Constructor && $(MAKE)
@@ -41,7 +42,7 @@ make:
 	@echo "Build finished successfully!\n"
 
 clean:
-	rm -rvf *.o
+	rm -rvf ${OBJ_DIR}/*.o
 
 shader: ${PIPELINE_OBJS}
 	@echo "Compiling Shader Files"

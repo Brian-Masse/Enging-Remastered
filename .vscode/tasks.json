@@ -32,6 +32,21 @@
     },
 
     {
+      "label": "Make Clean",
+      "type": "shell",
+      "command": "make clean",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/builds"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "detail": "Clean Build with the Makefile in /builds"
+    },
+
+    {
       "type": "cppbuild",
       "label": "C++: clang++ build active Dir",
       "command": "/usr/bin/clang++",

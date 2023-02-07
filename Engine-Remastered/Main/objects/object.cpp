@@ -1,5 +1,3 @@
-#ifndef VERTEX_H
-
 // Libs
 #define GLFW_INCLUDE_VULKAN
 #define GLM_FORCE_RADIANS
@@ -17,10 +15,12 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <optional>
+#include <set>
 
-using namespace std;
-using namespace glm;
+// #include "object.h"
+#include "../VertexHandler/vertexReader.h"
 
 
 
-#endif
+
