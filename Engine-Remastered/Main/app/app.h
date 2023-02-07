@@ -1,18 +1,29 @@
 #ifndef APP_H
 
+// Libs
 #define GLFW_INCLUDE_VULKAN
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include <glm/glm.hpp>
+#include <mach-o/dyld.h>
 #include <GLFW/glfw3.h>
 
-#include <iostream>  // for error handling
-#include <stdexcept> // for error handling
-#include <cstdlib>   // EXIT SUCCESS / FAILURE macros
+// std 
+#include <algorithm>
 #include <vector>
-#include <cstring>
+#include <array>
+#include <stdexcept>
+#include <string>
+#include <iostream>
+#include <limits>
 #include <optional>
 #include <set>
-#include <limits>
-#include <algorithm>
+
+// additions
+#include <cstdlib> // EXIT SUCCESS / FAILURE macros
+#include <cstring>
 #include <fstream>
+#include <sstream>
 
 #include "proxy.h"
 #include "Buffers/vertexBuffer.h"

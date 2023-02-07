@@ -1,12 +1,19 @@
+// Libs
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include <glm/glm.hpp>
+
+// std 
 #include <iostream>
 #include <stdexcept>
 #include <algorithm>
 #include <vector>
 #include <fstream>
 
+// dependencies
 #include "../app.h"
  
 // command pools manage the memory for command buffers: command buffers are allocated from command pools

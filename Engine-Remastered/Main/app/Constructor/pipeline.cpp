@@ -1,15 +1,22 @@
+// Libs
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
-#include <iostream>
-#include <stdexcept>
-#include <algorithm>
-#include <vector>
-#include <fstream>
-#include <string>
-#include <sstream>
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include <glm/glm.hpp>
 #include <mach-o/dyld.h>
 
+// std 
+#include <algorithm>
+#include <vector>
+#include <stdexcept>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+
+// dependencies
 #include "../app.h"
 
 using namespace std;
@@ -163,8 +170,10 @@ void HelloTriangleApplication::createGraphicsPipeline() {
     colorBlending.blendConstants[3] = 0.0f; // Optional
 
 
-    VkPushConstantRange pushConstantRnage = {};
-    pushConstantRnage.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+    VkPushConstantRange pushConstantRange = {};
+    pushConstantRange.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+    // pushConstantRange.size = sizeof(  )
+
 
 
     VkPipelineLayoutCreateInfo pipelineLayoutInfo{};

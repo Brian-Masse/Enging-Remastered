@@ -1,15 +1,22 @@
 #ifndef VERTEX_H
 
+// Libs
 #define GLFW_INCLUDE_VULKAN
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include <glm/glm.hpp>
+#include <mach-o/dyld.h>
 #include <GLFW/glfw3.h>
 
-#include <iostream>
-#include <stdexcept>
+// std 
 #include <algorithm>
 #include <vector>
-#include <fstream>
-#include <glm/glm.hpp>
 #include <array>
+#include <stdexcept>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 using namespace glm;
