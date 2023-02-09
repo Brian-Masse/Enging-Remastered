@@ -51,7 +51,7 @@ struct QueueFamilyIndicies {
     bool isComplete() { return graphicsFamily.has_value() && presentFamily.has_value(); }
 };
 
-struct PushConstantData {
+struct UniformConstantData {
     vec3 cameraPos;
 };
 
@@ -64,6 +64,7 @@ public:
 private:
     const int WIDTH = 600;
     const int HEIGHT = 600;
+    const int MAX_FRAMES_IN_FLIGHT = 2;
 
     const vector<const char *> validationLayers = {
         "VK_LAYER_KHRONOS_validation"
@@ -86,7 +87,7 @@ private:
     VkQueue graphicsQueue;
     VkQueue presentQueue;
 
-    PushConstantData pushData = { {0, 0, -1} };
+    UniformConstantData constantData = { {0, 0, -1} };
 
     // MARK: Initialization
     void initWindow();
@@ -177,11 +178,25 @@ private:
     void createSyncFunctions();
     void drawFrame();
 
-    //MARK: VertexBuffer
+    //MARK: buffers
     VkBuffer vertexBuffer;
     VkDeviceMemory vertexBufferMemory;
+    
+    vector<VkBuffer> uniformBuffers;
+    vector<VkDeviceMemory> uniformBuffersMemory;
+    vector<VkDescriptorSet> descriptorSets;
+    VkDescriptorPool descriptorPool;
+    VkDescriptorSetLayout descriptorSetLayout;
 
     void createVertexBuffer();
+    void createDescriptorSetLayout();
+    void createUniformBuffers();
+    void createDescriptorPools();
+    void createDescriptorSets();
+
+    void updateUniformBuffers(uint32_t currentImage);
+    
+
     void createBuffer( VkDeviceSize size, VkBufferUsageFlags flags, VkMemoryPropertyFlags memFlags, VkBuffer& buffer, VkDeviceMemory& bufferMemory );
     void copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
     uint32_t findMemoryType( uint32_t typeFilter, VkMemoryPropertyFlags properties );

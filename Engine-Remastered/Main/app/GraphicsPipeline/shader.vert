@@ -8,7 +8,7 @@ layout(location=2) in vec3 inColor;
 
 layout(location = 0) out vec3 fragColor;
 
-layout(push_constant) uniform Push {
+layout(binding = 0) uniform UniformConstantData {
     vec3 cameraPos;
 } push;
 

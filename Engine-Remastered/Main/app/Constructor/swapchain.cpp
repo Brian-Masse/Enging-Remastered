@@ -197,12 +197,19 @@ void HelloTriangleApplication::recreateSwapChain() {
     createImageViews();
     createFrameBuffers();
 
+    createUniformBuffers();
+    createDescriptorSets();
+
 }
 
 void HelloTriangleApplication::cleanupSwapChain() {
 
     for (auto framebuffer : swapChainFramebuffers) {  vkDestroyFramebuffer(device, framebuffer, nullptr); }
     for (auto& imageView : swapChainImageViews) { vkDestroyImageView(device, imageView, nullptr); }
+    for (size_t i = 0; i < 2; i++) {
+        vkDestroyBuffer( device, uniformBuffers[i], nullptr );
+        vkFreeMemory(device, uniformBuffersMemory[i], nullptr);
+    }
     
     vkDestroySwapchainKHR(device, swapChain, nullptr);
 }

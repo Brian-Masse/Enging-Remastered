@@ -53,6 +53,7 @@ void HelloTriangleApplication:: initVulkan()
     createSwapChain();
     createImageViews();
     createRenderPass();
+    createDescriptorSetLayout();
     createGraphicsPipeline();
     createFrameBuffers();
     createCommandPool();
@@ -62,6 +63,9 @@ void HelloTriangleApplication:: initVulkan()
     createDepthResources();
     createVertexBuffer();
     createIndexBuffer();
+    createUniformBuffers();
+    createDescriptorPools();
+    createDescriptorSets();
     createCommandBuffer( commandBuffer );
     createSyncFunctions();
 }
@@ -97,14 +101,14 @@ void HelloTriangleApplication::mainLoop()
 {
     while (!glfwWindowShouldClose(window)) {
 
-        temp++;
+        // temp++;
 
-        double x = cos( temp / 100 ) / 2;
-        double y = sin( temp / 100 ) / 2;
-        double z = (cos( temp / 100 ) / 2) + 1.5;
+        // double x = cos( temp / 100 ) / 2;
+        // double y = sin( temp / 100 ) / 2;
+        // double z = (cos( temp / 100 ) / 2) + 1.5;
 
-        pushData.cameraPos.x = x;
-        pushData.cameraPos.y = y;
+        // constantData.cameraPos.x = x;
+        // constantData.cameraPos.y = y;
         // pushData.cameraPos.z = z;
 
         // vertices[0].pos[0] = y;
@@ -245,6 +249,8 @@ void HelloTriangleApplication::cleanup()
     vkDestroyBuffer(device, indexBuffer, nullptr);
     vkFreeMemory(device, indexBufferMemory, nullptr);
 
+    vkDestroyDescriptorPool(device, descriptorPool, nullptr);
+    vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
     vkDestroyCommandPool(device, commandPool, nullptr);
     vkDestroyPipeline(device, pipeline, nullptr);
     vkDestroyPipelineLayout(device, pipelineLayout, nullptr);

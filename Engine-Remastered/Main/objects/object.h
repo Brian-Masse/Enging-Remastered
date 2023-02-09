@@ -40,6 +40,8 @@ class EngineObject {
             bindingDescription.stride = sizeof(Vertex);  //
             bindingDescription.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
 
+            
+
             return bindingDescription;
         }
 

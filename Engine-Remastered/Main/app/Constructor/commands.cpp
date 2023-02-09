@@ -119,7 +119,7 @@ void HelloTriangleApplication::recordCommandBuffer(VkCommandBuffer commandBuffer
     vkCmdBindIndexBuffer(commandBuffer, indexBuffer, 0, VK_INDEX_TYPE_UINT16);
 
     
-    vkCmdPushConstants(commandBuffer, pipelineLayout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof( PushConstantData ), &pushData.cameraPos );
+    // vkCmdPushConstants(commandBuffer, pipelineLayout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof( PushConstantData ), &pushData.cameraPos );
 
     // for using vertexBuffer
     // vkCmdDraw(commandBuffer, vertices.size(), 1, 0, 0);

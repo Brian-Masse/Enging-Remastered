@@ -168,20 +168,20 @@ void HelloTriangleApplication::createGraphicsPipeline() {
     depthStencil.stencilTestEnable = VK_FALSE;
 
 
-
     //MARK: Layout 
-    VkPushConstantRange pushConstantRange = {};
-    pushConstantRange.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
-    pushConstantRange.size = sizeof( PushConstantData );
-    pushConstantRange.offset = 0;
+    // VkPushConstantRange pushConstantRange = {};
+    // pushConstantRange.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+    // pushConstantRange.size = sizeof( PushConstantData );
+    // pushConstantRange.offset = 0;
 
 
     VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
-    pipelineLayoutInfo.setLayoutCount = 0; // Optional
-    pipelineLayoutInfo.pSetLayouts = nullptr; // Optional
-    pipelineLayoutInfo.pushConstantRangeCount = 1; 
-    pipelineLayoutInfo.pPushConstantRanges = &pushConstantRange;
+    pipelineLayoutInfo.setLayoutCount = 1; // Optional
+    pipelineLayoutInfo.pSetLayouts = &descriptorSetLayout; // Optional
+    pipelineLayoutInfo.pushConstantRangeCount = 0; 
+    pipelineLayoutInfo.pPushConstantRanges = nullptr;
+
 
     VkResult layoutResult = vkCreatePipelineLayout(device, &pipelineLayoutInfo, nullptr, &pipelineLayout);
     if (layoutResult != VK_SUCCESS) { throw runtime_error("Error creating the Pipeline Layout"); }
