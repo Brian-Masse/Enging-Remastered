@@ -124,14 +124,19 @@ void HelloTriangleApplication::createUniformBuffers() {
 void HelloTriangleApplication::updateUniformBuffers(uint32_t currentImage) {
     // do any frame by frame updates to the uniform buffer memory here!
 
-    temp++;
+    // temp++;
 
-    double x = cos( temp / 100 ) / 2;
-    double y = sin( temp / 100 ) / 2;
-    double z = (cos( temp / 100 ) / 2) + 1.5;
+    // double x = cos( temp / 100 ) / 2;
+    // double y = sin( temp / 100 ) / 2;
+    // double z = (cos( temp / 100 ) / 2) + 1.5;
 
-    constantData.cameraPos.x = x;
-    constantData.cameraPos.y = y;
+    // constantData.cameraPos.x = x;
+    // constantData.cameraPos.y = y;
+
+    // void* data;
+    // vkMapMemory(device, uniformBuffersMemory[currentImage], 0, sizeof(UniformConstantData), 0, &data);
+    // memcpy(data, &constantData, sizeof(UniformConstantData));
+    // vkUnmapMemory(device, uniformBuffersMemory[currentImage]);
 }
 
 void HelloTriangleApplication::createBuffer( VkDeviceSize size, VkBufferUsageFlags flags, VkMemoryPropertyFlags memFlags, VkBuffer& buffer, VkDeviceMemory& bufferMemory ) {

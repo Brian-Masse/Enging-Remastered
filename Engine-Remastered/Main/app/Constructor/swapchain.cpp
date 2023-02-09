@@ -85,14 +85,15 @@ void HelloTriangleApplication::createSwapChain() {
     VkPresentModeKHR presentMode = chooseSurfacePresentMode(details.presentMode);
     VkExtent2D swapExtent = chooseSwapExtent(details.capabilities);
 
-    uint32_t imageCount = details.capabilities.minImageCount + 1;
+    uint32_t imageCount = details.capabilities.minImageCount;
     if (details.capabilities.maxImageCount > 0 && details.capabilities.maxImageCount) { imageCount = details.capabilities.maxImageCount; }
 
     VkSwapchainCreateInfoKHR createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
     createInfo.surface = surface;
 
-    createInfo.minImageCount = imageCount;
+    // should be imageCount
+    createInfo.minImageCount = MAX_FRAMES_IN_FLIGHT;
     createInfo.imageFormat = format.format;
     createInfo.imageColorSpace = format.colorSpace;
     createInfo.imageExtent = swapExtent;
@@ -206,7 +207,7 @@ void HelloTriangleApplication::cleanupSwapChain() {
 
     for (auto framebuffer : swapChainFramebuffers) {  vkDestroyFramebuffer(device, framebuffer, nullptr); }
     for (auto& imageView : swapChainImageViews) { vkDestroyImageView(device, imageView, nullptr); }
-    for (size_t i = 0; i < 2; i++) {
+    for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroyBuffer( device, uniformBuffers[i], nullptr );
         vkFreeMemory(device, uniformBuffersMemory[i], nullptr);
     }

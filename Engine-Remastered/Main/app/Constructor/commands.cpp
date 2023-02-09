@@ -30,15 +30,17 @@ void HelloTriangleApplication::createCommandPool() {
 
 }
 
-void HelloTriangleApplication::createCommandBuffer( VkCommandBuffer& buffer) {
+void HelloTriangleApplication::createCommandBuffers() {
+
+    commandBuffers.resize( MAX_FRAMES_IN_FLIGHT );
 
     VkCommandBufferAllocateInfo allocInfo = {};
     allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
     allocInfo.commandPool = commandPool;
     allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY; //can be put into the queue directly; cannot be called form other command buffers
-    allocInfo.commandBufferCount = 1;
+    allocInfo.commandBufferCount = commandBuffers.size();
 
-    VkResult result = vkAllocateCommandBuffers(device, &allocInfo, &buffer);
+    VkResult result = vkAllocateCommandBuffers(device, &allocInfo, commandBuffers.data());
     if (result != VK_SUCCESS) { throw runtime_error("Failed to create CommandBuffer"); }
 
 }
@@ -46,7 +48,14 @@ void HelloTriangleApplication::createCommandBuffer( VkCommandBuffer& buffer) {
 VkCommandBuffer HelloTriangleApplication::beginSingleTimeCommands() {
 
     VkCommandBuffer buffer;
-    createCommandBuffer( buffer );
+    VkCommandBufferAllocateInfo allocInfo = {};
+    allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
+    allocInfo.commandPool = commandPool;
+    allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY; //can be put into the queue directly; cannot be called form other command buffers
+    allocInfo.commandBufferCount = 1;
+
+    VkResult allocResult = vkAllocateCommandBuffers(device, &allocInfo, &buffer);
+    if (allocResult != VK_SUCCESS) { throw runtime_error("Failed to create CommandBuffer"); }
 
 
     VkCommandBufferBeginInfo beginInfo = {};
@@ -118,6 +127,9 @@ void HelloTriangleApplication::recordCommandBuffer(VkCommandBuffer commandBuffer
     vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
     vkCmdBindIndexBuffer(commandBuffer, indexBuffer, 0, VK_INDEX_TYPE_UINT16);
 
+    // vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, 
+    //     pipelineLayout, 0, 1, 
+    //     &descriptorSets[currentFrame], 0, nullptr);
     
     // vkCmdPushConstants(commandBuffer, pipelineLayout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof( PushConstantData ), &pushData.cameraPos );
 

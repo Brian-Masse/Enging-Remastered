@@ -76,6 +76,8 @@ private:
     const bool enableValidationLayers = true;
 #endif
 
+    uint32_t currentFrame = 0;
+
     VkInstance instance;
     VkDebugUtilsMessengerEXT debugMessenger; 
     VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
@@ -162,18 +164,18 @@ private:
 
     //MARK: Commands
     VkCommandPool commandPool;
-    VkCommandBuffer commandBuffer;
+    vector<VkCommandBuffer> commandBuffers;
 
     void createCommandPool();
-    void createCommandBuffer(VkCommandBuffer& buffer);
+    void createCommandBuffers();
     VkCommandBuffer beginSingleTimeCommands();
     VkCommandBuffer endSingleTimeCommands(VkCommandBuffer commandBuffer);
     void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
 
     //MARK: Draw
-    VkSemaphore imageAvailableSemaphore;
-    VkSemaphore renderFinishedSemaphore;
-    VkFence inFlightFence; 
+    vector<VkSemaphore> imageAvailableSemaphores;
+    vector<VkSemaphore> renderFinishedSemaphores;
+    vector<VkFence> inFlightFences; 
 
     void createSyncFunctions();
     void drawFrame();
