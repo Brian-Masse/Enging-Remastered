@@ -10,6 +10,7 @@ MAIN_OBJ_FILES := $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(MAIN_FILES))
 main: ${MAIN_OBJ_FILES}
 
 ${OBJ_DIR}/%.o: %.cpp ../VertexHandler/vertexReader.h object.h ${MAIN_FILES}
+	@echo "remaking objects"
 	@${CC} ${FLAGS} ${INCLUDE} ${LIBRARIES} -c $< -o $@
 
 

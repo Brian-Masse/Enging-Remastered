@@ -30,8 +30,9 @@ class EngineObject {
 
     struct Vertex {
         glm::vec3 pos;
-        glm::vec3 normal;
         glm::vec3 color;
+        glm::vec3 normal;
+        glm::vec2 UV;
         
 
         static VkVertexInputBindingDescription getBindingDescription() {
@@ -40,22 +41,23 @@ class EngineObject {
             bindingDescription.stride = sizeof(Vertex);  //
             bindingDescription.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
 
-            
+
 
             return bindingDescription;
         }
 
-        static array<VkVertexInputAttributeDescription, 3> getAttributeDescriptions() {
-            array<VkVertexInputAttributeDescription, 3> attributeDescriptions = {};
+        static array<VkVertexInputAttributeDescription, 4> getAttributeDescriptions() {
+            array<VkVertexInputAttributeDescription, 4> attributeDescriptions = {};
 
             setDescription( attributeDescriptions, 0, 0, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, pos));
-            setDescription( attributeDescriptions, 0, 1, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, normal));
-            setDescription( attributeDescriptions, 0, 2, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, color));
+            setDescription( attributeDescriptions, 0, 1, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, color));
+            setDescription( attributeDescriptions, 0, 2, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, normal));
+            setDescription( attributeDescriptions, 0, 3, VK_FORMAT_R32G32_SFLOAT, offsetof(Vertex, UV));
 
             return attributeDescriptions;
         }
 
-        static void setDescription( array<VkVertexInputAttributeDescription, 3>& attributes, int binding, int location, VkFormat format, uint32_t offset ) {
+        static void setDescription( array<VkVertexInputAttributeDescription, 4>& attributes, int binding, int location, VkFormat format, uint32_t offset ) {
             attributes[location].binding = binding;
             attributes[location].location = location;
             attributes[location].format = format;

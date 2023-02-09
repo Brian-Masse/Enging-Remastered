@@ -18,7 +18,7 @@ export LIBRARIES := -L${MAIN_PWD}/../dependencies/library ${MAIN_PWD}/../depende
 
 #//MARK: DEPENDENCIES
 
-export APP_H_DEPENDENCIES := ${APP}/proxy.h 
+export APP_H_DEPENDENCIES := ${APP}/proxy.h ${APP}/../objects/object.h
 
 #//MARK: LINKING VARIABLES
 

@@ -10,5 +10,6 @@ MAIN_OBJ_FILES := $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(MAIN_FILES))
 main: ${MAIN_OBJ_FILES}
 
 	
-${OBJ_DIR}/%.o: %.cpp ../app.h ${MAIN_FILES}
+${OBJ_DIR}/%.o: %.cpp ${APP_H_DEPENDENCIES} ../app.h ${MAIN_FILES}
+	@echo "remaking constructor"
 	@${CC} ${FLAGS} ${INCLUDE} ${LIBRARIES} -c $< -o $@

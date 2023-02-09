@@ -103,9 +103,13 @@ EngineObject::BufferInformation extractInformation(string fileName) {
         float ny = extractFloat(inData, 0, 0);
         float nz = extractFloat(inData, 0, 0);
 
+        float u = extractFloat(inData, 0, 0);
+        float v = extractFloat(inData, 0, 0);
+
+        vertices[i].pos = { x, y, z };  
         vertices[i].color = {1.0f, 1.0f, 1.0f};
-        vertices[i].pos = { x, y, z };
         vertices[i].normal = { nx, ny, nz };
+        vertices[i].UV = { u, v };
 
         skipLines(inData, 1);
     }
