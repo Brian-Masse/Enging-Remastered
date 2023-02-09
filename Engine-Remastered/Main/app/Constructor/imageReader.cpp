@@ -62,6 +62,55 @@ void HelloTriangleApplication::createTextureImage() {
     vkFreeMemory(device, stagingBufferMemory, nullptr);
 }
 
+void HelloTriangleApplication::createTextureImageView() {
+
+    VkImageViewCreateInfo viewInfo{};
+    viewInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
+    viewInfo.image = textureImage;
+    viewInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
+    viewInfo.format = VK_FORMAT_R8G8B8A8_SRGB;
+    viewInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+    viewInfo.subresourceRange.baseMipLevel = 0;
+    viewInfo.subresourceRange.levelCount = 1;
+    viewInfo.subresourceRange.baseArrayLayer = 0;
+    viewInfo.subresourceRange.layerCount = 1;
+
+    VkResult result = vkCreateImageView(device, &viewInfo, nullptr, &textureImageView);
+    if (result != VK_SUCCESS) { throw runtime_error( "Unable to Create Texture Image View" ); } 
+}
+
+void HelloTriangleApplication::createImageSampler() {
+
+    VkSamplerCreateInfo samplerInfo = {};
+    samplerInfo.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;
+    samplerInfo.magFilter = VK_FILTER_LINEAR; // oversampling
+    samplerInfo.minFilter = VK_FILTER_LINEAR; // under-sampling
+
+    samplerInfo.addressModeU = VK_SAMPLER_ADDRESS_MODE_REPEAT; // how the image is handled outside of the image bounds
+    samplerInfo.addressModeV = VK_SAMPLER_ADDRESS_MODE_REPEAT; // can be specifed on a per-vertex basis
+    samplerInfo.addressModeW = VK_SAMPLER_ADDRESS_MODE_REPEAT;
+
+    samplerInfo.borderColor = VK_BORDER_COLOR_INT_OPAQUE_BLACK;
+    samplerInfo.unnormalizedCoordinates = VK_FALSE;
+    samplerInfo.compareEnable = VK_FALSE;
+    samplerInfo.compareOp = VK_COMPARE_OP_ALWAYS;
+
+    samplerInfo.mipmapMode = VK_SAMPLER_MIPMAP_MODE_LINEAR;
+    samplerInfo.mipLodBias = 0.0f;
+    samplerInfo.minLod = 0.0f;
+    samplerInfo.maxLod = 0.0f;
+
+    VkPhysicalDeviceProperties properties;
+    vkGetPhysicalDeviceProperties(physicalDevice, &properties);
+
+    samplerInfo.anisotropyEnable = VK_TRUE;
+    samplerInfo.maxAnisotropy = properties.limits.maxSamplerAnisotropy;
+
+    VkResult result = vkCreateSampler(device, &samplerInfo, nullptr, &sampler);
+    if (result != VK_SUCCESS) { throw runtime_error( "Unable to create the texture Sampler" ); }
+
+}
+
 //have to transition the image layout before copying the buffer memory into an Image object
 void HelloTriangleApplication::transitionImageLayout( VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout ) {
     VkCommandBuffer commandBuffer = beginSingleTimeCommands();

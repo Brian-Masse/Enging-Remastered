@@ -84,6 +84,7 @@
     "commandbuffers",
     "cooresponds",
     "framebuffer",
+    "MIPMAP",
     "multisampling",
     "Rasterization",
     "SFLOAT",
@@ -93,6 +94,7 @@
     "subresource",
     "SWAPCHAIN",
     "Swapchains",
+    "unnormalized",
     "VKAPI"
   ],
   "cSpell.ignoreWords": ["Multisample", "subpasses"]

@@ -204,9 +204,11 @@ private:
     VkImage textureImage;
     VkDeviceMemory textureImageMemory;
     VkImageView textureImageView;
+    VkSampler sampler;
 
     void createTextureImage();
     void createTextureImageView();
+    void createImageSampler();
     void create2DImage( int width, int height, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkImage& image, VkDeviceMemory& memory );
     void transitionImageLayout( VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout );
     void copyBufferToImage( VkBuffer buffer, VkImage image, uint32_t width, uint32_t height  );

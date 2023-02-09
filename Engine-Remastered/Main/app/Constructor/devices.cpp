@@ -60,7 +60,7 @@ bool HelloTriangleApplication::isDeviceSuitable( VkPhysicalDevice device ) {
         if ( !details.formats.empty() && !details.presentMode.empty() ) { swapChainAdequate = true; }
     }
 
-    return indicies.isComplete() && extensionsSupported && swapChainAdequate;
+    return indicies.isComplete() && extensionsSupported && swapChainAdequate && deviceFeatures.samplerAnisotropy; 
 }
 
 bool HelloTriangleApplication::checkDeviceExtensionSupport(VkPhysicalDevice device) {
@@ -102,7 +102,10 @@ void HelloTriangleApplication::createLogicalDevice() {
     queueCreateInfo.queueCount = 1;
 
 
-    VkPhysicalDeviceFeatures deviceFeatures = { .fillModeNonSolid = VK_TRUE };
+    VkPhysicalDeviceFeatures deviceFeatures = { 
+        .fillModeNonSolid = VK_TRUE,
+        .samplerAnisotropy = VK_TRUE 
+    };
     //  specify the features you want
 
     VkDeviceCreateInfo createInfo{};

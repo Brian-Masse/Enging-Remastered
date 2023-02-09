@@ -58,6 +58,7 @@ void HelloTriangleApplication:: initVulkan()
     createCommandPool();
     createTextureImage();
     createTextureImageView();
+    createImageSampler();
     createDepthResources();
     createVertexBuffer();
     createIndexBuffer();
@@ -230,6 +231,8 @@ void HelloTriangleApplication::cleanup()
     
     cleanupSwapChain();
 
+    vkDestroySampler(device, sampler, nullptr);
+    vkDestroyImageView(device, textureImageView, nullptr);
     vkDestroyImage(device, textureImage, nullptr);
     vkFreeMemory(device, textureImageMemory, nullptr);
 
