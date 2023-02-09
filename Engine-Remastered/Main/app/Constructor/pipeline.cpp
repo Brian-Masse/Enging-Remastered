@@ -18,29 +18,19 @@
 
 // dependencies
 #include "../app.h"
+#include "../proxy.h"
 
 using namespace std;
 
 
 //loading the binary SPV shader files in
 vector<char> readFile(const string& fileName) {
+    
+    string pathToShaders = "Main/app/GraphicsPipeline/SPVFiles/";
 
-    ostringstream pathName;
+    ifstream file( getAbsoluteDirectory(pathToShaders, fileName), ios::ate | ios::binary);
 
-    char buf [PATH_MAX];
-    uint32_t bufSize = PATH_MAX;
-    if ( _NSGetExecutablePath(buf, &bufSize) != 0 ) { throw runtime_error("error getting executable path"); }
-
-    uint32_t bufLength = strlen(buf);
-    *(buf + bufLength - 3) = '\0'; 
-
-    pathName << buf << "../Engine-Remastered/main/app/GraphicsPipeline/SPVFiles/" << fileName;
-
-    ifstream file(pathName.str(), ios::ate | ios::binary);
-
-    ostringstream oss;
-    oss << "Failed to open file!!: " << pathName.str() << " from CWD: " << std::filesystem::current_path();
-    if (!file.is_open()) { throw runtime_error( oss.str());}
+    if (!file.is_open()) { throw runtime_error( "Failed to Open File!");}
 
     //will read the file from the bottom, and create a buffer based on length;
     size_t fileSize = (size_t) file.tellg();
@@ -130,10 +120,10 @@ void HelloTriangleApplication::createGraphicsPipeline() {
     rasterizer.sType = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
     rasterizer.depthClampEnable = VK_FALSE;             //discard items outside of frame
     rasterizer.rasterizerDiscardEnable = VK_FALSE;      //don't ignore output of rasterizer
-    rasterizer.polygonMode = VK_POLYGON_MODE_LINE;
+    rasterizer.polygonMode = VK_POLYGON_MODE_FILL;
     rasterizer.lineWidth = 1.0f;
-
     // rasterizer.cullMode = VK_CULL_MODE_BACK_BIT;
+    rasterizer.cullMode = VK_CULL_MODE_NONE;
     rasterizer.frontFace = VK_FRONT_FACE_CLOCKWISE;
     rasterizer.depthBiasEnable = VK_FALSE;
 
@@ -169,6 +159,15 @@ void HelloTriangleApplication::createGraphicsPipeline() {
     colorBlending.blendConstants[2] = 0.0f; // Optional
     colorBlending.blendConstants[3] = 0.0f; // Optional
 
+    VkPipelineDepthStencilStateCreateInfo depthStencil = {};
+    depthStencil.sType = VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;
+    depthStencil.depthTestEnable = VK_TRUE;
+    depthStencil.depthWriteEnable = VK_TRUE;
+    depthStencil.depthCompareOp = VK_COMPARE_OP_GREATER;
+    depthStencil.depthBoundsTestEnable = VK_FALSE;
+    depthStencil.stencilTestEnable = VK_FALSE;
+
+
 
     //MARK: Layout 
     VkPushConstantRange pushConstantRange = {};
@@ -198,7 +197,7 @@ void HelloTriangleApplication::createGraphicsPipeline() {
     createInfo.pViewportState = &viewPortCreateInfo;
     createInfo.pRasterizationState = &rasterizer;
     createInfo.pMultisampleState = &multisampling;
-    createInfo.pDepthStencilState = nullptr;
+    createInfo.pDepthStencilState = &depthStencil;
     createInfo.pColorBlendState = &colorBlending;
     createInfo.pDynamicState = &dynamicState;
 

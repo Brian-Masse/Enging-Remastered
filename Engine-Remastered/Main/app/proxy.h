@@ -1,3 +1,6 @@
+#ifndef PROXY_H
+#define PROXY_H
+
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
@@ -14,9 +17,10 @@
 
 using namespace std;
 
-
-vector<char> readFile(const string& fileName);
+string getAbsoluteDirectory( string pathFromEntry, string fileName );
 
 VkResult CreateDebugUtilsMessengerEXT(VkInstance, const VkDebugUtilsMessengerCreateInfoEXT*, const VkAllocationCallbacks*, VkDebugUtilsMessengerEXT*);
 
 void DestroyDebugUtilsMessengerEXT(VkInstance, VkDebugUtilsMessengerEXT, const VkAllocationCallbacks*);
+
+#endif

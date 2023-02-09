@@ -30,7 +30,7 @@ void HelloTriangleApplication::createCommandPool() {
 
 }
 
-void HelloTriangleApplication::createCommandBuffer() {
+void HelloTriangleApplication::createCommandBuffer( VkCommandBuffer& buffer) {
 
     VkCommandBufferAllocateInfo allocInfo = {};
     allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
@@ -38,9 +38,39 @@ void HelloTriangleApplication::createCommandBuffer() {
     allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY; //can be put into the queue directly; cannot be called form other command buffers
     allocInfo.commandBufferCount = 1;
 
-    VkResult result = vkAllocateCommandBuffers(device, &allocInfo, &commandBuffer);
+    VkResult result = vkAllocateCommandBuffers(device, &allocInfo, &buffer);
     if (result != VK_SUCCESS) { throw runtime_error("Failed to create CommandBuffer"); }
 
+}
+
+VkCommandBuffer HelloTriangleApplication::beginSingleTimeCommands() {
+
+    VkCommandBuffer buffer;
+    createCommandBuffer( buffer );
+
+
+    VkCommandBufferBeginInfo beginInfo = {};
+    beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
+    beginInfo.flags = 0;
+
+    VkResult result = vkBeginCommandBuffer(buffer, &beginInfo);
+    if (result != VK_SUCCESS) { throw runtime_error("Failed to begin command buffer recording"); }
+
+    return buffer;
+}
+
+VkCommandBuffer HelloTriangleApplication::endSingleTimeCommands(VkCommandBuffer commandBuffer) {
+    vkEndCommandBuffer(commandBuffer);
+
+    VkSubmitInfo submitInfo = {};
+    submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
+    submitInfo.commandBufferCount = 1;
+    submitInfo.pCommandBuffers = &commandBuffer;
+
+    vkQueueSubmit(graphicsQueue, 1, &submitInfo, VK_NULL_HANDLE);
+    vkQueueWaitIdle(graphicsQueue);
+
+    vkFreeCommandBuffers(device, commandPool, 1, &commandBuffer);
 }
 
 void HelloTriangleApplication::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex) {
@@ -50,7 +80,7 @@ void HelloTriangleApplication::recordCommandBuffer(VkCommandBuffer commandBuffer
     beginInfo.flags = 0;
 
     VkResult result = vkBeginCommandBuffer(commandBuffer, &beginInfo);
-    if (result != VK_SUCCESS) { throw runtime_error("Failed to begin command buffer recording"); }
+    if (result != VK_SUCCESS) { throw runtime_error("Failed to begin command buffer recording"); }    
 
     VkRenderPassBeginInfo renderPassBeginInfo = {};
     renderPassBeginInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;

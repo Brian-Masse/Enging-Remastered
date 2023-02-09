@@ -22,22 +22,19 @@ using namespace std;
 
 //MARK: Proxy Functions
 
-// //loading the binary SPV shader files in
-// vector<char> readFile(const string& fileName) {
-//     ifstream file(fileName, ios::ate | ios::binary);
+string getAbsoluteDirectory( string pathFromEntry, string fileName ) {
+    ostringstream pathName;
+    char buf [PATH_MAX];
+    uint32_t bufSize = PATH_MAX;
+    if ( _NSGetExecutablePath(buf, &bufSize) != 0 ) { throw runtime_error("error getting executable path"); }
 
-//     if (!file.is_open()) { throw runtime_error( "Failed to open the file" );}
+    uint32_t bufLength = strlen(buf);
+    *(buf + bufLength - 3) = '\0'; 
 
-//     //will read the file from the bottom, and create a buffer based on length;
-//     size_t fileSize = (size_t) file.tellg();
-//     vector<char> buffer(fileSize);
+    pathName << buf << "../Engine-Remastered/" << pathFromEntry << fileName;
 
-//     file.seekg(0);
-//     file.read( buffer.data(), fileSize );
-
-//     file.close();
-//     return buffer;
-// }
+    return pathName.str();
+}
 
 //The function to create a messenger is in an extension, this function safely retrieves it
 VkResult CreateDebugUtilsMessengerEXT(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pDebugMessenger) {

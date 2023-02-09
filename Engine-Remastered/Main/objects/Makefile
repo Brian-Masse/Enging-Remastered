@@ -9,7 +9,7 @@ MAIN_OBJ_FILES := $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(MAIN_FILES))
 
 main: ${MAIN_OBJ_FILES}
 
-${OBJ_DIR}/%.o: %.cpp ../VertexHandler/vertexReader.h ../objects/object.h ${APP_H_DEPENDENCIES} app.h ${MAIN_FILES}
+${OBJ_DIR}/%.o: %.cpp ../VertexHandler/vertexReader.h object.h ${MAIN_FILES}
 	@${CC} ${FLAGS} ${INCLUDE} ${LIBRARIES} -c $< -o $@
 
 

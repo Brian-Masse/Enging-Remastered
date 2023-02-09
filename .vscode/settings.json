@@ -87,6 +87,7 @@
     "multisampling",
     "Rasterization",
     "SFLOAT",
+    "stbi",
     "stofloat",
     "subpass",
     "subresource",

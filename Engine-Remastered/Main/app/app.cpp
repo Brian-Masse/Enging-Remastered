@@ -56,9 +56,12 @@ void HelloTriangleApplication:: initVulkan()
     createGraphicsPipeline();
     createFrameBuffers();
     createCommandPool();
+    createTextureImage();
+    createTextureImageView();
+    createDepthResources();
     createVertexBuffer();
     createIndexBuffer();
-    createCommandBuffer();
+    createCommandBuffer( commandBuffer );
     createSyncFunctions();
 }
 
@@ -226,6 +229,9 @@ void HelloTriangleApplication::cleanup()
     if (enableValidationLayers) { DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr); }
     
     cleanupSwapChain();
+
+    vkDestroyImage(device, textureImage, nullptr);
+    vkFreeMemory(device, textureImageMemory, nullptr);
 
     vkDestroySemaphore(device, imageAvailableSemaphore, nullptr);
     vkDestroySemaphore(device, renderFinishedSemaphore, nullptr);

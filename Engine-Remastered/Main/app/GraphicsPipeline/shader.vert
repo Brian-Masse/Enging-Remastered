@@ -31,9 +31,9 @@ void main() {
     float perc = proj / vertexNormalMagnitude;
 
 
-    float x = (inPosition.x / 1.5) - push.cameraPos.x;
-    float y = (inPosition.y / 1.5) - push.cameraPos.y;
-    float z = (inPosition.z / 1.5) - push.cameraPos.z;
+    float x = (inPosition.x / 1.8) - push.cameraPos.x;
+    float y = (inPosition.y / 1.8) - push.cameraPos.y;
+    float z = (inPosition.z / 1.8) - push.cameraPos.z;
 
     float yf = (n * y) / z;
     float xf = (n * x) / z;

@@ -1,4 +1,5 @@
 #ifndef APP_H
+#define APP_H
 
 // Libs
 #define GLFW_INCLUDE_VULKAN
@@ -26,10 +27,10 @@
 #include <sstream>
 
 #include "proxy.h"
-#include "Buffers/vertexBuffer.h"
 #include "../objects/object.h"
 
 using namespace std;
+using namespace glm;
 
 
 
@@ -163,7 +164,9 @@ private:
     VkCommandBuffer commandBuffer;
 
     void createCommandPool();
-    void createCommandBuffer();
+    void createCommandBuffer(VkCommandBuffer& buffer);
+    VkCommandBuffer beginSingleTimeCommands();
+    VkCommandBuffer endSingleTimeCommands(VkCommandBuffer commandBuffer);
     void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
 
     //MARK: Draw
@@ -182,89 +185,40 @@ private:
     void createBuffer( VkDeviceSize size, VkBufferUsageFlags flags, VkMemoryPropertyFlags memFlags, VkBuffer& buffer, VkDeviceMemory& bufferMemory );
     void copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
     uint32_t findMemoryType( uint32_t typeFilter, VkMemoryPropertyFlags properties );
-
-    void mapVertices(VkDeviceSize size, VkDeviceMemory& bufferMemory, const void *);
+    void mapBuffer(VkDeviceSize size, VkDeviceMemory& bufferMemory, const void *);
     
     double temp = 0;
 
-    // std::vector<Vertex> vertices;
-    //  = {
-    //     {{-0.5f, -0.5f, 0.5f}, {1.0f, 0.0f, 0.0f}},
-    //     {{0.5f, -0.5f, 0.5f}, {1.0f, 0.0f, 0.0f}},
-    //     {{0.5f, 0.5f, 0.5f}, {1.0f, 0.0f, 0.0f}},
-    //     {{-0.5f, 0.5f, 0.5f}, {1.0f, 0.0f, 0.0f}}
-    // };
+    
+    vector<EngineObject::Vertex> vertices;
+    vector<uint16_t> indices;
 
-    vector< EngineObject::Vertex> vertices{
- 
-      // left face (white)
-      {{-.5f, -.5f, -.5f}, {.9f, .9f, .9f}},
-      {{-.5f, .5f, .5f}, {.9f, .9f, .9f}},
-      {{-.5f, -.5f, .5f}, {.9f, .9f, .9f}},
-      {{-.5f, -.5f, -.5f}, {.9f, .9f, .9f}},
-      {{-.5f, .5f, -.5f}, {.9f, .9f, .9f}},
-      {{-.5f, .5f, .5f}, {.9f, .9f, .9f}},
- 
-      // right face (yellow)
-      {{.5f, -.5f, -.5f}, {.8f, .8f, .1f}},
-      {{.5f, .5f, .5f}, {.8f, .8f, .1f}},
-      {{.5f, -.5f, .5f}, {.8f, .8f, .1f}},
-      {{.5f, -.5f, -.5f}, {.8f, .8f, .1f}},
-      {{.5f, .5f, -.5f}, {.8f, .8f, .1f}},
-      {{.5f, .5f, .5f}, {.8f, .8f, .1f}},
- 
-      // top face (orange, remember y axis points down)
-      {{-.5f, -.5f, -.5f}, {.9f, .6f, .1f}},
-      {{.5f, -.5f, .5f}, {.9f, .6f, .1f}},
-      {{-.5f, -.5f, .5f}, {.9f, .6f, .1f}},
-      {{-.5f, -.5f, -.5f}, {.9f, .6f, .1f}},
-      {{.5f, -.5f, -.5f}, {.9f, .6f, .1f}},
-      {{.5f, -.5f, .5f}, {.9f, .6f, .1f}},
- 
-      // bottom face (red)
-      {{-.5f, .5f, -.5f}, {.8f, .1f, .1f}},
-      {{.5f, .5f, .5f}, {.8f, .1f, .1f}},
-      {{-.5f, .5f, .5f}, {.8f, .1f, .1f}},
-      {{-.5f, .5f, -.5f}, {.8f, .1f, .1f}},
-      {{.5f, .5f, -.5f}, {.8f, .1f, .1f}},
-      {{.5f, .5f, .5f}, {.8f, .1f, .1f}},
- 
-      // nose face (blue)
-      {{-.5f, -.5f, 0.5f}, {.1f, .1f, .8f}},
-      {{.5f, .5f, 0.5f}, {.1f, .1f, .8f}},
-      {{-.5f, .5f, 0.5f}, {.1f, .1f, .8f}},
-      {{-.5f, -.5f, 0.5f}, {.1f, .1f, .8f}},
-      {{.5f, -.5f, 0.5f}, {.1f, .1f, .8f}},
-      {{.5f, .5f, 0.5f}, {.1f, .1f, .8f}},
- 
-      // tail face (green)
-      {{-.5f, -.5f, -0.5f}, {.1f, .8f, .1f}},
-      {{.5f, .5f, -0.5f}, {.1f, .8f, .1f}},
-      {{-.5f, .5f, -0.5f}, {.1f, .8f, .1f}},
-      {{-.5f, -.5f, -0.5f}, {.1f, .8f, .1f}},
-      {{.5f, -.5f, -0.5f}, {.1f, .8f, .1f}},
-      {{.5f, .5f, -0.5f}, {.1f, .8f, .1f}},
- 
-    };
-
-    void prepareVertices();
-
-
-    //MARK: index buffer
     VkBuffer indexBuffer;
     VkDeviceMemory indexBufferMemory;
 
     void createIndexBuffer();
+    void prepareVertices();
 
-    vector<uint16_t> indices;
-    // = {
-    //     0, 1, 2, 3,
-    //     4, 5, 6, 7,
-    //     8, 9, 10, 11,
-    //     12, 13, 14, 15,
-    //     16, 17, 18, 19,
-    //     20, 21, 22, 23,
-    // };
+    //MARK: Image Sampling:
+
+    VkImage textureImage;
+    VkDeviceMemory textureImageMemory;
+    VkImageView textureImageView;
+
+    void createTextureImage();
+    void createTextureImageView();
+    void create2DImage( int width, int height, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkImage& image, VkDeviceMemory& memory );
+    void transitionImageLayout( VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout );
+    void copyBufferToImage( VkBuffer buffer, VkImage image, uint32_t width, uint32_t height  );
+
+
+    //MARK: DepthBuffer:
+    VkImage depthImage;
+    VkDeviceMemory depthImageMemory;
+    VkImageView depthImageView;
+
+    void createDepthResources();
+    VkFormat findSupportedFormat( const vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features );
 
 
     // MARK: Mainloop

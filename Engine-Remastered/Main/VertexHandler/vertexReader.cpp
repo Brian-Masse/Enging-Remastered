@@ -18,8 +18,8 @@
 #include <optional>
 #include <set>
 
-// #include "../app/Buffers/vertexBuffer.h"
 #include "vertexReader.h"
+#include "../app/proxy.h"
 
 
 using namespace std;
@@ -28,17 +28,8 @@ using namespace std;
 
 ifstream openFile(string fileName) {
     ifstream inData;
-
-    ostringstream pathName;
-    char buf [PATH_MAX];
-    uint32_t bufSize = PATH_MAX;
-    if ( _NSGetExecutablePath(buf, &bufSize) != 0 ) { throw runtime_error("error getting executable path"); }
-
-    uint32_t bufLength = strlen(buf);
-    *(buf + bufLength - 3) = '\0'; 
-
-    pathName << buf << "../Engine-Remastered/VertexMeshes/" << fileName;
-    inData.open(pathName.str());
+    
+    inData.open( getAbsoluteDirectory( "VertexMeshes/", fileName) );
     if (!inData) { throw runtime_error("could not open file"); }
 
     return inData;

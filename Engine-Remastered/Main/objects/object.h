@@ -32,6 +32,7 @@ class EngineObject {
         glm::vec3 pos;
         glm::vec3 normal;
         glm::vec3 color;
+        
 
         static VkVertexInputBindingDescription getBindingDescription() {
             VkVertexInputBindingDescription bindingDescription = {};
