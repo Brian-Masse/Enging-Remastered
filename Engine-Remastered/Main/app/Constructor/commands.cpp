@@ -93,7 +93,11 @@ void EngineRemastered::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32
     vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, 
         pipelineLayout, 0, 1, 
         &descriptorSets[currentFrame], 0, nullptr);
-    // vkCmdPushConstants(commandBuffer, pipelineLayout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof( PushConstantData ), &pushData.cameraPos );
+
+
+    vkCmdPushConstants(commandBuffer, pipelineLayout, 
+        VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof( TransformPushConstants ),
+        &objects[0].transform );
 
     for (auto& object: objects) { object.draw(commandBuffer); }
     vkCmdEndRenderPass(commandBuffer);

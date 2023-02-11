@@ -24,6 +24,11 @@
 #include "../universalConstructors/universalConstructors.h"
 
 using namespace std;
+using namespace glm;
+
+struct TransformPushConstants {
+    vec3 translation;
+};
 
 class EngineObject {
 
@@ -68,7 +73,6 @@ class EngineObject {
     };
 
     string fileName;
-
     DeviceInfo info;
     void init();
     void cleanup();
@@ -85,12 +89,14 @@ class EngineObject {
 
     VkImageView textureImageView;
 
-    private:
-
     VkBuffer vertexBuffer;
     VkBuffer indexBuffer;
     VkDeviceMemory vertexBufferMemory;
     VkDeviceMemory indexBufferMemory;
+
+    TransformPushConstants transform;
+
+    private:
 
     void extractVertices();
     void createVertexBuffer();

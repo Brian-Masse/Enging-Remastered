@@ -7,6 +7,10 @@ layout(location=1) in vec3 inColor;
 layout(location=2) in vec3 inNormal;
 layout(location=3) in vec2 inUV;
 
+layout(push_constant) uniform Push {
+    vec3 translation;
+} transform;
+
 layout(location = 0) out vec3 fragColor;
 layout(location = 1) out vec2 fragUV;
 
@@ -25,6 +29,8 @@ void main() {
     float ny = -inNormal.y;
     float nz = -inNormal.z;
 
+    float scale = 1.8;
+
     float vertexNormalMagnitude = sqrt( pow(nx, 2) + pow(ny, 2) + pow(nz, 2) );
     float LightNormalMagnitude = sqrt( pow(light.x, 2) + pow(light.y, 2) + pow(light.z, 2) );
 
@@ -33,9 +39,9 @@ void main() {
     float perc = proj / vertexNormalMagnitude;
 
 
-    float x = (inPosition.x / 1.8) - push.cameraPos.x;
-    float y = (inPosition.y / 1.8) - push.cameraPos.y;
-    float z = (inPosition.z / 1.8) - push.cameraPos.z;
+    float x = ((inPosition.x + transform.translation.x) / scale) - push.cameraPos.x;
+    float y = ((inPosition.y + transform.translation.y) / scale) - push.cameraPos.y;
+    float z = ((inPosition.z + transform.translation.z) / scale) - push.cameraPos.z;
 
     float yf = (n * y) / z;
     float xf = (n * x) / z;

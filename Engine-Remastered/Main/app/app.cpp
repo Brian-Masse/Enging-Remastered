@@ -26,7 +26,6 @@ using namespace std;
 void EngineRemastered::run()
 {
     initWindow();
-    prepareVertices();
     initVulkan();
     mainLoop();
     cleanup();
@@ -79,32 +78,6 @@ void EngineRemastered:: initVulkan()
     createSyncFunctions();
 }
 
-void EngineRemastered::prepareVertices() {
-
-    EngineObject::BufferInformation information = extractInformation("cube.ply");
-
-    // for ( auto& index: information.indexBuffer ) {
-    //     auto& pos = information.vertexBuffer[index].pos;
-    //     auto& normal = information.vertexBuffer[index].normal;
-
-    //     cout << index << ":    " << pos.x << ", " << pos.y << ", " << pos.z << endl;
-    //     cout << normal.x << ", " << normal.y << ", " << normal.z << endl;
-    // }
-
-    this->vertices = information.vertexBuffer;
-    this->indices = information.indexBuffer;
-
-    // this ->indices = {
-    //     1, 0, 2, 3,
-    //     5, 4, 6, 7,
-    //     9, 8, 10, 11,
-    //     // 13, 12, 14, 15,
-    //     // 16, 17, 18, 19,
-    //     // 20, 21, 22, 23,
-    // };
-
-}
-
 // MARK: Mainloop
 void EngineRemastered::mainLoop()
 {
@@ -112,7 +85,11 @@ void EngineRemastered::mainLoop()
 
         // temp++;
 
-        // double x = cos( temp / 100 ) / 2;
+        // double x = cos( temp / 50 ) / 2;
+
+        // objects[0].transform.translation.x = x;
+
+        
         // double y = sin( temp / 100 ) / 2;
         // double z = (cos( temp / 100 ) / 2) + 1.5;
 
@@ -244,12 +221,12 @@ void EngineRemastered::createObjects() {
     cube.init();
 
     icosphere.info = info;
-    icosphere.fileName = "Icosphere.ply";
+    icosphere.fileName = "icosphere.ply";
     icosphere.init();
 
 
     // objects.resize(1);
-    objects = { cube, icosphere };
+    objects = { cube, };
 
     // vector< int > ints;
     // ints = { 1 }; 

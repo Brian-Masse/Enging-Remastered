@@ -30,6 +30,8 @@ void EngineObject::init() {
     createTextureMaterials();   
     createVertexBuffer();
     createIndexBuffer();
+
+    transform.translation = { 0.25f, 0.25f, 0.0f };
 }
 
 void EngineObject::cleanup() {
@@ -105,7 +107,7 @@ void EngineObject::bind(VkCommandBuffer commandBuffer) {
 }
 
 void EngineObject::draw(VkCommandBuffer commandBuffer) {
-    // vkCmdDraw(commandBuffer, vertices.size(), 1, 0, 0);
-    vkCmdDrawIndexed(commandBuffer, indices.size(), 1, 0, 0, 0);
+    vkCmdDraw(commandBuffer, vertices.size(), 1, 0, 0);
+    // vkCmdDrawIndexed(commandBuffer, indices.size(), 1, 0, 0, 0);
 }
 
