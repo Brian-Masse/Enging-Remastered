@@ -44,7 +44,7 @@ vector<char> readFile(const string& fileName) {
 }
 
 //MARK: Pipeline
-void HelloTriangleApplication::createGraphicsPipeline() {
+void EngineRemastered::createGraphicsPipeline() {
 
     auto vertShaderCode = readFile("vert.spv");
     auto fragShaderCode = readFile("frag.spv");
@@ -215,7 +215,7 @@ void HelloTriangleApplication::createGraphicsPipeline() {
     vkDestroyShaderModule(device, fragShaderModule, nullptr);
 }
 
-VkShaderModule HelloTriangleApplication::createShaderModule( const vector<char>& code ) {
+VkShaderModule EngineRemastered::createShaderModule( const vector<char>& code ) {
     VkShaderModuleCreateInfo createInfo = {};
     createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
     createInfo.codeSize = code.size();
@@ -229,7 +229,7 @@ VkShaderModule HelloTriangleApplication::createShaderModule( const vector<char>&
 }
 
 //specify frame buffer attachments
-void HelloTriangleApplication::createRenderPass() {
+void EngineRemastered::createRenderPass() {
     // define dependencies
     VkSubpassDependency dependency{};
     dependency.srcSubpass = VK_SUBPASS_EXTERNAL; // subpass before or after depending on where it is defined

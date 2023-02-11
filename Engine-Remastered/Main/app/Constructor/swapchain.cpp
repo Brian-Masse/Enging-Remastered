@@ -15,11 +15,13 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+
 #include "../app.h"
+#include "../../universalConstructors/universalConstructors.h"
 
 //MARK: Swapchain
 
-SwapChainSupportDetails HelloTriangleApplication::querySwapChainSupport( VkPhysicalDevice device ) {
+SwapChainSupportDetails EngineRemastered::querySwapChainSupport( VkPhysicalDevice device ) {
     SwapChainSupportDetails details;
 
     vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, surface, &details.capabilities);
@@ -43,7 +45,7 @@ SwapChainSupportDetails HelloTriangleApplication::querySwapChainSupport( VkPhysi
 }
 
 //selecting an optimal surface Format for the swapchain
-VkSurfaceFormatKHR HelloTriangleApplication::chooseSwapSurfaceFormat( const vector<VkSurfaceFormatKHR>& availableFormats ) {
+VkSurfaceFormatKHR EngineRemastered::chooseSwapSurfaceFormat( const vector<VkSurfaceFormatKHR>& availableFormats ) {
     for (const auto& availableFormat: availableFormats) {
         if (availableFormat.format == VK_FORMAT_B8G8R8A8_SRGB && availableFormat.colorSpace == VK_COLORSPACE_SRGB_NONLINEAR_KHR) { // prefer to work with 32 bit SRGB
             return availableFormat;
@@ -52,14 +54,14 @@ VkSurfaceFormatKHR HelloTriangleApplication::chooseSwapSurfaceFormat( const vect
     return availableFormats[0]; // could be ranked, but this is just the first suitable one
 }
 
-VkPresentModeKHR HelloTriangleApplication::chooseSurfacePresentMode( const vector<VkPresentModeKHR>& availablePresentModes ) {
+VkPresentModeKHR EngineRemastered::chooseSurfacePresentMode( const vector<VkPresentModeKHR>& availablePresentModes ) {
     for ( const auto& availablePresentMode : availablePresentModes ) {
         if ( availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) { return availablePresentMode; } // this is less energy efficient, but avoid latency
     }
     return VK_PRESENT_MODE_FIFO_KHR;
 }
 
-VkExtent2D HelloTriangleApplication::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities) {
+VkExtent2D EngineRemastered::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities) {
     if (capabilities.currentExtent.width != numeric_limits<uint32_t>::max()) { return capabilities.currentExtent; }
     else {
         int width, height; 
@@ -78,7 +80,7 @@ VkExtent2D HelloTriangleApplication::chooseSwapExtent(const VkSurfaceCapabilitie
     }
 }
 
-void HelloTriangleApplication::createSwapChain() {
+void EngineRemastered::createSwapChain() {
     SwapChainSupportDetails details = querySwapChainSupport(physicalDevice);
 
     VkSurfaceFormatKHR format = chooseSwapSurfaceFormat(details.formats);
@@ -133,15 +135,15 @@ void HelloTriangleApplication::createSwapChain() {
     swapChainExtent = swapExtent;
 } 
 
-void HelloTriangleApplication::createImageViews() {
+void EngineRemastered::createImageViews() {
     swapChainImageViews.resize(swapChainImages.size());
     for (size_t i = 0; i < swapChainImages.size(); i++) {
 
-        swapChainImageViews[i] = createImageView( swapChainImages[i], swapChainImageFormat, VK_IMAGE_ASPECT_COLOR_BIT );
+        swapChainImageViews[i] = createImageView( info, swapChainImages[i], swapChainImageFormat, VK_IMAGE_ASPECT_COLOR_BIT );
     }
 }
 
-void HelloTriangleApplication::createFrameBuffers() {
+void EngineRemastered::createFrameBuffers() {
     swapChainFramebuffers.resize( swapChainImages.size() );
 
     for (size_t i = 0; i < swapChainImages.size(); i++) {
@@ -165,7 +167,7 @@ void HelloTriangleApplication::createFrameBuffers() {
     }
 }
 
-void HelloTriangleApplication::recreateSwapChain() {
+void EngineRemastered::recreateSwapChain() {
 
     int width = 0, height = 0;
     glfwGetFramebufferSize(window, &width, &height);
@@ -187,7 +189,7 @@ void HelloTriangleApplication::recreateSwapChain() {
 
 }
 
-void HelloTriangleApplication::cleanupSwapChain() {
+void EngineRemastered::cleanupSwapChain() {
 
     for (auto framebuffer : swapChainFramebuffers) {  vkDestroyFramebuffer(device, framebuffer, nullptr); }
     for (auto& imageView : swapChainImageViews) { vkDestroyImageView(device, imageView, nullptr); }

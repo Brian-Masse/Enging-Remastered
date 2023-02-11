@@ -28,6 +28,7 @@
 
 #include "proxy.h"
 #include "../objects/object.h"
+#include "../universalConstructors/universalConstructors.h"
 
 using namespace std;
 using namespace glm;
@@ -56,7 +57,7 @@ struct UniformConstantData {
 };
 
 
-class HelloTriangleApplication
+class EngineRemastered
 {
 public:
     void run();
@@ -95,7 +96,7 @@ private:
     void initWindow();
     void initVulkan();
     static void frameBufferResizeCallback(GLFWwindow* window, int width, int height) {
-        auto app = reinterpret_cast<HelloTriangleApplication*>(glfwGetWindowUserPointer(window));
+        auto app = reinterpret_cast<EngineRemastered*>(glfwGetWindowUserPointer(window));
         app->frameBufferResized = true;
     }
 
@@ -168,8 +169,8 @@ private:
 
     void createCommandPool();
     void createCommandBuffers();
-    VkCommandBuffer beginSingleTimeCommands();
-    VkCommandBuffer endSingleTimeCommands(VkCommandBuffer commandBuffer);
+    // VkCommandBuffer beginSingleTimeCommands();
+    // VkCommandBuffer endSingleTimeCommands(VkCommandBuffer commandBuffer);
     void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
 
     //MARK: Draw
@@ -199,10 +200,10 @@ private:
     void updateUniformBuffers(uint32_t currentImage);
     
 
-    void createBuffer( VkDeviceSize size, VkBufferUsageFlags flags, VkMemoryPropertyFlags memFlags, VkBuffer& buffer, VkDeviceMemory& bufferMemory );
+    // void createBuffer( VkDeviceSize size, VkBufferUsageFlags flags, VkMemoryPropertyFlags memFlags, VkBuffer& buffer, VkDeviceMemory& bufferMemory );
     void copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
-    uint32_t findMemoryType( uint32_t typeFilter, VkMemoryPropertyFlags properties );
-    void mapBuffer(VkDeviceSize size, VkDeviceMemory& bufferMemory, const void *);
+    // uint32_t findMemoryType( uint32_t typeFilter, VkMemoryPropertyFlags properties );
+    // void mapBuffer(VkDeviceSize size, VkDeviceMemory& bufferMemory, const void *);
     
     double temp = 0;
 
@@ -210,26 +211,21 @@ private:
     vector<EngineObject::Vertex> vertices;
     vector<uint16_t> indices;
 
+    vector<EngineObject> objects;
+    EngineObject cube;
+
+    void createObjects();
+
+    DeviceInfo info;
+
     VkBuffer indexBuffer;
     VkDeviceMemory indexBufferMemory;
 
     void createIndexBuffer();
     void prepareVertices();
 
-    //MARK: Image Sampling:
-
-    VkImage textureImage;
-    VkDeviceMemory textureImageMemory;
-    VkImageView textureImageView;
     VkSampler sampler;
-
-    void createTextureImage();
-    void createImageSampler();
-    VkImageView createImageView(VkImage& image, VkFormat format, VkImageAspectFlagBits aspectMask);
-    void create2DImage( int width, int height, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkImage& image, VkDeviceMemory& memory );
-    void transitionImageLayout( VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout );
-    void copyBufferToImage( VkBuffer buffer, VkImage image, uint32_t width, uint32_t height  );
-
+    VkSampler createImageSampler();
 
     //MARK: DepthBuffer:
     VkImage depthImage;

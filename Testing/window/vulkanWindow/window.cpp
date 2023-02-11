@@ -10,7 +10,7 @@ using namespace std;
 const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
 
-class HelloTriangleApplication
+class EngineRemastered
 {
 public:
     void run()
@@ -57,7 +57,7 @@ private:
 int main()
 {
 
-    HelloTriangleApplication app;
+    EngineRemastered app;
 
     printf("this is running in the wrong place!");
 

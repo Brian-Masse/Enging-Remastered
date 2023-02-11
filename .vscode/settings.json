@@ -79,6 +79,7 @@
     "concepts": "cpp",
     "filesystem": "cpp"
   },
+  "C_Cpp.enhancedColorization": "enabled",
   "cmake.configureOnOpen": false,
   "cSpell.words": [
     "commandbuffers",

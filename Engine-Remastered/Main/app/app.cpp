@@ -17,12 +17,13 @@
 #include <sstream>
 
 #include "app.h"
+#include "../universalConstructors/universalConstructors.h"
 #include "../VertexHandler/vertexReader.h"
 // #include "../objects/object.h"
 
 using namespace std;
 
-void HelloTriangleApplication::run()
+void EngineRemastered::run()
 {
     initWindow();
     prepareVertices();
@@ -32,7 +33,7 @@ void HelloTriangleApplication::run()
 }
 
 // MARK: Initialization
-void HelloTriangleApplication::initWindow()
+void EngineRemastered::initWindow()
 {
     glfwInit();
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API); // prevents it from initializing OpenGL
@@ -43,7 +44,7 @@ void HelloTriangleApplication::initWindow()
     glfwSetFramebufferSizeCallback(window, frameBufferResizeCallback);
 }
 
-void HelloTriangleApplication:: initVulkan()
+void EngineRemastered:: initVulkan()
 {
     createInstance();
     createSurface();
@@ -51,13 +52,22 @@ void HelloTriangleApplication:: initVulkan()
     pickPhysicalDevice();
     createLogicalDevice();
     createSwapChain();
-    createImageViews();
     createRenderPass();
     createDescriptorSetLayout();
     createGraphicsPipeline();
     createCommandPool();
-    createTextureImage();
-    createImageSampler();
+
+    info.device = device;
+    info.physicalDevice = physicalDevice;
+    info.commandPool = commandPool;
+    info.graphicsQueue = graphicsQueue;
+
+    sampler = createImageSampler();
+    createObjects();
+
+
+    createImageViews();
+    
     createDepthResources();
     createFrameBuffers();   
     createVertexBuffer();
@@ -69,7 +79,7 @@ void HelloTriangleApplication:: initVulkan()
     createSyncFunctions();
 }
 
-void HelloTriangleApplication::prepareVertices() {
+void EngineRemastered::prepareVertices() {
 
     EngineObject::BufferInformation information = extractInformation("cube.ply");
 
@@ -96,7 +106,7 @@ void HelloTriangleApplication::prepareVertices() {
 }
 
 // MARK: Mainloop
-void HelloTriangleApplication::mainLoop()
+void EngineRemastered::mainLoop()
 {
     while (!glfwWindowShouldClose(window)) {
 
@@ -137,7 +147,7 @@ void HelloTriangleApplication::mainLoop()
 }
 
 //returns a list of extensions
-vector<const char *> HelloTriangleApplication::getRequiredExtensions() {
+vector<const char *> EngineRemastered::getRequiredExtensions() {
     uint32_t glfwExtensionCount = 0;
     const char** glfwExtensions;
     glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
@@ -154,7 +164,7 @@ vector<const char *> HelloTriangleApplication::getRequiredExtensions() {
     return extensions;
 }
 
-void HelloTriangleApplication::createInstance()
+void EngineRemastered::createInstance()
 {
     if (enableValidationLayers && !checkValidationLayerSupport()) { throw std::runtime_error("validation layers requested, but not available!"); }
     
@@ -198,12 +208,12 @@ void HelloTriangleApplication::createInstance()
 }
 
 //MARK: Window
-void HelloTriangleApplication::createSurface() {
+void EngineRemastered::createSurface() {
     VkResult result = glfwCreateWindowSurface(instance, window, nullptr, &surface);
     if (result != VK_SUCCESS) { throw runtime_error("Failed to create the surface"); }
 }
 
-QueueFamilyIndicies HelloTriangleApplication::findQueueFamilies( VkPhysicalDevice device ) {
+QueueFamilyIndicies EngineRemastered::findQueueFamilies( VkPhysicalDevice device ) {
     QueueFamilyIndicies indicies;
 
     uint32_t queueFamilyCount;
@@ -227,25 +237,75 @@ QueueFamilyIndicies HelloTriangleApplication::findQueueFamilies( VkPhysicalDevic
     return indicies;
 }
 
+void EngineRemastered::createObjects() {
+
+    cube.info = info;
+    cube.init();
+
+
+    // objects.resize(1);
+    objects = { cube };
+
+    // vector< int > ints;
+    // ints = { 1 }; 
+
+}
+
+VkSampler EngineRemastered::createImageSampler() {
+
+    VkSamplerCreateInfo samplerInfo = {};
+    samplerInfo.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;
+    samplerInfo.magFilter = VK_FILTER_LINEAR; // oversampling
+    samplerInfo.minFilter = VK_FILTER_LINEAR; // under-sampling
+
+    samplerInfo.addressModeU = VK_SAMPLER_ADDRESS_MODE_REPEAT; // how the image is handled outside of the image bounds
+    samplerInfo.addressModeV = VK_SAMPLER_ADDRESS_MODE_REPEAT; // can be specifed on a per-vertex basis
+    samplerInfo.addressModeW = VK_SAMPLER_ADDRESS_MODE_REPEAT;
+
+    samplerInfo.borderColor = VK_BORDER_COLOR_INT_OPAQUE_BLACK;
+    samplerInfo.unnormalizedCoordinates = VK_FALSE;
+    samplerInfo.compareEnable = VK_FALSE;
+    samplerInfo.compareOp = VK_COMPARE_OP_ALWAYS;
+
+    samplerInfo.mipmapMode = VK_SAMPLER_MIPMAP_MODE_LINEAR;
+    samplerInfo.mipLodBias = 0.0f;
+    samplerInfo.minLod = 0.0f;
+    samplerInfo.maxLod = 0.0f;
+
+    VkPhysicalDeviceProperties properties;
+    vkGetPhysicalDeviceProperties(physicalDevice, &properties);
+
+    samplerInfo.anisotropyEnable = VK_TRUE;
+    samplerInfo.maxAnisotropy = properties.limits.maxSamplerAnisotropy;
+
+    VkSampler sampler;
+    VkResult result = vkCreateSampler(device, &samplerInfo, nullptr, &sampler);
+    if (result != VK_SUCCESS) { throw runtime_error( "Unable to create the texture Sampler" ); }
+    return sampler;
+
+}
+
 // MARK: Cleanup
-void HelloTriangleApplication::cleanup()
+void EngineRemastered::cleanup()
 {
     if (enableValidationLayers) { DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr); }
     
     cleanupSwapChain();
 
-    vkDestroySampler(device, sampler, nullptr);
-    vkDestroyImageView(device, textureImageView, nullptr);
-    vkDestroyImage(device, textureImage, nullptr);
-    vkFreeMemory(device, textureImageMemory, nullptr);
-
     vkDestroyImage(device, depthImage, nullptr);
+    vkDestroyImageView(device, depthImageView, nullptr);
     vkFreeMemory(device, depthImageMemory, nullptr);
 
     for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
         vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
         vkDestroyFence(device, inFlightFences[i], nullptr);
+    }
+
+    vkDestroySampler(device, sampler, nullptr);
+
+    for (auto& object : objects) {
+        object.cleanup();
     }
 
     vkDestroyBuffer(device, vertexBuffer, nullptr);

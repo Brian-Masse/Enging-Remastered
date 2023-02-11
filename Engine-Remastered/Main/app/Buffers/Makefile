@@ -11,6 +11,6 @@ MAIN_OBJ_FILES := $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(MAIN_FILES))
 main: ${MAIN_OBJ_FILES}
 
 	
-${OBJ_DIR}/%.o: %.cpp ${APP_H_DEPENDENCIES} ../app.h ${MAIN_FILES}
+${OBJ_DIR}/%.o: %.cpp ${UNIVERSAL} ${APP_H_DEPENDENCIES} ../../universalConstructors/universalConstructors.h ../app.h ${MAIN_FILES}
 	@echo "remaking buffers"
 	@${CC} ${FLAGS} ${INCLUDE} ${LIBRARIES} -c $< -o $@

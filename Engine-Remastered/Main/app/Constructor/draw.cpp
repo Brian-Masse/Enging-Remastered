@@ -21,7 +21,7 @@
 #include "../app.h"
 
 
-void HelloTriangleApplication::createSyncFunctions() {
+void EngineRemastered::createSyncFunctions() {
     imageAvailableSemaphores.resize( MAX_FRAMES_IN_FLIGHT );
     renderFinishedSemaphores.resize( MAX_FRAMES_IN_FLIGHT );
     inFlightFences.resize( MAX_FRAMES_IN_FLIGHT );
@@ -42,7 +42,7 @@ void HelloTriangleApplication::createSyncFunctions() {
     }
 }
 
-void HelloTriangleApplication::drawFrame() {
+void EngineRemastered::drawFrame() {
 
     vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
 

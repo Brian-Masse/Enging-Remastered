@@ -19,6 +19,8 @@ export LIBRARIES := -L${MAIN_PWD}/../dependencies/library ${MAIN_PWD}/../depende
 #//MARK: DEPENDENCIES
 
 export APP_H_DEPENDENCIES := ${APP}/proxy.h ${APP}/../objects/object.h
+export UNIVERSAL := 
+# /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/universalConstructors.h
 
 #//MARK: LINKING VARIABLES
 
@@ -27,6 +29,7 @@ OBJ_FILES := $(wildcard ${OBJ_DIR}/*.o)
 #//MARK: MAIN
 app: make
 	@echo "Starting Linker"
+
 	@${CC} ${FLAGS} ${INCLUDE} ${LIBRARIES} ${OBJ_FILES} -o app
 	@echo "Linking finished successfully!"
 	
@@ -35,6 +38,7 @@ make:
 	@echo "Starting Build Tasks"
 	@cd ../Engine-Remastered/Main && $(MAKE)
 	@cd ../Engine-Remastered/Main/objects && $(MAKE)
+	@cd ../Engine-Remastered/Main/universalConstructors && $(MAKE)
 	@cd ../Engine-Remastered/Main/app && $(MAKE)
 	@cd ../Engine-Remastered/Main/app/Buffers && $(MAKE)
 	@cd ../Engine-Remastered/Main/app/Constructor && $(MAKE)

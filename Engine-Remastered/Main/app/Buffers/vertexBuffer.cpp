@@ -22,7 +22,7 @@ using namespace std;
 using namespace glm;
 
 
-void HelloTriangleApplication::createVertexBuffer() {
+void EngineRemastered::createVertexBuffer() {
     VkDeviceSize size = sizeof( vertices[0] ) * vertices.size();
 
     VkBufferUsageFlags stagingUsageFlags = VK_BUFFER_USAGE_TRANSFER_SRC_BIT;
@@ -35,26 +35,26 @@ void HelloTriangleApplication::createVertexBuffer() {
     //instead, create an allocator, that allocates space for 'one big object', then use the offset perimeters in functions to subdivide this allocation 
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingMemory;
-    createBuffer(size, stagingUsageFlags, stagingMemoryFlags, stagingBuffer, stagingMemory);
-    mapBuffer(size, stagingMemory, vertices.data());
+    createBuffer(info, size, stagingUsageFlags, stagingMemoryFlags, stagingBuffer, stagingMemory);
+    mapBuffer(info, size, stagingMemory, vertices.data());
 
-    createBuffer(size, usageFlags, memoryFlags, vertexBuffer, vertexBufferMemory);
+    createBuffer(info, size, usageFlags, memoryFlags, vertexBuffer, vertexBufferMemory);
     copyBuffer(stagingBuffer, vertexBuffer, size);  //copy the vertex data from CPU-accessible memory to optimized GPU only memory
 
     vkDestroyBuffer(device, stagingBuffer, nullptr);
     vkFreeMemory(device, stagingMemory, nullptr);
 }
 
-void HelloTriangleApplication::createIndexBuffer() {
+void EngineRemastered::createIndexBuffer() {
     VkDeviceSize size = sizeof( indices[0] ) * indices.size();
 
     VkBuffer stagingBuffer;
     VkDeviceMemory stagingBufferMemory;
-    createBuffer(size, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
+    createBuffer(info, size, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, stagingBuffer, stagingBufferMemory);
 
-    mapBuffer(size, stagingBufferMemory, indices.data());
+    mapBuffer(info, size, stagingBufferMemory, indices.data());
     
-    createBuffer(size, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, indexBuffer, indexBufferMemory);
+    createBuffer(info, size, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, indexBuffer, indexBufferMemory);
     copyBuffer(stagingBuffer, indexBuffer, size);
 
     vkDestroyBuffer(device, stagingBuffer, nullptr);

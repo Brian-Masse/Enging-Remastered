@@ -34,7 +34,7 @@ static vector<char> readFile(const string& fileName) {
 using namespace std;
 
 // MARK: Application
-class HelloTriangleApplication
+class EngineRemastered
 {
 public:
     void run()
@@ -744,7 +744,7 @@ private:
 // MARK: Main
 int main()
 {
-    HelloTriangleApplication app;
+    EngineRemastered app;
 
     try { app.run(); }
 

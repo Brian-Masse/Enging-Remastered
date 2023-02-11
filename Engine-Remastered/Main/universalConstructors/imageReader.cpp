@@ -20,51 +20,11 @@
 #include <optional>
 #include <set>
 
-#include "../app.h"
-#include "../proxy.h"
+#include "universalConstructors.h"
 
-void HelloTriangleApplication::createTextureImage() {
+using namespace std;
 
-    int textureWidth, textureHeight, textureChannels;
-
-    string pathToDir = "Textures/";
-    string fullPath = getAbsoluteDirectory(pathToDir, "base.png");
-
-    const char* url =  fullPath.c_str();
-
-    stbi_uc* pixels = stbi_load(url, &textureWidth, &textureHeight, &textureChannels, STBI_rgb_alpha  );
-    VkDeviceSize imageSize = textureWidth * textureHeight * 4;
-
-    if (!pixels) { throw runtime_error("Failed to open Image!"); }
-
-    VkBuffer stagingBuffer;
-    VkDeviceMemory stagingBufferMemory;
-
-    VkBufferUsageFlags stagingBufferUsage = VK_BUFFER_USAGE_TRANSFER_SRC_BIT;
-    VkMemoryPropertyFlags stagingMemoryProperties = VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT;
-
-    createBuffer(imageSize, stagingBufferUsage, stagingMemoryProperties, stagingBuffer, stagingBufferMemory);
-    mapBuffer(imageSize, stagingBufferMemory, pixels);
-    stbi_image_free(pixels);
-
-    create2DImage( textureWidth, textureHeight, 
-        VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, 
-        VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT,  
-        textureImage, textureImageMemory );
-
-    //copy the staging buffer to VkImage
-
-    transitionImageLayout(textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
-    copyBufferToImage(stagingBuffer, textureImage, textureWidth, textureHeight);
-    transitionImageLayout(textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
-
-    vkDestroyBuffer(device, stagingBuffer, nullptr);
-    vkFreeMemory(device, stagingBufferMemory, nullptr);
-
-    textureImageView = createImageView( textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT );
-}
-
-VkImageView HelloTriangleApplication::createImageView(VkImage& image, VkFormat format, VkImageAspectFlagBits aspectMask) {
+VkImageView createImageView( DeviceInfo info, VkImage& image, VkFormat format, VkImageAspectFlagBits aspectMask) {
 
     VkImageViewCreateInfo viewInfo{};
     viewInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
@@ -78,47 +38,15 @@ VkImageView HelloTriangleApplication::createImageView(VkImage& image, VkFormat f
     viewInfo.subresourceRange.layerCount = 1;
 
     VkImageView imageView;
-    VkResult result = vkCreateImageView(device, &viewInfo, nullptr, &imageView);
+    VkResult result = vkCreateImageView(info.device, &viewInfo, nullptr, &imageView);
     if (result != VK_SUCCESS) { throw runtime_error( "Unable to Create Texture Image View" ); } 
 
     return imageView;
 }
 
-void HelloTriangleApplication::createImageSampler() {
-
-    VkSamplerCreateInfo samplerInfo = {};
-    samplerInfo.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;
-    samplerInfo.magFilter = VK_FILTER_LINEAR; // oversampling
-    samplerInfo.minFilter = VK_FILTER_LINEAR; // under-sampling
-
-    samplerInfo.addressModeU = VK_SAMPLER_ADDRESS_MODE_REPEAT; // how the image is handled outside of the image bounds
-    samplerInfo.addressModeV = VK_SAMPLER_ADDRESS_MODE_REPEAT; // can be specifed on a per-vertex basis
-    samplerInfo.addressModeW = VK_SAMPLER_ADDRESS_MODE_REPEAT;
-
-    samplerInfo.borderColor = VK_BORDER_COLOR_INT_OPAQUE_BLACK;
-    samplerInfo.unnormalizedCoordinates = VK_FALSE;
-    samplerInfo.compareEnable = VK_FALSE;
-    samplerInfo.compareOp = VK_COMPARE_OP_ALWAYS;
-
-    samplerInfo.mipmapMode = VK_SAMPLER_MIPMAP_MODE_LINEAR;
-    samplerInfo.mipLodBias = 0.0f;
-    samplerInfo.minLod = 0.0f;
-    samplerInfo.maxLod = 0.0f;
-
-    VkPhysicalDeviceProperties properties;
-    vkGetPhysicalDeviceProperties(physicalDevice, &properties);
-
-    samplerInfo.anisotropyEnable = VK_TRUE;
-    samplerInfo.maxAnisotropy = properties.limits.maxSamplerAnisotropy;
-
-    VkResult result = vkCreateSampler(device, &samplerInfo, nullptr, &sampler);
-    if (result != VK_SUCCESS) { throw runtime_error( "Unable to create the texture Sampler" ); }
-
-}
-
 //have to transition the image layout before copying the buffer memory into an Image object
-void HelloTriangleApplication::transitionImageLayout( VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout ) {
-    VkCommandBuffer commandBuffer = beginSingleTimeCommands();
+void transitionImageLayout( DeviceInfo info, VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout ) {
+    VkCommandBuffer commandBuffer = beginSingleTimeCommands(info);
 
     //used to transition image layouts
     VkImageMemoryBarrier barrier = {};
@@ -161,11 +89,11 @@ void HelloTriangleApplication::transitionImageLayout( VkImage image, VkFormat fo
     // third parameter is the pipeline stage that tasks waiting for the barrier should wait during
     vkCmdPipelineBarrier(commandBuffer, sourceStages, destinationStages, 0, 0, nullptr, 0, nullptr, 1, &barrier);
 
-    endSingleTimeCommands(commandBuffer);
+    endSingleTimeCommands(info, commandBuffer);
 }
 
-void HelloTriangleApplication::copyBufferToImage( VkBuffer buffer, VkImage image, uint32_t width, uint32_t height  ) {
-    VkCommandBuffer commandBuffer = beginSingleTimeCommands();
+void copyBufferToImage( DeviceInfo info, VkBuffer buffer, VkImage image, uint32_t width, uint32_t height  ) {
+    VkCommandBuffer commandBuffer = beginSingleTimeCommands(info);
 
     // this is the region of the buffer to copy to a certain to part of the iamge
     VkBufferImageCopy region = {};
@@ -183,11 +111,11 @@ void HelloTriangleApplication::copyBufferToImage( VkBuffer buffer, VkImage image
 
     vkCmdCopyBufferToImage(commandBuffer, buffer, image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, 1, &region);
 
-    endSingleTimeCommands(commandBuffer);
+    endSingleTimeCommands(info, commandBuffer);
 }
 
 
-void HelloTriangleApplication::create2DImage( int width, int height, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkImage& image, VkDeviceMemory& memory ) {
+void create2DImage( DeviceInfo info, int width, int height, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkImage& image, VkDeviceMemory& memory ) {
 
     VkImageCreateInfo imageInfo = {};
     imageInfo.sType = VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO;
@@ -205,20 +133,20 @@ void HelloTriangleApplication::create2DImage( int width, int height, VkFormat fo
     imageInfo.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
     imageInfo.samples = VK_SAMPLE_COUNT_1_BIT;
 
-    VkResult result = vkCreateImage(device, &imageInfo, nullptr, &image);
+    VkResult result = vkCreateImage(info.device, &imageInfo, nullptr, &image);
     if (result != VK_SUCCESS) { throw runtime_error( "failed to create Image!" ); }
 
     VkMemoryRequirements memoryRequirements;
-    vkGetImageMemoryRequirements(device, image, &memoryRequirements);
+    vkGetImageMemoryRequirements(info.device, image, &memoryRequirements);
 
     VkMemoryAllocateInfo allocInfo = {};
     allocInfo.sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;
     allocInfo.allocationSize = memoryRequirements.size;
-    allocInfo.memoryTypeIndex = findMemoryType(memoryRequirements.memoryTypeBits, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+    allocInfo.memoryTypeIndex = findMemoryType(info, memoryRequirements.memoryTypeBits, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
 
-    VkResult allocResult = vkAllocateMemory(device, &allocInfo, nullptr, &memory);
+    VkResult allocResult = vkAllocateMemory(info.device, &allocInfo, nullptr, &memory);
     if (allocResult != VK_SUCCESS) { throw runtime_error( "Failed to allocate Memory!" ); }
 
-    vkBindImageMemory(device, image, memory, 0);
+    vkBindImageMemory(info.device, image, memory, 0);
 
 }

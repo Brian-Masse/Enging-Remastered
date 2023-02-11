@@ -21,7 +21,7 @@
 // MARK: Main
 int main()
 {
-    HelloTriangleApplication app;
+    EngineRemastered app;
 
     try { app.run(); }
 

@@ -21,12 +21,13 @@
 #include <optional>
 #include <set>
 
+#include "../universalConstructors/universalConstructors.h"
+
 using namespace std;
 
 class EngineObject {
 
     public:
-
 
     struct Vertex {
         glm::vec3 pos;
@@ -34,15 +35,11 @@ class EngineObject {
         glm::vec3 normal;
         glm::vec2 UV;
         
-
         static VkVertexInputBindingDescription getBindingDescription() {
             VkVertexInputBindingDescription bindingDescription = {};
             bindingDescription.binding = 0; //index of the binding in an array of bindings (there is only one now)
             bindingDescription.stride = sizeof(Vertex);  //
             bindingDescription.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
-
-
-
             return bindingDescription;
         }
 
@@ -74,14 +71,33 @@ class EngineObject {
         std::vector<uint16_t> indexBuffer;
     };
 
-    struct faces {
-        vector< Vertex > vertices;
-    };
+    void init();
+    void cleanup();
 
+    // struct faces {
+    //     vector< Vertex > vertices;
+    // };z
 
-    EngineObject() { }
+    vector< Vertex > vertices;
+    vector< uint16_t > indices;
+
+    void extractVertices();
+    void draw();
+    void bind();
+
+    VkImageView textureImageView;
+    VkImage textureImage;
+
+    DeviceInfo info;
 
     private:
+
+
+
+    void createTextureMaterials();
+    void createTextureImage();
+
+    VkDeviceMemory textureImageMemory;
 
 };
 

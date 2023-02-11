@@ -19,7 +19,7 @@
 #include "../app.h"
 
 // MARK: Validation Layers
-bool HelloTriangleApplication::checkValidationLayerSupport()
+bool EngineRemastered::checkValidationLayerSupport()
 {
     uint32_t layerCount;
     vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
@@ -42,7 +42,7 @@ bool HelloTriangleApplication::checkValidationLayerSupport()
     return true;
 }
 
-void HelloTriangleApplication::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo) {
+void EngineRemastered::populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo) {
     //this lists the types of messages (severity and type) that this messenger can receive
     createInfo = {};
     createInfo.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
@@ -51,7 +51,7 @@ void HelloTriangleApplication::populateDebugMessengerCreateInfo(VkDebugUtilsMess
     createInfo.pfnUserCallback = debugCallback;
 }
 
-void HelloTriangleApplication::setupMessenger() {
+void EngineRemastered::setupMessenger() {
     if (!enableValidationLayers) { return; } 
     
     VkDebugUtilsMessengerCreateInfoEXT createInfo{};

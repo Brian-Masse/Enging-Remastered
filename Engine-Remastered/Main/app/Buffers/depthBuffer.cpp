@@ -18,23 +18,23 @@
 
 // dependencies
 #include "../app.h"
+#include "../../universalConstructors/universalConstructors.h"
 
-
-void HelloTriangleApplication::createDepthResources() {
+void EngineRemastered::createDepthResources() {
     
     VkFormat depthFormat = findDepthFormat();
     bool hasStencilComponent = (depthFormat == VK_FORMAT_D32_SFLOAT_S8_UINT) || (depthFormat == VK_FORMAT_D24_UNORM_S8_UINT);
 
-    create2DImage( swapChainExtent.width, swapChainExtent.height, depthFormat, 
+    create2DImage( info, swapChainExtent.width, swapChainExtent.height, depthFormat, 
         VK_IMAGE_TILING_OPTIMAL,
         VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT,
         depthImage, depthImageMemory );
     
-    depthImageView = createImageView( depthImage, depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT );
+    depthImageView = createImageView( info, depthImage, depthFormat, VK_IMAGE_ASPECT_DEPTH_BIT );
     
 }
 
-VkFormat HelloTriangleApplication:: findDepthFormat() {
+VkFormat EngineRemastered:: findDepthFormat() {
     return findSupportedFormat(
         {VK_FORMAT_D32_SFLOAT, VK_FORMAT_D32_SFLOAT_S8_UINT, VK_FORMAT_D24_UNORM_S8_UINT},
         VK_IMAGE_TILING_OPTIMAL,
@@ -42,7 +42,7 @@ VkFormat HelloTriangleApplication:: findDepthFormat() {
     );
 }
 
-VkFormat HelloTriangleApplication:: findSupportedFormat( const vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features ) {
+VkFormat EngineRemastered:: findSupportedFormat( const vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features ) {
     for (VkFormat format : candidates) {
         VkFormatProperties props;
         vkGetPhysicalDeviceFormatProperties(physicalDevice, format, &props);

@@ -20,7 +20,7 @@
 
 
 //MARK: Physical Device:
-void HelloTriangleApplication::pickPhysicalDevice() {
+void EngineRemastered::pickPhysicalDevice() {
     uint32_t deviceCount = 0;
     vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
 
@@ -39,7 +39,7 @@ void HelloTriangleApplication::pickPhysicalDevice() {
     if (physicalDevice == VK_NULL_HANDLE) { throw runtime_error("Failed to find a compatible GPU for Vulkan!"); }
 }
 
-bool HelloTriangleApplication::isDeviceSuitable( VkPhysicalDevice device ) {
+bool EngineRemastered::isDeviceSuitable( VkPhysicalDevice device ) {
 
     VkPhysicalDeviceProperties deviceProperties;
     vkGetPhysicalDeviceProperties(device, &deviceProperties);
@@ -63,7 +63,7 @@ bool HelloTriangleApplication::isDeviceSuitable( VkPhysicalDevice device ) {
     return indicies.isComplete() && extensionsSupported && swapChainAdequate && deviceFeatures.samplerAnisotropy; 
 }
 
-bool HelloTriangleApplication::checkDeviceExtensionSupport(VkPhysicalDevice device) {
+bool EngineRemastered::checkDeviceExtensionSupport(VkPhysicalDevice device) {
     uint32_t extensionCount;
     vkEnumerateDeviceExtensionProperties(device, nullptr, &extensionCount, nullptr);
 
@@ -78,7 +78,7 @@ bool HelloTriangleApplication::checkDeviceExtensionSupport(VkPhysicalDevice devi
 
 
 //MARK: Logical Device
-void HelloTriangleApplication::createLogicalDevice() {
+void EngineRemastered::createLogicalDevice() {
     QueueFamilyIndicies indices = findQueueFamilies(physicalDevice);
 
     //the queues we want to create in a specific family

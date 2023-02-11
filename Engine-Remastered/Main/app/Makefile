@@ -10,7 +10,7 @@ MAIN_OBJ_FILES := $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(MAIN_FILES))
 
 main: ${MAIN_OBJ_FILES}
 
-${OBJ_DIR}/%.o: %.cpp ../VertexHandler/vertexReader.h ${APP_H_DEPENDENCIES} app.h ${MAIN_FILES}
+${OBJ_DIR}/%.o: %.cpp ${UNIVERSAL} ../VertexHandler/vertexReader.h ${APP_H_DEPENDENCIES} app.h ../universalConstructors/universalConstructors.h ${MAIN_FILES}
 	@echo "remaking app"
 	@${CC} ${FLAGS} ${INCLUDE} ${LIBRARIES} -c $< -o $@
 
