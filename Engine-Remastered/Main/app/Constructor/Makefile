@@ -1,4 +1,5 @@
 #app/Construcors
+.SILENT:
 
 PWD := $(shell pwd)
 

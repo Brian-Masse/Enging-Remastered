@@ -1,4 +1,5 @@
 #app/buffers
+.SILENT:
 
 PWD := $(shell pwd)
 

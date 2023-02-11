@@ -224,8 +224,8 @@ private:
     VkSampler sampler;
 
     void createTextureImage();
-    void createTextureImageView();
     void createImageSampler();
+    VkImageView createImageView(VkImage& image, VkFormat format, VkImageAspectFlagBits aspectMask);
     void create2DImage( int width, int height, VkFormat format, VkImageTiling tiling, VkImageUsageFlags usage, VkImage& image, VkDeviceMemory& memory );
     void transitionImageLayout( VkImage image, VkFormat format, VkImageLayout oldLayout, VkImageLayout newLayout );
     void copyBufferToImage( VkBuffer buffer, VkImage image, uint32_t width, uint32_t height  );
@@ -237,6 +237,7 @@ private:
     VkImageView depthImageView;
 
     void createDepthResources();
+    VkFormat findDepthFormat();
     VkFormat findSupportedFormat( const vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features );
 
 

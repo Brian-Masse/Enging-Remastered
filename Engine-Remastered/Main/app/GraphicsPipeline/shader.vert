@@ -16,7 +16,7 @@ layout(binding = 0) uniform UniformConstantData {
 
 float n = 0.7;
 
-vec3 light = vec3( -1, -0.7, 0.5 );
+vec3 light = vec3( -1, 0.7, 0.5 );
 
 //gets called for every vertex  
 void main() {

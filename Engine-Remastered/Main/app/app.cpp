@@ -55,12 +55,11 @@ void HelloTriangleApplication:: initVulkan()
     createRenderPass();
     createDescriptorSetLayout();
     createGraphicsPipeline();
-    createFrameBuffers();
     createCommandPool();
     createTextureImage();
-    createTextureImageView();
     createImageSampler();
     createDepthResources();
+    createFrameBuffers();   
     createVertexBuffer();
     createIndexBuffer();
     createUniformBuffers();
@@ -239,6 +238,9 @@ void HelloTriangleApplication::cleanup()
     vkDestroyImageView(device, textureImageView, nullptr);
     vkDestroyImage(device, textureImage, nullptr);
     vkFreeMemory(device, textureImageMemory, nullptr);
+
+    vkDestroyImage(device, depthImage, nullptr);
+    vkFreeMemory(device, depthImageMemory, nullptr);
 
     for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);

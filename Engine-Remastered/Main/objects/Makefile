@@ -1,4 +1,5 @@
 #app
+.SILENT:
 
 PWD := $(shell pwd)
 

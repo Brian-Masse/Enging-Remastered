@@ -60,23 +60,28 @@ void HelloTriangleApplication::createTextureImage() {
 
     vkDestroyBuffer(device, stagingBuffer, nullptr);
     vkFreeMemory(device, stagingBufferMemory, nullptr);
+
+    textureImageView = createImageView( textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT );
 }
 
-void HelloTriangleApplication::createTextureImageView() {
+VkImageView HelloTriangleApplication::createImageView(VkImage& image, VkFormat format, VkImageAspectFlagBits aspectMask) {
 
     VkImageViewCreateInfo viewInfo{};
     viewInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
-    viewInfo.image = textureImage;
+    viewInfo.image = image;
     viewInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
-    viewInfo.format = VK_FORMAT_R8G8B8A8_SRGB;
-    viewInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+    viewInfo.format = format;
+    viewInfo.subresourceRange.aspectMask = aspectMask;
     viewInfo.subresourceRange.baseMipLevel = 0;
     viewInfo.subresourceRange.levelCount = 1;
     viewInfo.subresourceRange.baseArrayLayer = 0;
     viewInfo.subresourceRange.layerCount = 1;
 
-    VkResult result = vkCreateImageView(device, &viewInfo, nullptr, &textureImageView);
+    VkImageView imageView;
+    VkResult result = vkCreateImageView(device, &viewInfo, nullptr, &imageView);
     if (result != VK_SUCCESS) { throw runtime_error( "Unable to Create Texture Image View" ); } 
+
+    return imageView;
 }
 
 void HelloTriangleApplication::createImageSampler() {
