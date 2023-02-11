@@ -16,13 +16,14 @@
 #include <fstream>
 #include <sstream>
 
-#include "../app.h"
+#include "object.h"
+#include "../universalConstructors/universalConstructors.h"
 
 using namespace std;
 using namespace glm;
 
 
-void EngineRemastered::createVertexBuffer() {
+void EngineObject::createVertexBuffer() {
     VkDeviceSize size = sizeof( vertices[0] ) * vertices.size();
 
     VkBufferUsageFlags stagingUsageFlags = VK_BUFFER_USAGE_TRANSFER_SRC_BIT;
@@ -39,13 +40,13 @@ void EngineRemastered::createVertexBuffer() {
     mapBuffer(info, size, stagingMemory, vertices.data());
 
     createBuffer(info, size, usageFlags, memoryFlags, vertexBuffer, vertexBufferMemory);
-    copyBuffer(stagingBuffer, vertexBuffer, size);  //copy the vertex data from CPU-accessible memory to optimized GPU only memory
+    copyBuffer(info, stagingBuffer, vertexBuffer, size);  //copy the vertex data from CPU-accessible memory to optimized GPU only memory
 
-    vkDestroyBuffer(device, stagingBuffer, nullptr);
-    vkFreeMemory(device, stagingMemory, nullptr);
+    vkDestroyBuffer(info.device, stagingBuffer, nullptr);
+    vkFreeMemory(info.device, stagingMemory, nullptr);
 }
 
-void EngineRemastered::createIndexBuffer() {
+void EngineObject::createIndexBuffer() {
     VkDeviceSize size = sizeof( indices[0] ) * indices.size();
 
     VkBuffer stagingBuffer;
@@ -55,9 +56,9 @@ void EngineRemastered::createIndexBuffer() {
     mapBuffer(info, size, stagingBufferMemory, indices.data());
     
     createBuffer(info, size, VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, indexBuffer, indexBufferMemory);
-    copyBuffer(stagingBuffer, indexBuffer, size);
+    copyBuffer(info, stagingBuffer, indexBuffer, size);
 
-    vkDestroyBuffer(device, stagingBuffer, nullptr);
-    vkFreeMemory(device, stagingBufferMemory, nullptr);
+    vkDestroyBuffer(info.device, stagingBuffer, nullptr);
+    vkFreeMemory(info.device, stagingBufferMemory, nullptr);
 
 }

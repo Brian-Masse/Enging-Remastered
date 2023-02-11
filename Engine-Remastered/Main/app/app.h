@@ -213,6 +213,7 @@ private:
 
     vector<EngineObject> objects;
     EngineObject cube;
+    EngineObject icosphere;
 
     void createObjects();
 

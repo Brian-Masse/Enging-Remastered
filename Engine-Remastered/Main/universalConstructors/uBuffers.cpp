@@ -66,3 +66,18 @@ uint32_t findMemoryType(DeviceInfo info, uint32_t typeFilter, VkMemoryPropertyFl
 
     throw runtime_error("Failed to find suitable Memory Type!");
 }
+
+void copyBuffer(DeviceInfo info, VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size) {
+    //need to temporarily allocate a command buffer for transferring vertex data between buffers
+    // this allocation, to be be sped up, should be done with a commandBuffer
+    VkCommandBuffer commandBuffer;
+    commandBuffer = beginSingleTimeCommands(info);
+
+    VkBufferCopy copyRegion = {};
+    copyRegion.srcOffset = 0;
+    copyRegion.dstOffset = 0;
+    copyRegion.size = size;
+    vkCmdCopyBuffer(commandBuffer, srcBuffer, dstBuffer, 1, &copyRegion);
+
+    endSingleTimeCommands(info, commandBuffer);
+}

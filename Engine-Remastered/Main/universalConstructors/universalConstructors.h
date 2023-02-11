@@ -53,6 +53,8 @@ void mapBuffer( DeviceInfo info, VkDeviceSize size, VkDeviceMemory& bufferMemory
 
 void createBuffer( DeviceInfo info, VkDeviceSize size, VkBufferUsageFlags flags, VkMemoryPropertyFlags memFlags, VkBuffer& buffer, VkDeviceMemory& bufferMemory );
 
+void copyBuffer(DeviceInfo info, VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
+
 //MARK: Commands
 
 VkCommandBuffer beginSingleTimeCommands(DeviceInfo info);

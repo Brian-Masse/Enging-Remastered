@@ -70,8 +70,8 @@ void EngineRemastered:: initVulkan()
     
     createDepthResources();
     createFrameBuffers();   
-    createVertexBuffer();
-    createIndexBuffer();
+    // createVertexBuffer();
+    // createIndexBuffer();
     createUniformBuffers();
     createDescriptorPools();
     createDescriptorSets();
@@ -240,11 +240,16 @@ QueueFamilyIndicies EngineRemastered::findQueueFamilies( VkPhysicalDevice device
 void EngineRemastered::createObjects() {
 
     cube.info = info;
+    cube.fileName = "cube.ply";
     cube.init();
+
+    icosphere.info = info;
+    icosphere.fileName = "Icosphere.ply";
+    icosphere.init();
 
 
     // objects.resize(1);
-    objects = { cube };
+    objects = { cube, icosphere };
 
     // vector< int > ints;
     // ints = { 1 }; 

@@ -88,19 +88,14 @@ void EngineRemastered::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32
     scissor.extent = swapChainExtent;
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
-    VkBuffer vertexBuffers[] = {vertexBuffer};
-    VkDeviceSize offsets[] = {0};
-    vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
-    vkCmdBindIndexBuffer(commandBuffer, indexBuffer, 0, VK_INDEX_TYPE_UINT16);
+    for (auto& object: objects) { object.bind(commandBuffer); }
 
     vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, 
         pipelineLayout, 0, 1, 
         &descriptorSets[currentFrame], 0, nullptr);
     // vkCmdPushConstants(commandBuffer, pipelineLayout, VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof( PushConstantData ), &pushData.cameraPos );
 
-    // for using vertexBuffer
-    // vkCmdDraw(commandBuffer, vertices.size(), 1, 0, 0);
-    vkCmdDrawIndexed(commandBuffer, indices.size(), 1, 0, 0, 0);
+    for (auto& object: objects) { object.draw(commandBuffer); }
     vkCmdEndRenderPass(commandBuffer);
 
     VkResult endResult = vkEndCommandBuffer(commandBuffer);

@@ -63,42 +63,44 @@ class EngineObject {
     };
 
     struct BufferInformation {
-        // int vertexSize;
-        // int vertexSize; //how many vertices in each face
-
-        // int indexSize;
         std::vector<Vertex> vertexBuffer;
         std::vector<uint16_t> indexBuffer;
     };
 
+    string fileName;
+
+    DeviceInfo info;
     void init();
     void cleanup();
 
-    // struct faces {
-    //     vector< Vertex > vertices;
-    // };z
+    // MARK: Vertex & Index Buffer information
 
     vector< Vertex > vertices;
     vector< uint16_t > indices;
 
-    void extractVertices();
-    void draw();
-    void bind();
+    //MARK: Commands
+
+    void draw(VkCommandBuffer commandBuffer);
+    void bind(VkCommandBuffer commandBuffer);
 
     VkImageView textureImageView;
-    VkImage textureImage;
-
-    DeviceInfo info;
 
     private:
 
+    VkBuffer vertexBuffer;
+    VkBuffer indexBuffer;
+    VkDeviceMemory vertexBufferMemory;
+    VkDeviceMemory indexBufferMemory;
+
+    void extractVertices();
+    void createVertexBuffer();
+    void createIndexBuffer();
 
 
     void createTextureMaterials();
     void createTextureImage();
-
+    VkImage textureImage;
     VkDeviceMemory textureImageMemory;
-
 };
 
 #endif

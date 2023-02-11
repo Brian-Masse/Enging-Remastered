@@ -22,21 +22,6 @@ using namespace std;
 using namespace glm;
 
 
-void EngineRemastered::copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size) {
-    //need to temporarily allocate a command buffer for transferring vertex data between buffers
-    // this allocation, to be be sped up, should be done with a commandBuffer
-    VkCommandBuffer commandBuffer;
-    commandBuffer = beginSingleTimeCommands(info);
-
-    VkBufferCopy copyRegion = {};
-    copyRegion.srcOffset = 0;
-    copyRegion.dstOffset = 0;
-    copyRegion.size = size;
-    vkCmdCopyBuffer(commandBuffer, srcBuffer, dstBuffer, 1, &copyRegion);
-
-    endSingleTimeCommands(info, commandBuffer);
-}
-
 void EngineRemastered::createDescriptorPools() {
     array<VkDescriptorPoolSize, 2> poolSizes{};
     poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;

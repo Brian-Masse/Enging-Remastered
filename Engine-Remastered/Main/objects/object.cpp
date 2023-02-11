@@ -25,18 +25,11 @@
 
 using namespace std;
 
-// EngineObject::EngineObject( const DeviceInfo& info ) {
-    
-//     this->info = info;
-
-//     extractVertices();
-
-//     createTextureMaterials();
-// } 
-
 void EngineObject::init() {
     extractVertices();
-    createTextureMaterials();
+    createTextureMaterials();   
+    createVertexBuffer();
+    createIndexBuffer();
 }
 
 void EngineObject::cleanup() {
@@ -49,7 +42,7 @@ void EngineObject::cleanup() {
 
 void EngineObject::extractVertices() {
 
-    EngineObject::BufferInformation information = extractInformation("cube.ply");
+    EngineObject::BufferInformation information = extractInformation(fileName);
 
     this->vertices = information.vertexBuffer;
     this->indices = information.indexBuffer;
@@ -102,7 +95,17 @@ void EngineObject::createTextureImage() {
     textureImageView = createImageView( info, textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT );
 }
 
-void EngineObject::draw() {
+void EngineObject::bind(VkCommandBuffer commandBuffer) {
 
+    VkBuffer vertexBuffers[] = {vertexBuffer};
+    VkDeviceSize offsets[] = {0};
+    vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
+    vkCmdBindIndexBuffer(commandBuffer, indexBuffer, 0, VK_INDEX_TYPE_UINT16);
+
+}
+
+void EngineObject::draw(VkCommandBuffer commandBuffer) {
+    // vkCmdDraw(commandBuffer, vertices.size(), 1, 0, 0);
+    vkCmdDrawIndexed(commandBuffer, indices.size(), 1, 0, 0, 0);
 }
 
