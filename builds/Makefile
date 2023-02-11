@@ -12,7 +12,7 @@ PIPELINE_OBJS = ${PIPELINE_DIR}/shader.frag ${PIPELINE_DIR}/shader.vert
 #//MARK: ARGS
 
 export CC := clang++
-export FLAGS := -std=c++17 -fdiagnostics-color=always -Wall -g -w
+export FLAGS := -std=c++17 -fdiagnostics-color=always -Wall -g -w -F
 export INCLUDE := -I${MAIN_PWD}../dependencies/include -I${MAIN_PWD}/../dependencies/library/stb
 export LIBRARIES := -L${MAIN_PWD}/../dependencies/library ${MAIN_PWD}/../dependencies/library/libglfw.3.3.dylib ${MAIN_PWD}/../dependencies/library/Vulkan/libvulkan.1.3.231.dylib 
 

@@ -56,10 +56,12 @@ struct UniformConstantData {
     vec3 cameraPos;
 };
 
-
 class EngineRemastered
 {
 public:
+
+    static EngineRemastered app;
+
     void run();
 
 private:
@@ -91,6 +93,7 @@ private:
     VkQueue presentQueue;
 
     UniformConstantData constantData = { {0, 0, -1} };
+
 
     // MARK: Initialization
     void initWindow();
@@ -200,6 +203,7 @@ private:
     void copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
     
     double temp = 0;
+    void updateCamera( double x, double y, double z );
 
     
     vector<EngineObject::Vertex> vertices;
@@ -232,5 +236,6 @@ private:
     void cleanupSwapChain();
     void cleanup();
 };
+
 
 #endif

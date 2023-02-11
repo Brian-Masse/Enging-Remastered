@@ -138,7 +138,6 @@ void EngineRemastered::createDescriptorSets() {
 void EngineRemastered::createUniformBuffers() {
     VkDeviceSize bufferSize = sizeof( UniformConstantData );
 
-    // 2 should be the max frames in process at one time
 
     uniformBuffers.resize( MAX_FRAMES_IN_FLIGHT );
     uniformBuffersMemory.resize( MAX_FRAMES_IN_FLIGHT );
@@ -152,17 +151,27 @@ void EngineRemastered::createUniformBuffers() {
 }
 
 
+
 void EngineRemastered::updateUniformBuffers(uint32_t currentImage) {
     // do any frame by frame updates to the uniform buffer memory here!
 
-    temp++;
+    // temp++;
 
-    double x = cos( temp / 100 ) / 2;
-    double y = sin( temp / 100 ) / 2;
-    double z = (cos( temp / 100 ) / 2) + 1.5;
+    // double x = cos( temp / 100 ) / 2;
+    // double y = sin( temp / 100 ) / 2;
+    // double z = (cos( temp / 100 ) / 2) + 1.5;
 
-    constantData.cameraPos.x = x;
-    constantData.cameraPos.y = y;
+    // constantData.cameraPos.x = x;
+    // constantData.cameraPos.y = y;
+
+    double moveSpeed = 0.05;
+
+    if ( glfwGetKey(window, GLFW_KEY_UP) ) { updateCamera(0, -moveSpeed, 0); }
+    if ( glfwGetKey(window, GLFW_KEY_DOWN) ) { updateCamera(0, moveSpeed, 0); }
+    if ( glfwGetKey(window, GLFW_KEY_LEFT) ) { updateCamera(-moveSpeed, 0, 0); }
+    if ( glfwGetKey(window, GLFW_KEY_RIGHT) ) { updateCamera(moveSpeed,0, 0); }
+    if ( glfwGetKey(window, GLFW_KEY_W) ) { updateCamera(0, 0, moveSpeed); }
+    if ( glfwGetKey(window, GLFW_KEY_S) ) { updateCamera(0, 0, -moveSpeed); }
 
     void* data;
     vkMapMemory(device, uniformBuffersMemory[currentImage], 0, sizeof(UniformConstantData), 0, &data);

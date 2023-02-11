@@ -270,6 +270,13 @@ VkSampler EngineRemastered::createImageSampler() {
 
 }
 
+void EngineRemastered::updateCamera( double x, double y, double z ) {
+    constantData.cameraPos.x += x;
+    constantData.cameraPos.y += y;
+    constantData.cameraPos.z += z;
+}
+
+
 // MARK: Cleanup
 void EngineRemastered::cleanup()
 {
@@ -277,9 +284,6 @@ void EngineRemastered::cleanup()
     
     cleanupSwapChain();
 
-    vkDestroyImage(device, depthImage, nullptr);
-    vkDestroyImageView(device, depthImageView, nullptr);
-    vkFreeMemory(device, depthImageMemory, nullptr);
 
     for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
@@ -293,8 +297,6 @@ void EngineRemastered::cleanup()
         object.cleanup();
     }
 
-    vkDestroyDescriptorPool(device, descriptorPool, nullptr);
-    vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
     vkDestroyCommandPool(device, commandPool, nullptr);
     vkDestroyPipeline(device, pipeline, nullptr);
     vkDestroyPipelineLayout(device, pipelineLayout, nullptr);

@@ -21,9 +21,9 @@
 // MARK: Main
 int main()
 {
-    EngineRemastered app;
+    EngineRemastered test = EngineRemastered();
 
-    try { app.run(); }
+    try { test.run(); }
 
     catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;

@@ -207,5 +207,6 @@ void EngineRemastered::cleanupSwapChain() {
     }
     
     vkDestroyDescriptorPool(device, descriptorPool, nullptr);
+    vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
     vkDestroySwapchainKHR(device, swapChain, nullptr);
 }
