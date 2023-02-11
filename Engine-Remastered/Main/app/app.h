@@ -182,8 +182,6 @@ private:
     void drawFrame();
 
     //MARK: buffers
-    VkBuffer vertexBuffer;
-    VkDeviceMemory vertexBufferMemory;
     
     vector<VkBuffer> uniformBuffers;
     vector<VkDeviceMemory> uniformBuffersMemory;
@@ -199,11 +197,7 @@ private:
 
     void updateUniformBuffers(uint32_t currentImage);
     
-
-    // void createBuffer( VkDeviceSize size, VkBufferUsageFlags flags, VkMemoryPropertyFlags memFlags, VkBuffer& buffer, VkDeviceMemory& bufferMemory );
     void copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
-    // uint32_t findMemoryType( uint32_t typeFilter, VkMemoryPropertyFlags properties );
-    // void mapBuffer(VkDeviceSize size, VkDeviceMemory& bufferMemory, const void *);
     
     double temp = 0;
 
@@ -213,17 +207,10 @@ private:
 
     vector<EngineObject> objects;
     EngineObject cube;
-    EngineObject icosphere;
+    EngineObject cube2;
 
     void createObjects();
-
     DeviceInfo info;
-
-    VkBuffer indexBuffer;
-    VkDeviceMemory indexBufferMemory;
-
-    void createIndexBuffer();
-    void prepareVertices();
 
     VkSampler sampler;
     VkSampler createImageSampler();

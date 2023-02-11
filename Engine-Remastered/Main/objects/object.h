@@ -84,8 +84,8 @@ class EngineObject {
 
     //MARK: Commands
 
-    void draw(VkCommandBuffer commandBuffer);
     void bind(VkCommandBuffer commandBuffer);
+    void draw(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
 
     VkImageView textureImageView;
 

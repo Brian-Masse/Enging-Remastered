@@ -88,18 +88,17 @@ void EngineRemastered::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32
     scissor.extent = swapChainExtent;
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
-    for (auto& object: objects) { object.bind(commandBuffer); }
-
-    vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, 
+    for (auto& object: objects) { 
+        object.bind(commandBuffer); 
+    
+        vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, 
         pipelineLayout, 0, 1, 
         &descriptorSets[currentFrame], 0, nullptr);
 
+        object.draw(commandBuffer, pipelineLayout);
 
-    vkCmdPushConstants(commandBuffer, pipelineLayout, 
-        VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof( TransformPushConstants ),
-        &objects[0].transform );
+    }
 
-    for (auto& object: objects) { object.draw(commandBuffer); }
     vkCmdEndRenderPass(commandBuffer);
 
     VkResult endResult = vkEndCommandBuffer(commandBuffer);

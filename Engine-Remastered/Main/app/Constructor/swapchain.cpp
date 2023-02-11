@@ -182,14 +182,22 @@ void EngineRemastered::recreateSwapChain() {
 
     createSwapChain();
     createImageViews();
+    createRenderPass();
+    createGraphicsPipeline();
+    createDepthResources();
     createFrameBuffers();
-
     createUniformBuffers();
+    createDescriptorPools();
     createDescriptorSets();
+    createCommandBuffers();
 
 }
 
 void EngineRemastered::cleanupSwapChain() {
+
+    vkDestroyImage(device, depthImage, nullptr);
+    vkDestroyImageView(device, depthImageView, nullptr);
+    vkFreeMemory(device, depthImageMemory, nullptr);
 
     for (auto framebuffer : swapChainFramebuffers) {  vkDestroyFramebuffer(device, framebuffer, nullptr); }
     for (auto& imageView : swapChainImageViews) { vkDestroyImageView(device, imageView, nullptr); }
@@ -198,5 +206,6 @@ void EngineRemastered::cleanupSwapChain() {
         vkFreeMemory(device, uniformBuffersMemory[i], nullptr);
     }
     
+    vkDestroyDescriptorPool(device, descriptorPool, nullptr);
     vkDestroySwapchainKHR(device, swapChain, nullptr);
 }

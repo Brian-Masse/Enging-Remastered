@@ -30,16 +30,19 @@ void EngineObject::init() {
     createTextureMaterials();   
     createVertexBuffer();
     createIndexBuffer();
-
-    transform.translation = { 0.25f, 0.25f, 0.0f };
 }
 
 void EngineObject::cleanup() {
     VkDevice device = info.device;
 
+    vkFreeMemory(device, textureImageMemory, nullptr);
     vkDestroyImageView(device, textureImageView, nullptr);
     vkDestroyImage(device, textureImage, nullptr);
-    vkFreeMemory(device, textureImageMemory, nullptr);
+
+    vkFreeMemory(device, vertexBufferMemory, nullptr);
+    vkFreeMemory(device, indexBufferMemory, nullptr);
+    vkDestroyBuffer(device, vertexBuffer, nullptr);
+    vkDestroyBuffer(device, indexBuffer, nullptr);
 }
 
 void EngineObject::extractVertices() {
@@ -103,11 +106,15 @@ void EngineObject::bind(VkCommandBuffer commandBuffer) {
     VkDeviceSize offsets[] = {0};
     vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
     vkCmdBindIndexBuffer(commandBuffer, indexBuffer, 0, VK_INDEX_TYPE_UINT16);
-
 }
 
-void EngineObject::draw(VkCommandBuffer commandBuffer) {
-    vkCmdDraw(commandBuffer, vertices.size(), 1, 0, 0);
-    // vkCmdDrawIndexed(commandBuffer, indices.size(), 1, 0, 0, 0);
+void EngineObject::draw(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout) {
+
+    vkCmdPushConstants(commandBuffer, pipelineLayout, 
+        VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof( TransformPushConstants ),
+        &transform );
+
+    // vkCmdDraw(commandBuffer, vertices.size(), 1, 0, 0);
+    vkCmdDrawIndexed(commandBuffer, indices.size(), 1, 0, 0, 0);
 }
 

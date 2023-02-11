@@ -219,14 +219,17 @@ void EngineRemastered::createObjects() {
     cube.info = info;
     cube.fileName = "cube.ply";
     cube.init();
+    cube.transform.translation = { 1.0f, 1.0f, 1.0f };
 
-    icosphere.info = info;
-    icosphere.fileName = "icosphere.ply";
-    icosphere.init();
+
+    cube2.info = info;
+    cube2.fileName = "Icosphere.ply";
+    cube2.init();
+    cube2.transform.translation = { -0.5f, -0.5f, 0.0f };
 
 
     // objects.resize(1);
-    objects = { cube, };
+    objects = { cube, cube2 };
 
     // vector< int > ints;
     // ints = { 1 }; 
@@ -289,11 +292,6 @@ void EngineRemastered::cleanup()
     for (auto& object : objects) {
         object.cleanup();
     }
-
-    vkDestroyBuffer(device, vertexBuffer, nullptr);
-    vkFreeMemory(device, vertexBufferMemory, nullptr);
-    vkDestroyBuffer(device, indexBuffer, nullptr);
-    vkFreeMemory(device, indexBufferMemory, nullptr);
 
     vkDestroyDescriptorPool(device, descriptorPool, nullptr);
     vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
