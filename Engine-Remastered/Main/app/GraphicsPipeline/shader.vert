@@ -8,7 +8,8 @@ layout(location=2) in vec3 inNormal;
 layout(location=3) in vec2 inUV;
 
 layout(push_constant) uniform Push {
-    vec3 translation;
+    mat4 translation;
+    mat4 scale;
 } transform;
 
 layout(location = 0) out vec3 fragColor;
@@ -25,6 +26,9 @@ vec3 light = vec3( -1, 0.7, 0.5 );
 //gets called for every vertex  
 void main() {
 
+    vec4 position = transform.translation * vec4(inPosition, 1);
+    position = transform.scale * position;
+
     float nx = -inNormal.x;
     float ny = -inNormal.y;
     float nz = -inNormal.z;
@@ -39,9 +43,9 @@ void main() {
     float perc = proj / vertexNormalMagnitude;
 
 
-    float x = ((inPosition.x + transform.translation.x) / scale) - push.cameraPos.x;
-    float y = ((inPosition.y + transform.translation.y) / scale) - push.cameraPos.y;
-    float z = ((inPosition.z + transform.translation.z) / scale) - push.cameraPos.z;
+    float x = ((position.x) / scale) - push.cameraPos.x;
+    float y = ((position.y) / scale) - push.cameraPos.y;
+    float z = ((position.z) / scale) - push.cameraPos.z;
 
     float yf = (n * y) / z;
     float xf = (n * x) / z;
@@ -49,7 +53,6 @@ void main() {
 
     gl_Position = vec4(xf, yf, z / 2, 1.0);
     fragColor = vec3( inColor.r * perc, inColor.g * perc, inColor.b * perc );
+    // fragColor = vec3( transform.translation[0][0], 0, 0 );
     fragUV = inUV;
-    // fragColor = vec3(0.1, 0.1, 0.1);
-    // fragColor = inColor;
 }

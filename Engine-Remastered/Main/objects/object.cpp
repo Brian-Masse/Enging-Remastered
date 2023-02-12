@@ -19,7 +19,7 @@
 #include <optional>
 #include <set>
 
-// #include "object.h"
+#include "object.h"
 #include "../universalConstructors/universalConstructors.h"
 #include "../VertexHandler/vertexReader.h"
 
@@ -64,7 +64,7 @@ void EngineObject::createTextureImage() {
     int textureWidth, textureHeight, textureChannels;
 
     string pathToDir = "Textures/";
-    string fullPath = getAbsoluteDirectory(pathToDir, "base.png");
+    string fullPath = getAbsoluteDirectory(pathToDir, "ramen.png");
 
     const char* url =  fullPath.c_str();
 

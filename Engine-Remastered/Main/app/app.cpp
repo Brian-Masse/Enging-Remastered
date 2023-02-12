@@ -5,6 +5,7 @@
 #include <glm/glm.hpp>
 #include <mach-o/dyld.h>
 #include <GLFW/glfw3.h>
+#include <glm/gtc/matrix_transform.hpp>
 
 // std 
 #include <algorithm>
@@ -219,9 +220,20 @@ void EngineRemastered::createObjects() {
 
     EngineObject cube;
     cube.info = info;
-    cube.fileName = "monkey.ply";
+    cube.fileName = "cube.ply";
     cube.init();
-    cube.transform.translation = { 1.0f, 1.0f, 1.0f };
+
+
+    mat4 translateMatrix = mat4{1.0f};
+    translateMatrix[3][0] = 1.0f;
+    translateMatrix[3][1] = 0.7f;
+    translateMatrix[3][2] = 0.0f;
+
+    mat4 scaleMatrix = mat4(0.5f);
+    scaleMatrix[3][3] = 1.0f;
+
+    cube.transform.translation = translateMatrix;
+    cube.transform.scale = scaleMatrix;
 
 
     // EngineObject cube2;
@@ -232,7 +244,7 @@ void EngineRemastered::createObjects() {
 
 
     // objects.resize(1);
-    objects = { cube };
+    objects = { cube};
 
     // vector< int > ints;
     // ints = { 1 }; 

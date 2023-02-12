@@ -85,6 +85,7 @@ EngineObject::BufferInformation extractInformation(string fileName) {
     skipLines(inData, 1);
     inData >> tempString;
 
+
     while ( tempString[0] == 'p' ) {
         skipLines(inData, 1);
         inData >> tempString; 
@@ -106,15 +107,20 @@ EngineObject::BufferInformation extractInformation(string fileName) {
         float ny = extractFloat(inData, 0, 0);
         float nz = extractFloat(inData, 0, 0);
 
-        // float u = extractFloat(inData, 0, 0);
-        // float v = extractFloat(inData, 0, 0);
+        float u = 0;
+        float v = 0;
 
-        // cout << x << ", " << y << ", " << z << ", " << nx << ", " << ny << ", " << nz << ", " << u << ", " <<  endl;
+        if (propertyCount == 8) {
+            u = extractFloat(inData, 0, 0);
+            v = extractFloat(inData, 0, 0);
+        }
+
+        // cout << x << ", " << y << ", " << z << ", " << nx << ", " << ny << ", " << nz << ", " << u << ", " << v <<  endl;
 
         vertices[i].pos = { x, y, z };  
         vertices[i].color = {1.0f, 1.0f, 1.0f};
         vertices[i].normal = { nx, ny, nz };
-        vertices[i].UV = { 0, 0 };
+        vertices[i].UV = { u, v };
 
         skipLines(inData, 1);
     }

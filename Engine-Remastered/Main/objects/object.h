@@ -27,7 +27,8 @@ using namespace std;
 using namespace glm;
 
 struct TransformPushConstants {
-    vec3 translation;
+    mat4 translation;
+    mat4 scale;
 };
 
 class EngineObject {
