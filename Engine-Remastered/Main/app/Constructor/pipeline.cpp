@@ -83,7 +83,7 @@ void EngineRemastered::createGraphicsPipeline() {
     //assembly
     VkPipelineInputAssemblyStateCreateInfo inputAssembly{};
     inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
-    inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_STRIP;
+    inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
     // VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST; // how to connect all the vertices together
     inputAssembly.primitiveRestartEnable = VK_FALSE; // possible to break up lines / triangles depending on topology mod
 

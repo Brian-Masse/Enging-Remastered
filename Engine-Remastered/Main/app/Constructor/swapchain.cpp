@@ -183,11 +183,12 @@ void EngineRemastered::recreateSwapChain() {
     createSwapChain();
     createImageViews();
     createRenderPass();
-    createGraphicsPipeline();
+    // createGraphicsPipeline();
     createDepthResources();
     createFrameBuffers();
     createUniformBuffers();
     createDescriptorPools();
+    createDescriptorSetLayout();
     createDescriptorSets();
     createCommandBuffers();
 

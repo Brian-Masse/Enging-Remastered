@@ -25,6 +25,7 @@ using namespace std;
 
 void EngineRemastered::run()
 {
+
     initWindow();
     initVulkan();
     mainLoop();
@@ -216,20 +217,22 @@ QueueFamilyIndicies EngineRemastered::findQueueFamilies( VkPhysicalDevice device
 
 void EngineRemastered::createObjects() {
 
+    EngineObject cube;
     cube.info = info;
-    cube.fileName = "cube.ply";
+    cube.fileName = "monkey.ply";
     cube.init();
     cube.transform.translation = { 1.0f, 1.0f, 1.0f };
 
 
-    cube2.info = info;
-    cube2.fileName = "Icosphere.ply";
-    cube2.init();
-    cube2.transform.translation = { -0.5f, -0.5f, 0.0f };
+    // EngineObject cube2;
+    // cube2.info = info;
+    // cube2.fileName = "Icosphere.ply";
+    // cube2.init();
+    // cube2.transform.translation = { -0.5f, -0.5f, 0.0f };
 
 
     // objects.resize(1);
-    objects = { cube, cube2 };
+    objects = { cube };
 
     // vector< int > ints;
     // ints = { 1 }; 

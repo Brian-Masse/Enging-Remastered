@@ -210,8 +210,8 @@ private:
     vector<uint16_t> indices;
 
     vector<EngineObject> objects;
-    EngineObject cube;
-    EngineObject cube2;
+    // EngineObject cbeube;
+    // EngineObject cube2;
 
     void createObjects();
     DeviceInfo info;

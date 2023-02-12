@@ -63,6 +63,8 @@ float extractFloat( ifstream& file, int row, int column ) {
     goToString(file, column);
 
     file >> stringNumber;
+
+    // cout << stringNumber << endl;
     float number = stof( stringNumber );
 
     return number;
@@ -93,50 +95,63 @@ EngineObject::BufferInformation extractInformation(string fileName) {
     skipLines(inData, 3);
 
     vector<EngineObject::Vertex> vertices;
-    vertices.resize( vertexCount );
+    vertices.resize( vertexCount + 1 );
     for (int i = 0; i < vertexCount; i++) {
+
         float x = extractFloat(inData, 0, 0);
-        float y = extractFloat(inData, 0, 0);
         float z = extractFloat(inData, 0, 0);
+        float y = -extractFloat(inData, 0, 0);
 
         float nx = extractFloat(inData, 0, 0);
         float ny = extractFloat(inData, 0, 0);
         float nz = extractFloat(inData, 0, 0);
 
-        float u = extractFloat(inData, 0, 0);
-        float v = extractFloat(inData, 0, 0);
+        // float u = extractFloat(inData, 0, 0);
+        // float v = extractFloat(inData, 0, 0);
+
+        // cout << x << ", " << y << ", " << z << ", " << nx << ", " << ny << ", " << nz << ", " << u << ", " <<  endl;
 
         vertices[i].pos = { x, y, z };  
         vertices[i].color = {1.0f, 1.0f, 1.0f};
         vertices[i].normal = { nx, ny, nz };
-        vertices[i].UV = { u, v };
+        vertices[i].UV = { 0, 0 };
 
         skipLines(inData, 1);
     }
 
     vector<uint16_t> indices;
 
-    int indicesCount = extractInt(inData, 0, 0);
-    indices.resize( faceCount * indicesCount );
+    // inData.ignore( numeric_limits<streamsize>::max(), ' ' );
+    // for converting fan to strip:
 
     for (int i = 0; i < faceCount; i++) {
-        inData.ignore( numeric_limits<streamsize>::max(), ' ' );
+        int count = extractInt(inData, 0, 0);
+        int extra = floor(count / 2) - 1;
 
-        for (int f = 0; f < indicesCount; f++) {
-            int index = extractInt(inData, 0, 0);
+        int faceTotal = (count - 2) * 3;
 
-            int insertion = f;
+        vector<uint16_t> face;
+        face.resize(faceTotal);
 
-            //remaps indices to Triangle strip 
-            if (indicesCount == 4) {
-                if (f == 0) { insertion = 1; } 
-                if (f == 1) { insertion = 0; } 
-            }
+        int first = extractInt(inData, 0, 0);
 
-            indices[(i * indicesCount) + insertion] = index;
+        int oldValue = extractInt(inData, 0, 0);
+
+        for (int f = 1; f < faceTotal; f+=3) {
+            
+            int newValue = extractInt(inData, 0, 0);
+
+            face[f - 1] = first;
+            face[f] = oldValue;
+            face[f + 1] = newValue;
+
+            oldValue = newValue;
         }
+
+        indices.insert( indices.end(), face.begin(), face.end() );
         skipLines(inData, 1);
     }
+
 
     EngineObject::BufferInformation bufferInformation = {
         vertices,
