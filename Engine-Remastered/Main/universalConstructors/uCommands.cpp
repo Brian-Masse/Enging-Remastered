@@ -57,4 +57,6 @@ VkCommandBuffer endSingleTimeCommands(DeviceInfo info, VkCommandBuffer commandBu
     vkQueueWaitIdle(info.graphicsQueue);
 
     vkFreeCommandBuffers(info.device, info.commandPool, 1, &(commandBuffer));
+
+    return commandBuffer;
 }

@@ -5,7 +5,7 @@
 #include <glm/glm.hpp>
 #include <mach-o/dyld.h>
 #include <GLFW/glfw3.h>
-#include <stb_image.h>
+#include <stb/stb_image.h>
 
 // std 
 #include <algorithm>
@@ -20,8 +20,8 @@
 #include <set>
 
 #include "object.h"
-#include "../universalConstructors/universalConstructors.h"
-#include "../VertexHandler/vertexReader.h"
+#include "universalConstructors.h"
+#include "vertexReader.h"
 
 using namespace std;
 

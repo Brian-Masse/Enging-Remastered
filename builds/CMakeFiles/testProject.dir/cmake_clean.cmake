@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/VertexHandler/vertexReader.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/VertexHandler/vertexReader.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Buffers/buffers.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Buffers/buffers.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Buffers/depthBuffer.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Buffers/depthBuffer.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/commands.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/commands.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/devices.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/devices.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/draw.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/draw.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/pipeline.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/pipeline.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/swapchain.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/swapchain.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/validation.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/Constructor/validation.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/app.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/app/app.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/main.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/main.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/objects/object.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/objects/object.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/universalConstructors/uBuffers.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/universalConstructors/uBuffers.cpp.o.d"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o"
+  "CMakeFiles/testProject.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o.d"
+  "testProject"
+  "testProject.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/testProject.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

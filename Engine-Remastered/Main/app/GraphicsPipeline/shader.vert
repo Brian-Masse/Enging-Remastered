@@ -51,8 +51,10 @@ void main() {
     float xf = (n * x) / z;
     
 
+    vec3 fColor = inColor * perc;
+
     gl_Position = vec4(xf, yf, z / 2, 1.0);
-    fragColor = vec3( inColor.r * perc, inColor.g * perc, inColor.b * perc );
+    fragColor = vec3( fColor.r + 0.25, fColor.g + 0.25, fColor.b + 0.25  );
     // fragColor = vec3( transform.translation[0][0], 0, 0 );
     fragUV = inUV;
 }

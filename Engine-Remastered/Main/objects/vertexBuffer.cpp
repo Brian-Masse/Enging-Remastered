@@ -17,7 +17,7 @@
 #include <sstream>
 
 #include "object.h"
-#include "../universalConstructors/universalConstructors.h"
+#include "universalConstructors.h"
 
 using namespace std;
 using namespace glm;

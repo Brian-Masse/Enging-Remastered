@@ -16,7 +16,7 @@
 #include <fstream>
 #include <sstream>
 
-#include "app/app.h"
+#include "app.h"
 
 // MARK: Main
 int main()

@@ -19,7 +19,7 @@
     {
       "label": "Make Shaders",
       "type": "shell",
-      "command": "make shader",
+      "command": "sh ${workspaceFolder}/Engine-Remastered/Main/app/GraphicsPipeline/compile.sh ",
       "args": [],
       "options": {
         "cwd": "${workspaceFolder}/builds"
