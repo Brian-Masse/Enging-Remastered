@@ -22,11 +22,10 @@
 #include "../VertexHandler/vertexReader.h"
 // #include "../objects/object.h"
 
+
 using namespace std;
 
-void EngineRemastered::run()
-{
-
+void EngineRemastered::run() {
     initWindow();
     initVulkan();
     mainLoop();
@@ -34,8 +33,7 @@ void EngineRemastered::run()
 }
 
 // MARK: Initialization
-void EngineRemastered::initWindow()
-{
+void EngineRemastered::initWindow() {
     glfwInit();
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API); // prevents it from initializing OpenGL
     glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
@@ -45,13 +43,13 @@ void EngineRemastered::initWindow()
     glfwSetFramebufferSizeCallback(window, frameBufferResizeCallback);
 }
 
-void EngineRemastered:: initVulkan()
-{
+void EngineRemastered:: initVulkan() {
     createInstance();
     createSurface();
     setupMessenger();
     pickPhysicalDevice();
     createLogicalDevice();
+
     createSwapChain();
     createRenderPass();
     createDescriptorSetLayout();
@@ -62,20 +60,17 @@ void EngineRemastered:: initVulkan()
     info.physicalDevice = physicalDevice;
     info.commandPool = commandPool;
     info.graphicsQueue = graphicsQueue;
-
     sampler = createImageSampler();
     createObjects();
 
-
     createImageViews();
-    
     createDepthResources();
     createFrameBuffers();   
-    // createVertexBuffer();
-    // createIndexBuffer();
+
     createUniformBuffers();
     createDescriptorPools();
     createDescriptorSets();
+
     createCommandBuffers();
     createSyncFunctions();
 }
@@ -84,42 +79,8 @@ void EngineRemastered:: initVulkan()
 void EngineRemastered::mainLoop()
 {
     while (!glfwWindowShouldClose(window)) {
-
-        // temp++;
-
-        // double x = cos( temp / 50 ) / 2;
-
-        // objects[0].transform.translation.x = x;
-
-        
-        // double y = sin( temp / 100 ) / 2;
-        // double z = (cos( temp / 100 ) / 2) + 1.5;
-
-        // constantData.cameraPos.x = x;
-        // constantData.cameraPos.y = y;
-        // pushData.cameraPos.z = z;
-
-        // vertices[0].pos[0] = y;
-
-        // VkDeviceSize size = sizeof( vertices[0] ) * vertices.size();
-
-        // VkBufferUsageFlags stagingUsageFlags = VK_BUFFER_USAGE_TRANSFER_SRC_BIT;
-        // VkMemoryPropertyFlags stagingMemoryFlags = VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT;
-
-
-        // VkBuffer stagingBuffer;
-        // VkDeviceMemory stagingMemory;
-        // createBuffer(size, stagingUsageFlags, stagingMemoryFlags, stagingBuffer, stagingMemory);
-        // mapVertices(size, stagingMemory, vertices.data());
-
-        // copyBuffer(stagingBuffer, vertexBuffer, size);  //copy the vertex data from CPU-accessible memory to optimized GPU only memory
-
-        // vkDestroyBuffer(device, stagingBuffer, nullptr);
-        // vkFreeMemory(device, stagingMemory, nullptr);
-        
         glfwPollEvents();
         drawFrame();
-
     }
 
     vkDeviceWaitIdle(device);
@@ -242,13 +203,7 @@ void EngineRemastered::createObjects() {
     // cube2.init();
     // cube2.transform.translation = { -0.5f, -0.5f, 0.0f };
 
-
-    // objects.resize(1);
     objects = { cube};
-
-    // vector< int > ints;
-    // ints = { 1 }; 
-
 }
 
 VkSampler EngineRemastered::createImageSampler() {
@@ -299,7 +254,6 @@ void EngineRemastered::cleanup()
     
     cleanupSwapChain();
 
-
     for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
         vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
@@ -308,9 +262,7 @@ void EngineRemastered::cleanup()
 
     vkDestroySampler(device, sampler, nullptr);
 
-    for (auto& object : objects) {
-        object.cleanup();
-    }
+    for (auto& object : objects) { object.cleanup(); }
 
     vkDestroyCommandPool(device, commandPool, nullptr);
     vkDestroyPipeline(device, pipeline, nullptr);

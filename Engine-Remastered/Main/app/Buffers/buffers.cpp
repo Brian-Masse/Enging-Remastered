@@ -112,26 +112,7 @@ void EngineRemastered::createDescriptorSets() {
         descriptorWrites[1].descriptorCount = 1;
         descriptorWrites[1].pImageInfo = &imageInfo;
 
-
-
-        // for (int i = 0; i < objects.size(); i++) {
-        //     VkDescriptorImageInfo imageInfo{};
-        //     imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-        //     imageInfo.imageView = objects[0].textureImageView;
-        //     imageInfo.sampler = sampler;
-
-        //     descriptorWrites[i + 1].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-        //     descriptorWrites[i + 1].dstSet = descriptorSets[i];
-        //     descriptorWrites[i + 1].dstBinding = 1;
-        //     descriptorWrites[i + 1].dstArrayElement = 0;
-        //     descriptorWrites[i + 1].descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
-        //     descriptorWrites[i + 1].descriptorCount = 1;
-        //     descriptorWrites[i + 1].pImageInfo = &imageInfo;
-        // }
-
         vkUpdateDescriptorSets(device, static_cast<uint32_t>(descriptorWrites.size()), descriptorWrites.data(), 0, nullptr);
-
-
     }
 }
 

@@ -94,8 +94,14 @@ private:
 
     UniformConstantData constantData = { {0, 0, -1} };
 
-
     // MARK: Initialization
+        // MARK: Mainloop
+    void mainLoop();
+
+    // MARK: Cleanup
+    void cleanupSwapChain();
+    void cleanup();
+
     void initWindow();
     void initVulkan();
     static void frameBufferResizeCallback(GLFWwindow* window, int width, int height) {
@@ -106,22 +112,13 @@ private:
     void createInstance();
     void createSurface();
 
-    //MARK: Validation
-    bool checkValidationLayerSupport();
-    void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo);
-    void setupMessenger();
-    static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(
-        VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, //VERBOSE, INFO, WARNING, ERROR (comparable)
-        VkDebugUtilsMessageTypeFlagsEXT messageType,
-        const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,
-        void* pUserData) {
-            printf("");
+    //MARK: Objects
+    double temp = 0;
+    void updateCamera( double x, double y, double z );
 
-            cerr << "validation layer: " << pCallbackData->pMessage << endl;
-            return VK_FALSE;
-        }
-
-    vector<const char *> getRequiredExtensions();
+    DeviceInfo info;
+    vector<EngineObject> objects;
+    void createObjects();
 
     //MARK: PhysicalDevice
     void pickPhysicalDevice();
@@ -172,8 +169,6 @@ private:
 
     void createCommandPool();
     void createCommandBuffers();
-    // VkCommandBuffer beginSingleTimeCommands();
-    // VkCommandBuffer endSingleTimeCommands(VkCommandBuffer commandBuffer);
     void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
 
     //MARK: Draw
@@ -185,7 +180,6 @@ private:
     void drawFrame();
 
     //MARK: buffers
-    
     vector<VkBuffer> uniformBuffers;
     vector<VkDeviceMemory> uniformBuffersMemory;
     vector<VkDescriptorSet> descriptorSets;
@@ -199,22 +193,6 @@ private:
     void createDescriptorSets();
 
     void updateUniformBuffers(uint32_t currentImage);
-    
-    void copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
-    
-    double temp = 0;
-    void updateCamera( double x, double y, double z );
-
-    
-    vector<EngineObject::Vertex> vertices;
-    vector<uint16_t> indices;
-
-    vector<EngineObject> objects;
-    // EngineObject cbeube;
-    // EngineObject cube2;
-
-    void createObjects();
-    DeviceInfo info;
 
     VkSampler sampler;
     VkSampler createImageSampler();
@@ -228,13 +206,22 @@ private:
     VkFormat findDepthFormat();
     VkFormat findSupportedFormat( const vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features );
 
+    //MARK: Validation
+    bool checkValidationLayerSupport();
+    void populateDebugMessengerCreateInfo(VkDebugUtilsMessengerCreateInfoEXT& createInfo);
+    void setupMessenger();
+    static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(
+        VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, //VERBOSE, INFO, WARNING, ERROR (comparable)
+        VkDebugUtilsMessageTypeFlagsEXT messageType,
+        const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,
+        void* pUserData) {
+            printf("");
 
-    // MARK: Mainloop
-    void mainLoop();
+            cerr << "validation layer: " << pCallbackData->pMessage << endl;
+            return VK_FALSE;
+        }
 
-    // MARK: Cleanup
-    void cleanupSwapChain();
-    void cleanup();
+    vector<const char *> getRequiredExtensions();
 };
 
 
