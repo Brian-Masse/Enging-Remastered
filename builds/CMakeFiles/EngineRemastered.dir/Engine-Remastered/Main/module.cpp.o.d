@@ -305,14 +305,17 @@ CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: \
   /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/Vulkan/glm/gtc/../geometric.hpp \
   /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/Vulkan/glm/gtc/../trigonometric.hpp \
   /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/Vulkan/glm/gtc/../matrix.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/algorithm \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__debug \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iosfwd \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__mbstate_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/wchar.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/wchar.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_mbstate_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/pybind11.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/class.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/../attr.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/common.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/optional \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/variant \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/string_view \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/Python.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/patchlevel.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pyconfig.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pymacconfig.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_stdio.h \
@@ -321,25 +324,180 @@ CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_ctermid.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_off_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_ssize_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/time.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_clock_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_time_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_timespec.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_wctype.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/__wctype.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_wint_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_types/_wctype_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/ctype.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/ctype.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_ctype.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/runetype.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bits \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cstring \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/string.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/string.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_rsize_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_errno_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/strings.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/errno.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/errno.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/errno.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/unistd.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/unistd.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_posix_vdisable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_seek_set.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_gid_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_useconds_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/select.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_def.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_timespec.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_time_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_suseconds_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_setsize.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_set.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_clr.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_isset.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_zero.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_copy.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_select.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_uuid_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/gethostuuid.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pyport.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/inttypes.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/inttypes.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/inttypes.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/time.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_timeval64.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/time.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_clock_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/stat.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_blkcnt_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_blksize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_ino_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_ino64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_nlink_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_s_ifmt.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_filesec_t.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/exports.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pymacro.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pymath.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pytime.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/object.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/object.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pymem.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/pymem.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/objimpl.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/objimpl.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/typeslots.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pyhash.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pydebug.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/bytearrayobject.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdarg.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/bytearrayobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/bytesobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/bytesobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/unicodeobject.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/ctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/ctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_ctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/runetype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_wint_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/wchar.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/wchar.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_mbstate_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/__wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_types/_wctype_t.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/unicodeobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/longobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/longintrepr.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/boolobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/floatobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/complexobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/rangeobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/memoryobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/tupleobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/tupleobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/listobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/listobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/dictobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/dictobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/odictobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/enumobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/setobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/methodobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/methodobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/moduleobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/funcobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/classobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/fileobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/fileobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pycapsule.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/code.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/code.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pyframe.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/traceback.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/traceback.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/sliceobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cellobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/iterobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/genobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pystate.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/pystate.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/initconfig.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/descrobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/genericaliasobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/warnings.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/weakrefobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/structseq.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/namespaceobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/picklebufobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/codecs.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pyerrors.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/pyerrors.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pythread.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/pthread/sched.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/pthread/pthread_impl.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_cond_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_once_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/pthread/qos.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/qos.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/context.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pyarena.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/modsupport.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/compile.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pythonrun.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pylifecycle.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/pylifecycle.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/ceval.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/ceval.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/sysmodule.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/sysmodule.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/osmodule.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/intrcheck.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/import.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/import.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/abstract.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/abstract.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/bltinmodule.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/eval.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pyctype.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pystrtod.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pystrcmp.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/fileutils.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/fileutils.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/pyfpe.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/tracemalloc.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/frameobject.h \
+  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/frameobject.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cstring \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/exception \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__availability \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__memory/addressof.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cstdlib \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/forward_list \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/algorithm \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__debug \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iosfwd \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__mbstate_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/functional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/search.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -353,12 +511,8 @@ CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__functional_base \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__functional/operations.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__functional/reference_wrapper.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__memory/addressof.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__memory/allocator_arg_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__memory/uses_allocator.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/exception \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__availability \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cstdlib \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/new \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/utility \
@@ -403,22 +557,6 @@ CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/ctime \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/ratio \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__threading_support \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/errno.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/errno.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/errno.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/pthread/sched.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/pthread/pthread_impl.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_cond_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_once_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_pthread/_pthread_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/pthread/qos.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/qos.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sched.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/memory \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__memory/pointer_safety.h \
@@ -436,7 +574,6 @@ CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__ranges/access.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__ranges/enable_borrowed_range.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__utility/__decay_copy.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/variant \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__variant/monostate.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/counted_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/default_sentinel.h \
@@ -560,13 +697,8 @@ CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/transform.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/unique_copy.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/unique.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/vector \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bit_reference \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__split_buffer \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/array \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cstdio \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/string_view \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__ranges/enable_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cwchar \
@@ -575,6 +707,31 @@ CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_types/_wctrans_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/typeindex \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/unordered_map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__functional/is_transparent.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__hash_table \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__node_handle \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/unordered_set \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/vector \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bit_reference \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__split_buffer \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/cast.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/descr.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/type_caster_base.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/../pytypes.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/buffer_info.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/internals.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/typeid.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cxxabi.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__cxxabi_config.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/pytypes.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/array \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/../options.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/init.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/attr.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/gil.h \
+  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/options.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__locale \
@@ -590,6 +747,7 @@ CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_xlocale.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/xlocale/_ctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/xlocale/__wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/xlocale/_inttypes.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/xlocale/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/xlocale/_stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/xlocale/_string.h \
@@ -607,24 +765,9 @@ CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_u_short.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_u_int.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_caddr_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_blkcnt_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_blksize_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_gid_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_in_addr_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_in_port_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_ino_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_ino64_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_key_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_nlink_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_useconds_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_suseconds_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_def.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_setsize.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_set.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_clr.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_zero.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_isset.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fd_copy.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/_types/_nl_item.h \
@@ -636,151 +779,8 @@ CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iomanip \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/sstream \
   /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/include/app.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/optional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/set \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__functional/is_transparent.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__node_handle \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__tree \
   /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/include/object.h \
   /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/include/universalConstructors.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/include/vertexReader.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/pybind11.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/class.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/../attr.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/common.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/Python.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/patchlevel.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pyconfig.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pymacconfig.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/unistd.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/unistd.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_posix_vdisable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_seek_set.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/select.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_select.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_uuid_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/gethostuuid.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pyport.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/inttypes.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/inttypes.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/inttypes.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/xlocale/_inttypes.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/time.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_timeval64.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/stat.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_s_ifmt.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_filesec_t.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/exports.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pymacro.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pymath.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pytime.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/object.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/object.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pymem.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/pymem.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/objimpl.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/objimpl.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/typeslots.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pyhash.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pydebug.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/bytearrayobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/bytearrayobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/bytesobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/bytesobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/unicodeobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/unicodeobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/longobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/longintrepr.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/boolobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/floatobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/complexobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/rangeobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/memoryobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/tupleobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/tupleobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/listobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/listobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/dictobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/dictobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/odictobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/enumobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/setobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/methodobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/methodobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/moduleobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/funcobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/classobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/fileobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/fileobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pycapsule.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/code.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/code.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pyframe.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/traceback.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/traceback.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/sliceobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cellobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/iterobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/genobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pystate.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/pystate.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/initconfig.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/descrobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/genericaliasobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/warnings.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/weakrefobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/structseq.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/namespaceobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/picklebufobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/codecs.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pyerrors.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/pyerrors.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pythread.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/context.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pyarena.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/modsupport.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/compile.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pythonrun.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pylifecycle.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/pylifecycle.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/ceval.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/ceval.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/sysmodule.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/sysmodule.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/osmodule.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/intrcheck.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/import.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/import.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/abstract.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/abstract.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/bltinmodule.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/eval.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pyctype.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pystrtod.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pystrcmp.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/fileutils.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/fileutils.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/pyfpe.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/tracemalloc.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/frameobject.h \
-  /Users/brianmasse/opt/miniconda3/include/python3.9/cpython/frameobject.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/forward_list \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/typeindex \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/unordered_map \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__hash_table \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/unordered_set \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/cast.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/descr.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/type_caster_base.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/../pytypes.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/buffer_info.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/internals.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/typeid.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cxxabi.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__cxxabi_config.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/pytypes.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/../options.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/detail/init.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/attr.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/gil.h \
-  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include/pybind11/options.h
+  /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/include/vertexReader.h

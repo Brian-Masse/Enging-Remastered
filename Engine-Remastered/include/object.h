@@ -29,6 +29,7 @@ using namespace glm;
 struct TransformPushConstants {
     mat4 translation;
     mat4 scale;
+    vec3 color;
 };
 
 class EngineObject {

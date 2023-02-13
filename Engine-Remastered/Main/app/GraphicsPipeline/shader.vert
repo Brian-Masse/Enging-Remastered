@@ -10,6 +10,7 @@ layout(location=3) in vec2 inUV;
 layout(push_constant) uniform Push {
     mat4 translation;
     mat4 scale;
+    vec3 color;
 } transform;
 
 layout(location = 0) out vec3 fragColor;
@@ -52,9 +53,14 @@ void main() {
     
 
     vec3 fColor = inColor * perc;
+    float r = (fColor.r * transform.color.r);
+    float g = (fColor.g * transform.color.g);
+    float b = (fColor.b * transform.color.b);
+
 
     gl_Position = vec4(xf, yf, z / 2, 1.0);
-    fragColor = vec3( fColor.r + 0.25, fColor.g + 0.25, fColor.b + 0.25  );
+    fragColor = vec3( r, g, b );
+    
     // fragColor = vec3( transform.translation[0][0], 0, 0 );
     fragUV = inUV;
 }

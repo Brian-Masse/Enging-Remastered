@@ -22,6 +22,8 @@
 int main()
 {
     EngineRemastered test = EngineRemastered();
+    
+    test.initialization();
 
     try { test.run(); }
 

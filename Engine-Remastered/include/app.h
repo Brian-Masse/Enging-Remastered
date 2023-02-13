@@ -60,11 +60,12 @@ class EngineRemastered
 {
 public:
 
-    static EngineRemastered app;
-
-    void run();
+    void createObject(string name, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b);
+    void initialization();
+    void run();;
 
 private:
+
     const int WIDTH = 600;
     const int HEIGHT = 600;
     const int MAX_FRAMES_IN_FLIGHT = 2;

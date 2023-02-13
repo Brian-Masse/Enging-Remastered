@@ -32,6 +32,21 @@
     },
 
     {
+      "label": "Run py",
+      "type": "shell",
+      "command": "python ${workspaceFolder}/main.py",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/builds"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "detail": "Clean Build with the Makefile in /builds"
+    },
+
+    {
       "label": "Make Clean",
       "type": "shell",
       "command": "make clean",

@@ -23,9 +23,12 @@
 
 using namespace std;
 
-void EngineRemastered::run() {
+void EngineRemastered::initialization() {
     initWindow();
     initVulkan();
+}
+
+void EngineRemastered::run() {
     mainLoop();
     cleanup();
 }
@@ -175,24 +178,52 @@ QueueFamilyIndicies EngineRemastered::findQueueFamilies( VkPhysicalDevice device
     return indicies;
 }
 
-void EngineRemastered::createObjects() {
+void EngineRemastered::createObject(string name, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b) {
 
-    EngineObject cube;
-    cube.info = info;
-    cube.fileName = "cube.ply";
-    cube.init();
-
+    EngineObject obj;
+    obj.info = info;
+    obj.fileName = name;
+    obj.init();
 
     mat4 translateMatrix = mat4{1.0f};
-    translateMatrix[3][0] = 1.0f;
-    translateMatrix[3][1] = 0.7f;
-    translateMatrix[3][2] = 0.0f;
+    translateMatrix[3][0] = tx;
+    translateMatrix[3][1] = ty;
+    translateMatrix[3][2] = tz;
 
-    mat4 scaleMatrix = mat4(0.5f);
-    scaleMatrix[3][3] = 1.0f;
+    mat4 scaleMatrix = mat4(1.0f);
+    scaleMatrix[0][0] = sx;
+    scaleMatrix[1][1] = sy;
+    scaleMatrix[2][2] = sz;
 
-    cube.transform.translation = translateMatrix;
-    cube.transform.scale = scaleMatrix;
+    obj.transform.translation = translateMatrix;
+    obj.transform.scale = scaleMatrix;
+
+    obj.transform.color = vec3( r, g, b );
+
+    objects.push_back(obj);
+
+}
+
+void EngineRemastered::createObjects() {
+
+    createObject("cube.ply", 0, 0, 0, 0, 0, 0, 1, 1, 1);
+
+    // EngineObject cube;
+    // cube.info = info;
+    // cube.fileName = "cube.ply";
+    // cube.init();
+
+
+    // mat4 translateMatrix = mat4{1.0f};
+    // translateMatrix[3][0] = 1.0f;
+    // translateMatrix[3][1] = 0.7f;
+    // translateMatrix[3][2] = 0.0f;
+
+    // mat4 scaleMatrix = mat4(0.5f);
+    // scaleMatrix[3][3] = 1.0f;
+
+    // cube.transform.translation = translateMatrix;
+    // cube.transform.scale = scaleMatrix;
 
 
     // EngineObject cube2;
@@ -201,7 +232,7 @@ void EngineRemastered::createObjects() {
     // cube2.init();
     // cube2.transform.translation = { -0.5f, -0.5f, 0.0f };
 
-    objects = { cube};
+    // objects = { cube };
 }
 
 VkSampler EngineRemastered::createImageSampler() {

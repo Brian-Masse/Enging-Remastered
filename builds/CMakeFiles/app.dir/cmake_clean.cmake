@@ -27,6 +27,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o.d"
   "CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o"
   "CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o.d"
+  "CMakeFiles/app.dir/Engine-Remastered/Main/test.cpp.o"
+  "CMakeFiles/app.dir/Engine-Remastered/Main/test.cpp.o.d"
   "CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o"
   "CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o.d"
   "CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o"

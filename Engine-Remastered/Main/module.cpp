@@ -6,6 +6,7 @@
 #include <mach-o/dyld.h>
 #include <GLFW/glfw3.h>
 #include <glm/gtc/matrix_transform.hpp>
+#include <pybind11/pybind11.h>
 
 // std 
 #include <algorithm>
@@ -21,20 +22,20 @@
 #include "universalConstructors.h"
 #include "vertexReader.h"
 
-#include <pybind11/pybind11.h>
-
 using namespace std;
 
 void sum( int x, int y ) {
     cout << x + y << endl;
 }
 
+PYBIND11_MODULE(EngineRemastered, module) {
 
-PYBIND11_MODULE(pybind11Module, module) {
+    module.doc() = "EngineRemastered";
 
-    module.doc() = "pybind11Module";
-
-    module.def( "python_sum", &sum );
-
+    pybind11::class_<EngineRemastered> (module, "EngineRemasteredApp")
+        .def ( pybind11::init<> ()) 
+        .def ( "initApp", &EngineRemastered::initialization )
+        .def ( "runApp", &EngineRemastered::run )
+        .def ( "createObj", &EngineRemastered::createObject, "function");
 }
 

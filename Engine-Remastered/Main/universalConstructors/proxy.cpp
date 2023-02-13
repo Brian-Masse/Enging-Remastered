@@ -31,7 +31,11 @@ string getAbsoluteDirectory( string pathFromEntry, string fileName ) {
     uint32_t bufLength = strlen(buf);
     *(buf + bufLength - 3) = '\0'; 
 
-    pathName << buf << "../Engine-Remastered/" << pathFromEntry << fileName;
+
+    // pathName << buf << "../Engine-Remastered/" << pathFromEntry << fileName;
+    pathName <<  "/Users/brianmasse/Developer/Software/Engine-Remastered/builds/../Engine-Remastered/" << pathFromEntry << fileName;
+
+    
 
     return pathName.str();
 }

@@ -24,21 +24,61 @@ set( APP "${MAIN}/app" )
 set( OBJECT "${MAIN}/objects" )
 set( UCONSTRUCTORS "${MAIN}/universalConstructors" )
 
+find_package(Boost COMPONENTS python REQUIRED)
 add_subdirectory(${DEPEND_INCLUDES}/pybind11) 
 
 pybind11_add_module(
-    ${MOD_NAME}
+    EngineRemastered
+
+    SHARED
+
     ${MAIN}/module.cpp
+    ${MAIN}/app.cpp
+    ${MAIN}/main.cpp
+
+    ${APP}/validation.cpp
+    ${MAIN}/module.cpp
+
+    ${APP}/buffers.cpp
+    ${APP}/depthBuffer.cpp
+    ${APP}/commands.cpp
+    ${APP}/devices.cpp
+    ${APP}/draw.cpp
+    ${APP}/pipeline.cpp
+    ${APP}/swapchain.cpp
+    
+
+    ${OBJECT}/object.cpp
+    ${OBJECT}/vertexBuffer.cpp
+    ${OBJECT}/vertexReader.cpp
+
+    ${UCONSTRUCTORS}/imageReader.cpp
+    ${UCONSTRUCTORS}/proxy.cpp
+    ${UCONSTRUCTORS}/uBuffers.cpp
+    ${UCONSTRUCTORS}/uCommands.cpp
 )
 
 target_include_directories(
-    ${MOD_NAME}
-
+    EngineRemastered
+    
+    PRIVATE ${MAIN}
+    PRIVATE ${APP}
+    PRIVATE ${OBJECT}
+    PRIVATE ${UCONSTRUCTORS}
+    
     PRIVATE ${INCLUDES}
     PRIVATE ${DEPEND_INCLUDES}
     PRIVATE ${DEPEND_INCLUDES}/Vulkan
     PRIVATE ${DEPEND_INCLUDES}/pybind11/include
-    PRIVATE ${MAIN}
+    PRIVATE ${DEPEND_LIBRARY}
+)
+
+target_link_libraries(
+    EngineRemastered
+
+    PRIVATE ${Boost_LIBRARIES}
+    PRIVATE ${DEPEND_LIBRARY}/libglfw.3.3.dylib
+    PRIVATE ${DEPEND_LIBRARY}/Vulkan/libvulkan.1.3.231.dylib
 )
 
 #app
@@ -47,6 +87,7 @@ add_executable(
     ${MAIN}/main.cpp
     ${MAIN}/app.cpp
     ${MAIN}/module.cpp
+    ${MAIN}/test.cpp
 
     ${APP}/buffers.cpp
     ${APP}/depthBuffer.cpp
@@ -85,6 +126,7 @@ target_include_directories(
 target_link_libraries(
     ${APP_NAME}
 
+    PRIVATE ${Boost_LIBRARIES}
     PRIVATE ${DEPEND_LIBRARY}/libglfw.3.3.dylib
     PRIVATE ${DEPEND_LIBRARY}/Vulkan/libvulkan.1.3.231.dylib
 

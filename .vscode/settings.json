@@ -98,5 +98,6 @@
     "unnormalized",
     "VKAPI"
   ],
-  "cSpell.ignoreWords": ["Multisample", "subpasses"]
+  "cSpell.ignoreWords": ["Multisample", "subpasses"],
+  "C_Cpp.errorSquiggles": "disabled"
 }

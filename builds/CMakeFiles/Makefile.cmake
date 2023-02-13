@@ -35,6 +35,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/Compiler/Clang.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/Compiler/GNU.cmake"
+  "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/FindBoost.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/FindPackageMessage.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/FindPythonInterp.cmake"
@@ -51,6 +52,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/Platform/Darwin.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/Platform/UnixPaths.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/WriteBasicConfigVersionFile.cmake"
+  "/usr/local/lib/cmake/Boost-1.81.0/BoostConfig.cmake"
+  "/usr/local/lib/cmake/Boost-1.81.0/BoostConfigVersion.cmake"
+  "/usr/local/lib/cmake/BoostDetectToolset-1.81.0.cmake"
+  "/usr/local/lib/cmake/boost_headers-1.81.0/boost_headers-config-version.cmake"
+  "/usr/local/lib/cmake/boost_headers-1.81.0/boost_headers-config.cmake"
+  "/usr/local/lib/cmake/boost_python-1.81.0/boost_python-config-version.cmake"
+  "/usr/local/lib/cmake/boost_python-1.81.0/boost_python-config.cmake"
+  "/usr/local/lib/cmake/boost_python-1.81.0/libboost_python-variant-mt-shared-py3.11.cmake"
+  "/usr/local/lib/cmake/boost_python-1.81.0/libboost_python-variant-mt-static-py3.11.cmake"
+  "/usr/local/lib/cmake/boost_python-1.81.0/libboost_python-variant-shared-py3.11.cmake"
+  "/usr/local/lib/cmake/boost_python-1.81.0/libboost_python-variant-static-py3.11.cmake"
   )
 
 # The corresponding makefile is:
