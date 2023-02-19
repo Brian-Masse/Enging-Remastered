@@ -187,9 +187,47 @@ QueueFamilyIndicies EngineRemastered::findQueueFamilies( VkPhysicalDevice device
 
 void EngineRemastered::createDescriptorSetMaterials() {
 
-    createDescriptorSetLayout();
-    descriptorPool = createDescriptorPools(info, 1, 1);
-    createDescriptorSets();
+    VkDescriptorSetLayoutBinding uboLayoutBinding = {};
+    uboLayoutBinding.binding = 0;
+    uboLayoutBinding.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+    uboLayoutBinding.descriptorCount = 1;
+    uboLayoutBinding.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+
+    // VkDescriptorSetLayoutBinding samplerLayoutBinding{};
+    // samplerLayoutBinding.binding = 1;
+    // samplerLayoutBinding.descriptorCount = 1;
+    // samplerLayoutBinding.descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    // samplerLayoutBinding.pImmutableSamplers = nullptr;
+    // samplerLayoutBinding.stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT;
+
+    vector< VkDescriptorSetLayoutBinding > bindings = { uboLayoutBinding };
+
+    descriptorSetLayout = createDescriptorSetLayout(info, bindings);
+    descriptorPool = createDescriptorPools(info, 1, 0);
+    descriptorSets = allocateDescriptorSet(info, descriptorPool, descriptorSetLayout);
+
+    VkDescriptorBufferInfo bufferInfo = {};
+    // the actual buffer is asigned in the udpateDescriptorSet function
+    // bufferInfo.buffer = uniformBuffers[0]; //memory has already been allocated in create uniform buffers
+    bufferInfo.offset = 0;
+    bufferInfo.range = sizeof( UniformConstantData );
+
+    updateDescriptorSet(info, descriptorSets, 0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, &bufferInfo, nullptr, uniformBuffers);
+
+        //specify binding, type, and info 
+
+        // descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+        // descriptorWrites[0].dstSet = descriptorSets[i];
+        // descriptorWrites[0].dstBinding = 0;
+        // descriptorWrites[0].dstArrayElement = 0;
+        // descriptorWrites[0].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+        // descriptorWrites[0].descriptorCount = 1;
+        // descriptorWrites[0].pBufferInfo = &bufferInfo;
+
+    // };
+
+
+    // createDescriptorSets();
 
 }
 

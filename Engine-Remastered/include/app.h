@@ -192,9 +192,7 @@ private:
 
     // MARK: Descriptors
     void createDescriptorSetMaterials();
-    void createDescriptorSetLayout();
-    // void createDescriptorPools();
-    void createDescriptorSets();
+    // void createDescriptorSets();
 
     //MARK: DepthBuffer:
     VkImage depthImage;

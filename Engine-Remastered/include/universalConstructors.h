@@ -25,7 +25,6 @@
 using namespace std;
 
 struct DeviceInfo {
-
     VkDevice device;
     VkPhysicalDevice physicalDevice;
 
@@ -33,7 +32,6 @@ struct DeviceInfo {
     VkQueue graphicsQueue;
 
     int MAX_FRAMES_IN_FLIGHT;
-
 };
 
 
@@ -50,6 +48,12 @@ void create2DImage( DeviceInfo info, int width, int height, VkFormat format, VkI
 //MARK: Descriptors
 
 VkDescriptorPool createDescriptorPools(DeviceInfo info, int bufferCount, int imageCount);
+
+VkDescriptorSetLayout createDescriptorSetLayout( DeviceInfo info, vector<VkDescriptorSetLayoutBinding> bindings);
+
+vector<VkDescriptorSet> allocateDescriptorSet(DeviceInfo info, VkDescriptorPool pool, VkDescriptorSetLayout& descriptorSetLayout);
+
+void updateDescriptorSet(DeviceInfo info, vector<VkDescriptorSet> descriptorSets,  int binding, VkDescriptorType type, VkDescriptorBufferInfo* bufferInfo, VkDescriptorImageInfo* imageInfo, vector<VkBuffer> buffers);
 
 //MARK: Buffers
 

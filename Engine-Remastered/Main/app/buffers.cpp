@@ -22,84 +22,84 @@
 using namespace std;
 using namespace glm;
 
-void EngineRemastered::createDescriptorSetLayout() {
-    VkDescriptorSetLayoutBinding uboLayoutBinding = {};
-    uboLayoutBinding.binding = 0;
-    uboLayoutBinding.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-    uboLayoutBinding.descriptorCount = 1;
-    uboLayoutBinding.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+VkDescriptorSetLayout createDescriptorSetLayout( DeviceInfo info, vector<VkDescriptorSetLayoutBinding> bindings) {
 
-    VkDescriptorSetLayoutBinding samplerLayoutBinding{};
-    samplerLayoutBinding.binding = 1;
-    samplerLayoutBinding.descriptorCount = 1;
-    samplerLayoutBinding.descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
-    samplerLayoutBinding.pImmutableSamplers = nullptr;
-    samplerLayoutBinding.stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT;
-
-    std::array<VkDescriptorSetLayoutBinding, 2> bindings = {uboLayoutBinding, samplerLayoutBinding};
     VkDescriptorSetLayoutCreateInfo layoutInfo{};
     layoutInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
     layoutInfo.bindingCount = static_cast<uint32_t>(bindings.size());
     layoutInfo.pBindings = bindings.data();
 
-
-    VkResult result = vkCreateDescriptorSetLayout(device, &layoutInfo, nullptr, &descriptorSetLayout);
+    VkDescriptorSetLayout descriptorSetLayout;
+    VkResult result = vkCreateDescriptorSetLayout(info.device, &layoutInfo, nullptr, &descriptorSetLayout);
     if (result != VK_SUCCESS) { throw runtime_error("Failed to create Descriptor Set Layout!"); }
+
+    return descriptorSetLayout;
 }
 
-void EngineRemastered::createDescriptorSets() {
+vector<VkDescriptorSet> allocateDescriptorSet(DeviceInfo info, VkDescriptorPool pool, VkDescriptorSetLayout& descriptorSetLayout) {
 
-    vector<VkDescriptorSetLayout> layouts(MAX_FRAMES_IN_FLIGHT, descriptorSetLayout);
+    vector<VkDescriptorSetLayout> layouts(info.MAX_FRAMES_IN_FLIGHT, descriptorSetLayout);
 
     VkDescriptorSetAllocateInfo allocInfo = {};
     allocInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO;
-    allocInfo.descriptorPool = descriptorPool;
-    allocInfo.descriptorSetCount = MAX_FRAMES_IN_FLIGHT;
+    allocInfo.descriptorPool = pool;
+    allocInfo.descriptorSetCount = info.MAX_FRAMES_IN_FLIGHT;
     allocInfo.pSetLayouts = layouts.data(); 
 
-    descriptorSets.resize( MAX_FRAMES_IN_FLIGHT );
-    VkResult result = vkAllocateDescriptorSets(device, &allocInfo, descriptorSets.data());
+    vector<VkDescriptorSet> descriptorSets;
+    descriptorSets.resize( info.MAX_FRAMES_IN_FLIGHT );
+
+    VkResult result = vkAllocateDescriptorSets(info.device, &allocInfo, descriptorSets.data());
     if (result != VK_SUCCESS) { throw runtime_error( "Failed to allocate the Descriptor Sets!" ); }
 
-    for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+    return descriptorSets;
+}
 
-        VkDescriptorBufferInfo bufferInfo = {};
-        bufferInfo.buffer = uniformBuffers[i]; //memory has already been allocated in create uniform buffers
-        bufferInfo.offset = 0;
-        bufferInfo.range = sizeof( UniformConstantData );
+void updateDescriptorSet(DeviceInfo info, vector<VkDescriptorSet> descriptorSets, int binding, VkDescriptorType type, VkDescriptorBufferInfo* bufferInfo, VkDescriptorImageInfo* imageInfo, vector<VkBuffer> buffers) {
+    
 
-        const size_t count = objects.size();
-        const int uniformBuffersCount = 1;
+
+    for (size_t i = 0; i < info.MAX_FRAMES_IN_FLIGHT; i++) {
+        
+        // const size_t count = objects.size();
+        // const int uniformBuffersCount = 1;
 
         // array<VkWriteDescriptorSet, 2> descriptorWrites{};
         vector<VkWriteDescriptorSet> descriptorWrites = {};
-        descriptorWrites.resize( count + uniformBuffersCount );
+        descriptorWrites.resize( 1 );
 
         descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
         descriptorWrites[0].dstSet = descriptorSets[i];
-        descriptorWrites[0].dstBinding = 0;
+        descriptorWrites[0].dstBinding = binding;
         descriptorWrites[0].dstArrayElement = 0;
-        descriptorWrites[0].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+        descriptorWrites[0].descriptorType = type;
         descriptorWrites[0].descriptorCount = 1;
-        descriptorWrites[0].pBufferInfo = &bufferInfo;
 
-        for (int f = 0; f < count; f++) {
-
-            VkDescriptorImageInfo imageInfo{};
-            imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-            imageInfo.imageView = objects[f].textureImageView;
-            imageInfo.sampler = sampler;
-
-            descriptorWrites[f + uniformBuffersCount].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-            descriptorWrites[f + uniformBuffersCount].dstSet = descriptorSets[i];
-            descriptorWrites[f + uniformBuffersCount].dstBinding = 1;
-            descriptorWrites[f + uniformBuffersCount].dstArrayElement = 0;
-            descriptorWrites[f + uniformBuffersCount].descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
-            descriptorWrites[f + uniformBuffersCount].descriptorCount = 1;
-            descriptorWrites[f + uniformBuffersCount].pImageInfo = &imageInfo;
+        if (bufferInfo != nullptr) { 
+            bufferInfo->buffer = buffers[i];
+            descriptorWrites[0].pBufferInfo = bufferInfo; 
         }
+        else if (imageInfo != nullptr) { descriptorWrites[0].pImageInfo = imageInfo; }
 
-        vkUpdateDescriptorSets(device, static_cast<uint32_t>(descriptorWrites.size()), descriptorWrites.data(), 0, nullptr);
+
+
+        // for (int f = 0; f < count; f++) {
+
+        //     VkDescriptorImageInfo imageInfo{};
+        //     imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+        //     imageInfo.imageView = objects[f].textureImageView;
+        //     imageInfo.sampler = sampler;
+
+        //     descriptorWrites[f + uniformBuffersCount].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+        //     descriptorWrites[f + uniformBuffersCount].dstSet = descriptorSets[i];
+        //     descriptorWrites[f + uniformBuffersCount].dstBinding = 1;
+        //     descriptorWrites[f + uniformBuffersCount].dstArrayElement = 0;
+        //     descriptorWrites[f + uniformBuffersCount].descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+        //     descriptorWrites[f + uniformBuffersCount].descriptorCount = 1;
+        //     descriptorWrites[f + uniformBuffersCount].pImageInfo = &imageInfo;
+        // }
+
+        vkUpdateDescriptorSets(info.device, static_cast<uint32_t>(descriptorWrites.size()), descriptorWrites.data(), 0, nullptr);
     }
 }
 
