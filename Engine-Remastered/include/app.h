@@ -187,9 +187,6 @@ private:
     void createUniformBuffers();
     void updateUniformBuffers(uint32_t currentImage);
 
-    VkSampler sampler;
-    VkSampler createImageSampler();
-
     // MARK: Descriptors
     void createDescriptorSetMaterials();
     // void createDescriptorSets();

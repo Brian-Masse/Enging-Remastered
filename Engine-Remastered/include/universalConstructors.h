@@ -53,7 +53,7 @@ VkDescriptorSetLayout createDescriptorSetLayout( DeviceInfo info, vector<VkDescr
 
 vector<VkDescriptorSet> allocateDescriptorSet(DeviceInfo info, VkDescriptorPool pool, VkDescriptorSetLayout& descriptorSetLayout);
 
-void updateDescriptorSet(DeviceInfo info, vector<VkDescriptorSet> descriptorSets,  int binding, VkDescriptorType type, VkDescriptorBufferInfo* bufferInfo, VkDescriptorImageInfo* imageInfo, vector<VkBuffer> buffers);
+void updateDescriptorSet(DeviceInfo info, vector<VkDescriptorSet>& descriptorSets,  int binding, VkDescriptorType type, VkDescriptorBufferInfo* bufferInfo, VkDescriptorImageInfo* imageInfo, vector<VkBuffer>* buffers);
 
 //MARK: Buffers
 

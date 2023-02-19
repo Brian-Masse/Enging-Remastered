@@ -174,11 +174,12 @@ void EngineRemastered::createGraphicsPipeline() {
     pushConstantRange.size = sizeof( TransformPushConstants );
     pushConstantRange.offset = 0;
 
+    vector<VkDescriptorSetLayout> descriptorLayouts = { descriptorSetLayout, objects[0].descriptorSetLayout };
 
     VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
-    pipelineLayoutInfo.setLayoutCount = 1; // Optional
-    pipelineLayoutInfo.pSetLayouts = &descriptorSetLayout; // Optional
+    pipelineLayoutInfo.setLayoutCount = 2; // Optional
+    pipelineLayoutInfo.pSetLayouts = descriptorLayouts.data(); // Optional
     pipelineLayoutInfo.pushConstantRangeCount = 1; 
     pipelineLayoutInfo.pPushConstantRanges = &pushConstantRange;
 

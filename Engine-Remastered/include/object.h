@@ -88,10 +88,12 @@ class EngineObject {
 
     //MARK: Commands
 
-    void bind(VkCommandBuffer commandBuffer);
+    void bind(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout, int currentFrame);
     void draw(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout);
 
     VkImageView textureImageView;
+    VkDescriptorSetLayout descriptorSetLayout;
+    VkSampler sampler;
 
     VkBuffer vertexBuffer;
     VkBuffer indexBuffer;
@@ -108,10 +110,16 @@ class EngineObject {
 
 
     //MARK: Texture
-    void createTextureMaterials();
-    void createTextureImage();
+    
     VkImage textureImage;
     VkDeviceMemory textureImageMemory;
+    VkDescriptorPool descriptorPool;
+    vector<VkDescriptorSet> descriptorSets;
+    
+    void createImageSampler();
+    void createTextureMaterials();
+    void createTextureImage();
+    void createDescriptorSetMaterials();
 };
 
 #endif

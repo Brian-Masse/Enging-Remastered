@@ -40,7 +40,6 @@ set( CPP_FILES
     ${APP}/validation.cpp
     ${MAIN}/module.cpp
 
-    ${APP}/buffers.cpp
     ${APP}/depthBuffer.cpp
     ${APP}/commands.cpp
     ${APP}/devices.cpp
@@ -55,7 +54,7 @@ set( CPP_FILES
 
     ${UCONSTRUCTORS}/imageReader.cpp
     ${UCONSTRUCTORS}/proxy.cpp
-    ${UCONSTRUCTORS}/uBuffers.cpp
+    ${UCONSTRUCTORS}/buffers.cpp
     ${UCONSTRUCTORS}/uCommands.cpp
 
 )

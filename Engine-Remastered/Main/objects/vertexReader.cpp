@@ -132,7 +132,7 @@ EngineObject::BufferInformation extractInformation(string fileName) {
 
     for (int i = 0; i < faceCount; i++) {
         int count = extractInt(inData, 0, 0);
-        int extra = floor(count / 2) - 1;
+        // int extra = floor(count / 2) - 1;
 
         int faceTotal = (count - 2) * 3;
 

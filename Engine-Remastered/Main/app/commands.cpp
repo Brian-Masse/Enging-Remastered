@@ -88,13 +88,10 @@ void EngineRemastered::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32
     scissor.extent = swapChainExtent;
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
-    for (auto& object: objects) { 
-        object.bind(commandBuffer); 
-    
-        vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, 
-        pipelineLayout, 0, 1, 
-        &descriptorSets[currentFrame], 0, nullptr);
+    vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout, 0, 1, &descriptorSets[currentFrame], 0, nullptr);
 
+    for (auto& object: objects) { 
+        object.bind(commandBuffer, pipelineLayout, currentFrame); 
         object.draw(commandBuffer, pipelineLayout);
 
     }

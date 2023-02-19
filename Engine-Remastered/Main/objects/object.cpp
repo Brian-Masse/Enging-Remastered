@@ -28,12 +28,17 @@ using namespace std;
 void EngineObject::init() {
     extractVertices();
     createTextureMaterials();   
+    createDescriptorSetMaterials();
     createVertexBuffer();
     createIndexBuffer();
 }
 
 void EngineObject::cleanup() {
     VkDevice device = info.device;
+
+    vkDestroySampler(device, sampler, nullptr);
+    vkDestroyDescriptorSetLayout(info.device, descriptorSetLayout, nullptr);
+    vkDestroyDescriptorPool(info.device, descriptorPool, nullptr);
 
     vkFreeMemory(device, textureImageMemory, nullptr);
     vkDestroyImageView(device, textureImageView, nullptr);
@@ -56,6 +61,7 @@ void EngineObject::extractVertices() {
 //MARK: Image
 
 void EngineObject::createTextureMaterials() {
+    createImageSampler();
     createTextureImage();
 }
 
@@ -100,14 +106,72 @@ void EngineObject::createTextureImage() {
     textureImageView = createImageView( info, textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT );
 }
 
-void EngineObject::bind(VkCommandBuffer commandBuffer) {
+void EngineObject::createImageSampler() {
+
+    VkSamplerCreateInfo samplerInfo = {};
+    samplerInfo.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;
+    samplerInfo.magFilter = VK_FILTER_LINEAR; // oversampling
+    samplerInfo.minFilter = VK_FILTER_LINEAR; // under-sampling
+
+    samplerInfo.addressModeU = VK_SAMPLER_ADDRESS_MODE_REPEAT; // how the image is handled outside of the image bounds
+    samplerInfo.addressModeV = VK_SAMPLER_ADDRESS_MODE_REPEAT; // can be specifed on a per-vertex basis
+    samplerInfo.addressModeW = VK_SAMPLER_ADDRESS_MODE_REPEAT;
+
+    samplerInfo.borderColor = VK_BORDER_COLOR_INT_OPAQUE_BLACK;
+    samplerInfo.unnormalizedCoordinates = VK_FALSE;
+    samplerInfo.compareEnable = VK_FALSE;
+    samplerInfo.compareOp = VK_COMPARE_OP_ALWAYS;
+
+    samplerInfo.mipmapMode = VK_SAMPLER_MIPMAP_MODE_LINEAR;
+    samplerInfo.mipLodBias = 0.0f;
+    samplerInfo.minLod = 0.0f;
+    samplerInfo.maxLod = 0.0f;
+
+    VkPhysicalDeviceProperties properties;
+    vkGetPhysicalDeviceProperties(info.physicalDevice, &properties);
+
+    samplerInfo.anisotropyEnable = VK_TRUE;
+    samplerInfo.maxAnisotropy = properties.limits.maxSamplerAnisotropy;
+
+    VkResult result = vkCreateSampler(info.device, &samplerInfo, nullptr, &sampler);
+    if (result != VK_SUCCESS) { throw runtime_error( "Unable to create the texture Sampler" ); }
+
+}
+
+void EngineObject::createDescriptorSetMaterials() {
+
+    VkDescriptorSetLayoutBinding samplerLayoutBinding{};
+    samplerLayoutBinding.binding = 1;
+    samplerLayoutBinding.descriptorCount = 1;
+    samplerLayoutBinding.descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+    samplerLayoutBinding.pImmutableSamplers = nullptr;
+    samplerLayoutBinding.stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT;
+
+    vector< VkDescriptorSetLayoutBinding > bindings = { samplerLayoutBinding };
+
+    descriptorSetLayout = createDescriptorSetLayout(info, bindings);
+
+    descriptorPool = createDescriptorPools(info, 0, 1);
+    descriptorSets = allocateDescriptorSet(info, descriptorPool, descriptorSetLayout);
+
+    VkDescriptorImageInfo imageInfo{};
+    imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    imageInfo.imageView = textureImageView;
+    imageInfo.sampler = sampler;
+
+    updateDescriptorSet(info, descriptorSets, 1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, nullptr, &imageInfo, nullptr);
+}
+
+void EngineObject::bind(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout, int currentFrame) {
 
     VkBuffer vertexBuffers[] = {vertexBuffer};
     VkDeviceSize offsets[] = {0};
     vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
     vkCmdBindIndexBuffer(commandBuffer, indexBuffer, 0, VK_INDEX_TYPE_UINT16);
 
-    
+    vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, 
+        pipelineLayout, 1, 1, 
+        &descriptorSets[currentFrame], 0, nullptr);
 }
 
 void EngineObject::draw(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout) {
