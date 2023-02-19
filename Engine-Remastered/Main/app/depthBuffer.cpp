@@ -23,7 +23,7 @@
 void EngineRemastered::createDepthResources() {
     
     VkFormat depthFormat = findDepthFormat();
-    bool hasStencilComponent = (depthFormat == VK_FORMAT_D32_SFLOAT_S8_UINT) || (depthFormat == VK_FORMAT_D24_UNORM_S8_UINT);
+    // bool hasStencilComponent = (depthFormat == VK_FORMAT_D32_SFLOAT_S8_UINT) || (depthFormat == VK_FORMAT_D24_UNORM_S8_UINT);
 
     create2DImage( info, swapChainExtent.width, swapChainExtent.height, depthFormat, 
         VK_IMAGE_TILING_OPTIMAL,

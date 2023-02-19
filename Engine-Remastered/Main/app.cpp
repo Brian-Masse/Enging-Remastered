@@ -172,7 +172,7 @@ QueueFamilyIndicies EngineRemastered::findQueueFamilies( VkPhysicalDevice device
 
     int i = 0;
     for (const auto& queueFamily : queueFamilies) {
-        if ( queueFamily.queueFlags && VK_QUEUE_GRAPHICS_BIT ) { indicies.graphicsFamily = i; }
+        if ( queueFamily.queueFlags & VK_QUEUE_GRAPHICS_BIT ) { indicies.graphicsFamily = i; }
 
         VkBool32 presentSupport = false;
         vkGetPhysicalDeviceSurfaceSupportKHR(device, i, surface, &presentSupport);

@@ -87,8 +87,8 @@ void EngineRemastered::createSwapChain() {
     VkPresentModeKHR presentMode = chooseSurfacePresentMode(details.presentMode);
     VkExtent2D swapExtent = chooseSwapExtent(details.capabilities);
 
-    uint32_t imageCount = details.capabilities.minImageCount;
-    if (details.capabilities.maxImageCount > 0 && details.capabilities.maxImageCount) { imageCount = details.capabilities.maxImageCount; }
+    // uint32_t imageCount = details.capabilities.minImageCount;
+    // if (details.capabilities.maxImageCount > 0 && details.capabilities.maxImageCount) { imageCount = details.capabilities.maxImageCount; }
 
     VkSwapchainCreateInfoKHR createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
