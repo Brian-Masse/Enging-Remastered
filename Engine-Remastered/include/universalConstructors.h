@@ -32,6 +32,8 @@ struct DeviceInfo {
     VkCommandPool commandPool;
     VkQueue graphicsQueue;
 
+    int MAX_FRAMES_IN_FLIGHT;
+
 };
 
 
@@ -44,6 +46,10 @@ void transitionImageLayout( DeviceInfo info, VkImage image, VkFormat format, VkI
 void copyBufferToImage( DeviceInfo info, VkBuffer buffer, VkImage image, uint32_t width, uint32_t height  );
 
 void create2DImage( DeviceInfo info, int width, int height, VkFormat format, VkImageTiling tiling, unsigned int usage, VkImage_T*& image, VkDeviceMemory_T*& memory );
+
+//MARK: Descriptors
+
+VkDescriptorPool createDescriptorPools(DeviceInfo info, int bufferCount, int imageCount);
 
 //MARK: Buffers
 

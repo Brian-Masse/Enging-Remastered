@@ -60,7 +60,7 @@ class EngineRemastered
 {
 public:
 
-    void createObject(string name, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b);
+    void createObject(string name, string texture, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b);
     void initialization();
     void run();;
 
@@ -96,13 +96,7 @@ private:
     UniformConstantData constantData = { {0, 0, -1} };
 
     // MARK: Initialization
-        // MARK: Mainloop
     void mainLoop();
-
-    // MARK: Cleanup
-    void cleanupSwapChain();
-    void cleanup();
-
     void initWindow();
     void initVulkan();
     static void frameBufferResizeCallback(GLFWwindow* window, int width, int height) {
@@ -113,18 +107,24 @@ private:
     void createInstance();
     void createSurface();
 
+    // MARK: Cleanup
+    void cleanupSwapChain();
+    void cleanup();
+
     //MARK: Objects
     double temp = 0;
     void updateCamera( double x, double y, double z );
 
     DeviceInfo info;
     vector<EngineObject> objects;
+    void createDeviceInfo();
     void createObjects();
 
-    //MARK: PhysicalDevice
+    //MARK: Devices
     void pickPhysicalDevice();
     bool isDeviceSuitable( VkPhysicalDevice device );
     bool checkDeviceExtensionSupport(VkPhysicalDevice device);
+    void createLogicalDevice();
 
     //MARK: Swapchain
     VkSwapchainKHR swapChain;
@@ -151,9 +151,6 @@ private:
     void createFrameBuffers();
 
     QueueFamilyIndicies findQueueFamilies( VkPhysicalDevice device );
-
-    //MARK: Logical Device
-    void createLogicalDevice();
 
     //MARK: Pipeline
     VkRenderPass renderPass;
@@ -187,16 +184,17 @@ private:
     VkDescriptorPool descriptorPool;
     VkDescriptorSetLayout descriptorSetLayout;
 
-    void createVertexBuffer();
-    void createDescriptorSetLayout();
     void createUniformBuffers();
-    void createDescriptorPools();
-    void createDescriptorSets();
-
     void updateUniformBuffers(uint32_t currentImage);
 
     VkSampler sampler;
     VkSampler createImageSampler();
+
+    // MARK: Descriptors
+    void createDescriptorSetMaterials();
+    void createDescriptorSetLayout();
+    // void createDescriptorPools();
+    void createDescriptorSets();
 
     //MARK: DepthBuffer:
     VkImage depthImage;

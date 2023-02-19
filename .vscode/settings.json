@@ -81,6 +81,9 @@
   },
   "C_Cpp.enhancedColorization": "enabled",
   "cmake.configureOnOpen": false,
+  // "cmake.debugConfig": {
+  //   "externalConsole": true
+  // },
   "cSpell.words": [
     "commandbuffers",
     "cooresponds",

@@ -17,28 +17,10 @@
 #include <sstream>
 
 #include "app.h"
+#include "universalConstructors.h"
 
 using namespace std;
 using namespace glm;
-
-
-
-void EngineRemastered::createDescriptorPools() {
-    array<VkDescriptorPoolSize, 2> poolSizes{};
-    poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-    poolSizes[0].descriptorCount = MAX_FRAMES_IN_FLIGHT;
-    poolSizes[1].type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
-    poolSizes[1].descriptorCount = MAX_FRAMES_IN_FLIGHT;
-
-    VkDescriptorPoolCreateInfo createInfo = {};
-    createInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
-    createInfo.poolSizeCount = poolSizes.size();
-    createInfo.pPoolSizes = poolSizes.data(); // create a descriptor set for every frame
-    createInfo.maxSets = MAX_FRAMES_IN_FLIGHT;
-
-    VkResult result = vkCreateDescriptorPool(device, &createInfo, nullptr, &descriptorPool);
-    if (result != VK_SUCCESS) { throw runtime_error( "Unable to Create Descriptor Pool" ); }
-}
 
 void EngineRemastered::createDescriptorSetLayout() {
     VkDescriptorSetLayoutBinding uboLayoutBinding = {};
@@ -80,21 +62,18 @@ void EngineRemastered::createDescriptorSets() {
     if (result != VK_SUCCESS) { throw runtime_error( "Failed to allocate the Descriptor Sets!" ); }
 
     for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+
         VkDescriptorBufferInfo bufferInfo = {};
         bufferInfo.buffer = uniformBuffers[i]; //memory has already been allocated in create uniform buffers
         bufferInfo.offset = 0;
         bufferInfo.range = sizeof( UniformConstantData );
 
-        VkDescriptorImageInfo imageInfo{};
-        imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-        imageInfo.imageView = objects[0].textureImageView;
-        imageInfo.sampler = sampler;
+        const size_t count = objects.size();
+        const int uniformBuffersCount = 1;
 
-
-        const size_t count = objects.size() + 1;
-
-        array<VkWriteDescriptorSet, 2> descriptorWrites{};
-        // descriptorWrites.resize( count );
+        // array<VkWriteDescriptorSet, 2> descriptorWrites{};
+        vector<VkWriteDescriptorSet> descriptorWrites = {};
+        descriptorWrites.resize( count + uniformBuffersCount );
 
         descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
         descriptorWrites[0].dstSet = descriptorSets[i];
@@ -104,13 +83,21 @@ void EngineRemastered::createDescriptorSets() {
         descriptorWrites[0].descriptorCount = 1;
         descriptorWrites[0].pBufferInfo = &bufferInfo;
 
-        descriptorWrites[1].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-        descriptorWrites[1].dstSet = descriptorSets[i];
-        descriptorWrites[1].dstBinding = 1;
-        descriptorWrites[1].dstArrayElement = 0;
-        descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
-        descriptorWrites[1].descriptorCount = 1;
-        descriptorWrites[1].pImageInfo = &imageInfo;
+        for (int f = 0; f < count; f++) {
+
+            VkDescriptorImageInfo imageInfo{};
+            imageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+            imageInfo.imageView = objects[f].textureImageView;
+            imageInfo.sampler = sampler;
+
+            descriptorWrites[f + uniformBuffersCount].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+            descriptorWrites[f + uniformBuffersCount].dstSet = descriptorSets[i];
+            descriptorWrites[f + uniformBuffersCount].dstBinding = 1;
+            descriptorWrites[f + uniformBuffersCount].dstArrayElement = 0;
+            descriptorWrites[f + uniformBuffersCount].descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+            descriptorWrites[f + uniformBuffersCount].descriptorCount = 1;
+            descriptorWrites[f + uniformBuffersCount].pImageInfo = &imageInfo;
+        }
 
         vkUpdateDescriptorSets(device, static_cast<uint32_t>(descriptorWrites.size()), descriptorWrites.data(), 0, nullptr);
     }
@@ -118,7 +105,6 @@ void EngineRemastered::createDescriptorSets() {
 
 void EngineRemastered::createUniformBuffers() {
     VkDeviceSize bufferSize = sizeof( UniformConstantData );
-
 
     uniformBuffers.resize( MAX_FRAMES_IN_FLIGHT );
     uniformBuffersMemory.resize( MAX_FRAMES_IN_FLIGHT );

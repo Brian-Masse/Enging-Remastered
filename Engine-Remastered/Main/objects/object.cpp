@@ -64,7 +64,7 @@ void EngineObject::createTextureImage() {
     int textureWidth, textureHeight, textureChannels;
 
     string pathToDir = "Textures/";
-    string fullPath = getAbsoluteDirectory(pathToDir, "ramen.png");
+    string fullPath = getAbsoluteDirectory(pathToDir, texture);
 
     const char* url =  fullPath.c_str();
 
@@ -106,6 +106,8 @@ void EngineObject::bind(VkCommandBuffer commandBuffer) {
     VkDeviceSize offsets[] = {0};
     vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
     vkCmdBindIndexBuffer(commandBuffer, indexBuffer, 0, VK_INDEX_TYPE_UINT16);
+
+    
 }
 
 void EngineObject::draw(VkCommandBuffer commandBuffer, VkPipelineLayout pipelineLayout) {

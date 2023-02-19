@@ -187,9 +187,8 @@ void EngineRemastered::recreateSwapChain() {
     createDepthResources();
     createFrameBuffers();
     createUniformBuffers();
-    createDescriptorPools();
-    createDescriptorSetLayout();
-    createDescriptorSets();
+
+    createDescriptorSetMaterials();
     createCommandBuffers();
 
 }

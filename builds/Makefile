@@ -520,30 +520,6 @@ Engine-Remastered/Main/objects/vertexReader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexReader.cpp.s
 .PHONY : Engine-Remastered/Main/objects/vertexReader.cpp.s
 
-Engine-Remastered/Main/test.o: Engine-Remastered/Main/test.cpp.o
-.PHONY : Engine-Remastered/Main/test.o
-
-# target to build an object file
-Engine-Remastered/Main/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/test.cpp.o
-.PHONY : Engine-Remastered/Main/test.cpp.o
-
-Engine-Remastered/Main/test.i: Engine-Remastered/Main/test.cpp.i
-.PHONY : Engine-Remastered/Main/test.i
-
-# target to preprocess a source file
-Engine-Remastered/Main/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/test.cpp.i
-.PHONY : Engine-Remastered/Main/test.cpp.i
-
-Engine-Remastered/Main/test.s: Engine-Remastered/Main/test.cpp.s
-.PHONY : Engine-Remastered/Main/test.s
-
-# target to generate assembly for a file
-Engine-Remastered/Main/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/test.cpp.s
-.PHONY : Engine-Remastered/Main/test.cpp.s
-
 Engine-Remastered/Main/universalConstructors/imageReader.o: Engine-Remastered/Main/universalConstructors/imageReader.cpp.o
 .PHONY : Engine-Remastered/Main/universalConstructors/imageReader.o
 
@@ -704,9 +680,6 @@ help:
 	@echo "... Engine-Remastered/Main/objects/vertexReader.o"
 	@echo "... Engine-Remastered/Main/objects/vertexReader.i"
 	@echo "... Engine-Remastered/Main/objects/vertexReader.s"
-	@echo "... Engine-Remastered/Main/test.o"
-	@echo "... Engine-Remastered/Main/test.i"
-	@echo "... Engine-Remastered/Main/test.s"
 	@echo "... Engine-Remastered/Main/universalConstructors/imageReader.o"
 	@echo "... Engine-Remastered/Main/universalConstructors/imageReader.i"
 	@echo "... Engine-Remastered/Main/universalConstructors/imageReader.s"

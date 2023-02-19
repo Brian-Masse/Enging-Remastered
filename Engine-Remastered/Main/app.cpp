@@ -53,24 +53,23 @@ void EngineRemastered:: initVulkan() {
 
     createSwapChain();
     createRenderPass();
-    createDescriptorSetLayout();
-    createGraphicsPipeline();
+
     createCommandPool();
 
-    info.device = device;
-    info.physicalDevice = physicalDevice;
-    info.commandPool = commandPool;
-    info.graphicsQueue = graphicsQueue;
+    createDeviceInfo();
+
+    createUniformBuffers();
+
     sampler = createImageSampler();
     createObjects();
+
+    createDescriptorSetMaterials();
+    createGraphicsPipeline();
 
     createImageViews();
     createDepthResources();
     createFrameBuffers();   
 
-    createUniformBuffers();
-    createDescriptorPools();
-    createDescriptorSets();
 
     createCommandBuffers();
     createSyncFunctions();
@@ -148,6 +147,14 @@ void EngineRemastered::createInstance()
     }
 }
 
+void EngineRemastered::createDeviceInfo() {
+    info.device = device;
+    info.physicalDevice = physicalDevice;
+    info.commandPool = commandPool;
+    info.graphicsQueue = graphicsQueue;
+    info.MAX_FRAMES_IN_FLIGHT = MAX_FRAMES_IN_FLIGHT;
+}
+
 //MARK: Window
 void EngineRemastered::createSurface() {
     VkResult result = glfwCreateWindowSurface(instance, window, nullptr, &surface);
@@ -178,11 +185,20 @@ QueueFamilyIndicies EngineRemastered::findQueueFamilies( VkPhysicalDevice device
     return indicies;
 }
 
-void EngineRemastered::createObject(string name, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b) {
+void EngineRemastered::createDescriptorSetMaterials() {
+
+    createDescriptorSetLayout();
+    descriptorPool = createDescriptorPools(info, 1, 1);
+    createDescriptorSets();
+
+}
+
+void EngineRemastered::createObject(string name, string texture, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b) {
 
     EngineObject obj;
     obj.info = info;
     obj.fileName = name;
+    obj.texture = texture;
     obj.init();
 
     mat4 translateMatrix = mat4{1.0f};
@@ -206,33 +222,9 @@ void EngineRemastered::createObject(string name, double sx, double sy, double sz
 
 void EngineRemastered::createObjects() {
 
-    createObject("cube.ply", 0, 0, 0, 0, 0, 0, 1, 1, 1);
+    createObject("cube.ply", "ramen.png", 1, 1, 1, 0, 0, 0, 1, 1, 1);
+    createObject("icoSphere.ply", "base.png", 1, 1, 1, 1, 1, 0, 1, 1, 1);
 
-    // EngineObject cube;
-    // cube.info = info;
-    // cube.fileName = "cube.ply";
-    // cube.init();
-
-
-    // mat4 translateMatrix = mat4{1.0f};
-    // translateMatrix[3][0] = 1.0f;
-    // translateMatrix[3][1] = 0.7f;
-    // translateMatrix[3][2] = 0.0f;
-
-    // mat4 scaleMatrix = mat4(0.5f);
-    // scaleMatrix[3][3] = 1.0f;
-
-    // cube.transform.translation = translateMatrix;
-    // cube.transform.scale = scaleMatrix;
-
-
-    // EngineObject cube2;
-    // cube2.info = info;
-    // cube2.fileName = "Icosphere.ply";
-    // cube2.init();
-    // cube2.transform.translation = { -0.5f, -0.5f, 0.0f };
-
-    // objects = { cube };
 }
 
 VkSampler EngineRemastered::createImageSampler() {

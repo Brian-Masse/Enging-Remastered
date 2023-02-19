@@ -74,6 +74,8 @@ class EngineObject {
         std::vector<uint16_t> indexBuffer;
     };
 
+
+    string texture;
     string fileName;
     DeviceInfo info;
     void init();
@@ -105,6 +107,7 @@ class EngineObject {
     void createIndexBuffer();
 
 
+    //MARK: Texture
     void createTextureMaterials();
     void createTextureImage();
     VkImage textureImage;

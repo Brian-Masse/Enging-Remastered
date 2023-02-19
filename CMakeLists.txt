@@ -4,13 +4,14 @@ project( "Test Project" )
 set(CMAKE_CXX_STANDARD 17)
 
 #UNIVERSALS
-
 set( APP_NAME "app")
 set( MOD_NAME "EngineRemastered")
 
 set( BASE "${PROJECT_SOURCE_DIR}/Engine-Remastered" )
 set( MAIN "${BASE}/Main" )
 set( DEPENDENCIES "${PROJECT_SOURCE_DIR}/dependencies" )
+
+set( COMPILE_FLAGS "-g -Wall" )
 
 #INCLUDES
 set( INCLUDES "${BASE}/include" )
@@ -24,13 +25,13 @@ set( APP "${MAIN}/app" )
 set( OBJECT "${MAIN}/objects" )
 set( UCONSTRUCTORS "${MAIN}/universalConstructors" )
 
+
+add_definitions(${COMPILE_FLAGS})
 find_package(Boost COMPONENTS python REQUIRED)
 add_subdirectory(${DEPEND_INCLUDES}/pybind11) 
 
-pybind11_add_module(
-    EngineRemastered
 
-    SHARED
+set( CPP_FILES 
 
     ${MAIN}/module.cpp
     ${MAIN}/app.cpp
@@ -56,6 +57,15 @@ pybind11_add_module(
     ${UCONSTRUCTORS}/proxy.cpp
     ${UCONSTRUCTORS}/uBuffers.cpp
     ${UCONSTRUCTORS}/uCommands.cpp
+
+)
+
+pybind11_add_module(
+    EngineRemastered
+
+    SHARED
+
+    ${CPP_FILES}
 )
 
 target_include_directories(
@@ -84,28 +94,8 @@ target_link_libraries(
 #app
 add_executable(
     ${APP_NAME}
-    ${MAIN}/main.cpp
-    ${MAIN}/app.cpp
-    ${MAIN}/module.cpp
-    ${MAIN}/test.cpp
 
-    ${APP}/buffers.cpp
-    ${APP}/depthBuffer.cpp
-    ${APP}/commands.cpp
-    ${APP}/devices.cpp
-    ${APP}/draw.cpp
-    ${APP}/pipeline.cpp
-    ${APP}/swapchain.cpp
-    ${APP}/validation.cpp
-
-    ${OBJECT}/object.cpp
-    ${OBJECT}/vertexBuffer.cpp
-    ${OBJECT}/vertexReader.cpp
-
-    ${UCONSTRUCTORS}/imageReader.cpp
-    ${UCONSTRUCTORS}/proxy.cpp
-    ${UCONSTRUCTORS}/uBuffers.cpp
-    ${UCONSTRUCTORS}/uCommands.cpp
+    ${CPP_FILES}
 
 )
 

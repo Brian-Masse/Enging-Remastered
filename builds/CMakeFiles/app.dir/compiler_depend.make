@@ -8897,8 +8897,6 @@ CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o: /Users/bri
   /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/include/object.h \
   /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/include/universalConstructors.h
 
-CMakeFiles/app.dir/Engine-Remastered/Main/test.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/test.cpp
-
 CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/imageReader.cpp \
   /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/Vulkan/glm/glm.hpp \
   /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/Vulkan/glm/detail/_fixes.hpp \
@@ -12813,8 +12811,6 @@ CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o:
 /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/Vulkan/glm/detail/_vectorize.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/sys/wait.h:
-
-/Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/test.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/Availability.h:
 

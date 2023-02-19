@@ -8911,9 +8911,6 @@ CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o
  /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/include/object.h
  /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/include/universalConstructors.h
 
-CMakeFiles/app.dir/Engine-Remastered/Main/test.cpp.o
- /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/test.cpp
-
 CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o
  /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/imageReader.cpp
  /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/Vulkan/glm/glm.hpp

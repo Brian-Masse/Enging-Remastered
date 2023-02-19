@@ -22,6 +22,41 @@
 
 using namespace std;
 
+//MARK: DescriptorSets
+
+VkDescriptorPool createDescriptorPools(DeviceInfo info, int bufferCount, int imageCount) {
+    vector<VkDescriptorPoolSize> poolSizes{};
+    poolSizes.resize( bufferCount + imageCount );
+
+    for (int i = 0; i < bufferCount; i++) {
+        poolSizes[i].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+        poolSizes[i].descriptorCount = info.MAX_FRAMES_IN_FLIGHT;
+    }
+
+    for (int i = 0; i < imageCount; i++) {
+        poolSizes[i + bufferCount].type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+        poolSizes[i + bufferCount].descriptorCount = info.MAX_FRAMES_IN_FLIGHT;
+    }
+
+    VkDescriptorPoolCreateInfo createInfo = {};
+    createInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
+    createInfo.poolSizeCount = poolSizes.size();
+    createInfo.pPoolSizes = poolSizes.data(); // create a descriptor set for every frame
+    createInfo.maxSets = info.MAX_FRAMES_IN_FLIGHT;
+
+    VkDescriptorPool descriptorPool;
+
+    VkResult result = vkCreateDescriptorPool(info.device, &createInfo, nullptr, &descriptorPool);
+    if (result != VK_SUCCESS) { throw runtime_error( "Unable to Create Descriptor Pool" ); }
+
+    return descriptorPool;
+}
+
+
+
+
+//MARK: Buffers:
+
 void createBuffer( DeviceInfo info, VkDeviceSize size, VkBufferUsageFlags flags, VkMemoryPropertyFlags memFlags, VkBuffer& buffer, VkDeviceMemory& bufferMemory ) {
     //buffers are space in memory for data to be stored for the GPU to read
     // Memory must be managed explicitly
