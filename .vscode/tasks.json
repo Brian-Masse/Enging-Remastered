@@ -19,7 +19,7 @@
     {
       "label": "Make Shaders",
       "type": "shell",
-      "command": "sh ${workspaceFolder}/Engine-Remastered/Main/app/GraphicsPipeline/compile.sh ",
+      "command": "sh ${workspaceFolder}/EngineRemastered/Main/app/GraphicsPipeline/compile.sh ",
       "args": [],
       "options": {
         "cwd": "${workspaceFolder}/builds"
@@ -34,7 +34,7 @@
     {
       "label": "Run py",
       "type": "shell",
-      "command": "python ${workspaceFolder}/main.py",
+      "command": "python ${fileDirname}/main.py",
       "args": [],
       "options": {
         "cwd": "${workspaceFolder}/builds"
@@ -99,7 +99,7 @@
         //  "-Wno-deprecated"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/Engine-Remastered/Main"
+        "cwd": "${workspaceFolder}/EngineRemastered/Main"
       },
       "problemMatcher": ["$gcc"],
       "group": {

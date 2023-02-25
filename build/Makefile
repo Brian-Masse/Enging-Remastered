@@ -142,464 +142,464 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
-Engine-Remastered/Main/app.o: Engine-Remastered/Main/app.cpp.o
-.PHONY : Engine-Remastered/Main/app.o
+EngineRemastered/Main/app.o: EngineRemastered/Main/app.cpp.o
+.PHONY : EngineRemastered/Main/app.o
 
 # target to build an object file
-Engine-Remastered/Main/app.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app.cpp.o
-.PHONY : Engine-Remastered/Main/app.cpp.o
+EngineRemastered/Main/app.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app.cpp.o
+.PHONY : EngineRemastered/Main/app.cpp.o
 
-Engine-Remastered/Main/app.i: Engine-Remastered/Main/app.cpp.i
-.PHONY : Engine-Remastered/Main/app.i
+EngineRemastered/Main/app.i: EngineRemastered/Main/app.cpp.i
+.PHONY : EngineRemastered/Main/app.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/app.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app.cpp.i
-.PHONY : Engine-Remastered/Main/app.cpp.i
+EngineRemastered/Main/app.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app.cpp.i
+.PHONY : EngineRemastered/Main/app.cpp.i
 
-Engine-Remastered/Main/app.s: Engine-Remastered/Main/app.cpp.s
-.PHONY : Engine-Remastered/Main/app.s
+EngineRemastered/Main/app.s: EngineRemastered/Main/app.cpp.s
+.PHONY : EngineRemastered/Main/app.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/app.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app.cpp.s
-.PHONY : Engine-Remastered/Main/app.cpp.s
+EngineRemastered/Main/app.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app.cpp.s
+.PHONY : EngineRemastered/Main/app.cpp.s
 
-Engine-Remastered/Main/app/commands.o: Engine-Remastered/Main/app/commands.cpp.o
-.PHONY : Engine-Remastered/Main/app/commands.o
+EngineRemastered/Main/app/commands.o: EngineRemastered/Main/app/commands.cpp.o
+.PHONY : EngineRemastered/Main/app/commands.o
 
 # target to build an object file
-Engine-Remastered/Main/app/commands.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/commands.cpp.o
-.PHONY : Engine-Remastered/Main/app/commands.cpp.o
+EngineRemastered/Main/app/commands.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/commands.cpp.o
+.PHONY : EngineRemastered/Main/app/commands.cpp.o
 
-Engine-Remastered/Main/app/commands.i: Engine-Remastered/Main/app/commands.cpp.i
-.PHONY : Engine-Remastered/Main/app/commands.i
+EngineRemastered/Main/app/commands.i: EngineRemastered/Main/app/commands.cpp.i
+.PHONY : EngineRemastered/Main/app/commands.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/app/commands.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/commands.cpp.i
-.PHONY : Engine-Remastered/Main/app/commands.cpp.i
+EngineRemastered/Main/app/commands.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/commands.cpp.i
+.PHONY : EngineRemastered/Main/app/commands.cpp.i
 
-Engine-Remastered/Main/app/commands.s: Engine-Remastered/Main/app/commands.cpp.s
-.PHONY : Engine-Remastered/Main/app/commands.s
+EngineRemastered/Main/app/commands.s: EngineRemastered/Main/app/commands.cpp.s
+.PHONY : EngineRemastered/Main/app/commands.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/app/commands.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/commands.cpp.s
-.PHONY : Engine-Remastered/Main/app/commands.cpp.s
+EngineRemastered/Main/app/commands.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/commands.cpp.s
+.PHONY : EngineRemastered/Main/app/commands.cpp.s
 
-Engine-Remastered/Main/app/depthBuffer.o: Engine-Remastered/Main/app/depthBuffer.cpp.o
-.PHONY : Engine-Remastered/Main/app/depthBuffer.o
+EngineRemastered/Main/app/depthBuffer.o: EngineRemastered/Main/app/depthBuffer.cpp.o
+.PHONY : EngineRemastered/Main/app/depthBuffer.o
 
 # target to build an object file
-Engine-Remastered/Main/app/depthBuffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o
-.PHONY : Engine-Remastered/Main/app/depthBuffer.cpp.o
+EngineRemastered/Main/app/depthBuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/depthBuffer.cpp.o
+.PHONY : EngineRemastered/Main/app/depthBuffer.cpp.o
 
-Engine-Remastered/Main/app/depthBuffer.i: Engine-Remastered/Main/app/depthBuffer.cpp.i
-.PHONY : Engine-Remastered/Main/app/depthBuffer.i
+EngineRemastered/Main/app/depthBuffer.i: EngineRemastered/Main/app/depthBuffer.cpp.i
+.PHONY : EngineRemastered/Main/app/depthBuffer.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/app/depthBuffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/depthBuffer.cpp.i
-.PHONY : Engine-Remastered/Main/app/depthBuffer.cpp.i
+EngineRemastered/Main/app/depthBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/depthBuffer.cpp.i
+.PHONY : EngineRemastered/Main/app/depthBuffer.cpp.i
 
-Engine-Remastered/Main/app/depthBuffer.s: Engine-Remastered/Main/app/depthBuffer.cpp.s
-.PHONY : Engine-Remastered/Main/app/depthBuffer.s
+EngineRemastered/Main/app/depthBuffer.s: EngineRemastered/Main/app/depthBuffer.cpp.s
+.PHONY : EngineRemastered/Main/app/depthBuffer.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/app/depthBuffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/depthBuffer.cpp.s
-.PHONY : Engine-Remastered/Main/app/depthBuffer.cpp.s
+EngineRemastered/Main/app/depthBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/depthBuffer.cpp.s
+.PHONY : EngineRemastered/Main/app/depthBuffer.cpp.s
 
-Engine-Remastered/Main/app/devices.o: Engine-Remastered/Main/app/devices.cpp.o
-.PHONY : Engine-Remastered/Main/app/devices.o
+EngineRemastered/Main/app/devices.o: EngineRemastered/Main/app/devices.cpp.o
+.PHONY : EngineRemastered/Main/app/devices.o
 
 # target to build an object file
-Engine-Remastered/Main/app/devices.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/devices.cpp.o
-.PHONY : Engine-Remastered/Main/app/devices.cpp.o
+EngineRemastered/Main/app/devices.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/devices.cpp.o
+.PHONY : EngineRemastered/Main/app/devices.cpp.o
 
-Engine-Remastered/Main/app/devices.i: Engine-Remastered/Main/app/devices.cpp.i
-.PHONY : Engine-Remastered/Main/app/devices.i
+EngineRemastered/Main/app/devices.i: EngineRemastered/Main/app/devices.cpp.i
+.PHONY : EngineRemastered/Main/app/devices.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/app/devices.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/devices.cpp.i
-.PHONY : Engine-Remastered/Main/app/devices.cpp.i
+EngineRemastered/Main/app/devices.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/devices.cpp.i
+.PHONY : EngineRemastered/Main/app/devices.cpp.i
 
-Engine-Remastered/Main/app/devices.s: Engine-Remastered/Main/app/devices.cpp.s
-.PHONY : Engine-Remastered/Main/app/devices.s
+EngineRemastered/Main/app/devices.s: EngineRemastered/Main/app/devices.cpp.s
+.PHONY : EngineRemastered/Main/app/devices.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/app/devices.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/devices.cpp.s
-.PHONY : Engine-Remastered/Main/app/devices.cpp.s
+EngineRemastered/Main/app/devices.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/devices.cpp.s
+.PHONY : EngineRemastered/Main/app/devices.cpp.s
 
-Engine-Remastered/Main/app/draw.o: Engine-Remastered/Main/app/draw.cpp.o
-.PHONY : Engine-Remastered/Main/app/draw.o
+EngineRemastered/Main/app/draw.o: EngineRemastered/Main/app/draw.cpp.o
+.PHONY : EngineRemastered/Main/app/draw.o
 
 # target to build an object file
-Engine-Remastered/Main/app/draw.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/draw.cpp.o
-.PHONY : Engine-Remastered/Main/app/draw.cpp.o
+EngineRemastered/Main/app/draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/draw.cpp.o
+.PHONY : EngineRemastered/Main/app/draw.cpp.o
 
-Engine-Remastered/Main/app/draw.i: Engine-Remastered/Main/app/draw.cpp.i
-.PHONY : Engine-Remastered/Main/app/draw.i
+EngineRemastered/Main/app/draw.i: EngineRemastered/Main/app/draw.cpp.i
+.PHONY : EngineRemastered/Main/app/draw.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/app/draw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/draw.cpp.i
-.PHONY : Engine-Remastered/Main/app/draw.cpp.i
+EngineRemastered/Main/app/draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/draw.cpp.i
+.PHONY : EngineRemastered/Main/app/draw.cpp.i
 
-Engine-Remastered/Main/app/draw.s: Engine-Remastered/Main/app/draw.cpp.s
-.PHONY : Engine-Remastered/Main/app/draw.s
+EngineRemastered/Main/app/draw.s: EngineRemastered/Main/app/draw.cpp.s
+.PHONY : EngineRemastered/Main/app/draw.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/app/draw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/draw.cpp.s
-.PHONY : Engine-Remastered/Main/app/draw.cpp.s
+EngineRemastered/Main/app/draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/draw.cpp.s
+.PHONY : EngineRemastered/Main/app/draw.cpp.s
 
-Engine-Remastered/Main/app/pipeline.o: Engine-Remastered/Main/app/pipeline.cpp.o
-.PHONY : Engine-Remastered/Main/app/pipeline.o
+EngineRemastered/Main/app/pipeline.o: EngineRemastered/Main/app/pipeline.cpp.o
+.PHONY : EngineRemastered/Main/app/pipeline.o
 
 # target to build an object file
-Engine-Remastered/Main/app/pipeline.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/pipeline.cpp.o
-.PHONY : Engine-Remastered/Main/app/pipeline.cpp.o
+EngineRemastered/Main/app/pipeline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/pipeline.cpp.o
+.PHONY : EngineRemastered/Main/app/pipeline.cpp.o
 
-Engine-Remastered/Main/app/pipeline.i: Engine-Remastered/Main/app/pipeline.cpp.i
-.PHONY : Engine-Remastered/Main/app/pipeline.i
+EngineRemastered/Main/app/pipeline.i: EngineRemastered/Main/app/pipeline.cpp.i
+.PHONY : EngineRemastered/Main/app/pipeline.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/app/pipeline.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/pipeline.cpp.i
-.PHONY : Engine-Remastered/Main/app/pipeline.cpp.i
+EngineRemastered/Main/app/pipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/pipeline.cpp.i
+.PHONY : EngineRemastered/Main/app/pipeline.cpp.i
 
-Engine-Remastered/Main/app/pipeline.s: Engine-Remastered/Main/app/pipeline.cpp.s
-.PHONY : Engine-Remastered/Main/app/pipeline.s
+EngineRemastered/Main/app/pipeline.s: EngineRemastered/Main/app/pipeline.cpp.s
+.PHONY : EngineRemastered/Main/app/pipeline.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/app/pipeline.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/pipeline.cpp.s
-.PHONY : Engine-Remastered/Main/app/pipeline.cpp.s
+EngineRemastered/Main/app/pipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/pipeline.cpp.s
+.PHONY : EngineRemastered/Main/app/pipeline.cpp.s
 
-Engine-Remastered/Main/app/swapchain.o: Engine-Remastered/Main/app/swapchain.cpp.o
-.PHONY : Engine-Remastered/Main/app/swapchain.o
+EngineRemastered/Main/app/swapchain.o: EngineRemastered/Main/app/swapchain.cpp.o
+.PHONY : EngineRemastered/Main/app/swapchain.o
 
 # target to build an object file
-Engine-Remastered/Main/app/swapchain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/swapchain.cpp.o
-.PHONY : Engine-Remastered/Main/app/swapchain.cpp.o
+EngineRemastered/Main/app/swapchain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/swapchain.cpp.o
+.PHONY : EngineRemastered/Main/app/swapchain.cpp.o
 
-Engine-Remastered/Main/app/swapchain.i: Engine-Remastered/Main/app/swapchain.cpp.i
-.PHONY : Engine-Remastered/Main/app/swapchain.i
+EngineRemastered/Main/app/swapchain.i: EngineRemastered/Main/app/swapchain.cpp.i
+.PHONY : EngineRemastered/Main/app/swapchain.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/app/swapchain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/swapchain.cpp.i
-.PHONY : Engine-Remastered/Main/app/swapchain.cpp.i
+EngineRemastered/Main/app/swapchain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/swapchain.cpp.i
+.PHONY : EngineRemastered/Main/app/swapchain.cpp.i
 
-Engine-Remastered/Main/app/swapchain.s: Engine-Remastered/Main/app/swapchain.cpp.s
-.PHONY : Engine-Remastered/Main/app/swapchain.s
+EngineRemastered/Main/app/swapchain.s: EngineRemastered/Main/app/swapchain.cpp.s
+.PHONY : EngineRemastered/Main/app/swapchain.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/app/swapchain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/swapchain.cpp.s
-.PHONY : Engine-Remastered/Main/app/swapchain.cpp.s
+EngineRemastered/Main/app/swapchain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/swapchain.cpp.s
+.PHONY : EngineRemastered/Main/app/swapchain.cpp.s
 
-Engine-Remastered/Main/app/validation.o: Engine-Remastered/Main/app/validation.cpp.o
-.PHONY : Engine-Remastered/Main/app/validation.o
+EngineRemastered/Main/app/validation.o: EngineRemastered/Main/app/validation.cpp.o
+.PHONY : EngineRemastered/Main/app/validation.o
 
 # target to build an object file
-Engine-Remastered/Main/app/validation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/validation.cpp.o
-.PHONY : Engine-Remastered/Main/app/validation.cpp.o
+EngineRemastered/Main/app/validation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/validation.cpp.o
+.PHONY : EngineRemastered/Main/app/validation.cpp.o
 
-Engine-Remastered/Main/app/validation.i: Engine-Remastered/Main/app/validation.cpp.i
-.PHONY : Engine-Remastered/Main/app/validation.i
+EngineRemastered/Main/app/validation.i: EngineRemastered/Main/app/validation.cpp.i
+.PHONY : EngineRemastered/Main/app/validation.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/app/validation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/validation.cpp.i
-.PHONY : Engine-Remastered/Main/app/validation.cpp.i
+EngineRemastered/Main/app/validation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/validation.cpp.i
+.PHONY : EngineRemastered/Main/app/validation.cpp.i
 
-Engine-Remastered/Main/app/validation.s: Engine-Remastered/Main/app/validation.cpp.s
-.PHONY : Engine-Remastered/Main/app/validation.s
+EngineRemastered/Main/app/validation.s: EngineRemastered/Main/app/validation.cpp.s
+.PHONY : EngineRemastered/Main/app/validation.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/app/validation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/app/validation.cpp.s
-.PHONY : Engine-Remastered/Main/app/validation.cpp.s
+EngineRemastered/Main/app/validation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/app/validation.cpp.s
+.PHONY : EngineRemastered/Main/app/validation.cpp.s
 
-Engine-Remastered/Main/main.o: Engine-Remastered/Main/main.cpp.o
-.PHONY : Engine-Remastered/Main/main.o
+EngineRemastered/Main/main.o: EngineRemastered/Main/main.cpp.o
+.PHONY : EngineRemastered/Main/main.o
 
 # target to build an object file
-Engine-Remastered/Main/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/main.cpp.o
-.PHONY : Engine-Remastered/Main/main.cpp.o
+EngineRemastered/Main/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/main.cpp.o
+.PHONY : EngineRemastered/Main/main.cpp.o
 
-Engine-Remastered/Main/main.i: Engine-Remastered/Main/main.cpp.i
-.PHONY : Engine-Remastered/Main/main.i
+EngineRemastered/Main/main.i: EngineRemastered/Main/main.cpp.i
+.PHONY : EngineRemastered/Main/main.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/main.cpp.i
-.PHONY : Engine-Remastered/Main/main.cpp.i
+EngineRemastered/Main/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/main.cpp.i
+.PHONY : EngineRemastered/Main/main.cpp.i
 
-Engine-Remastered/Main/main.s: Engine-Remastered/Main/main.cpp.s
-.PHONY : Engine-Remastered/Main/main.s
+EngineRemastered/Main/main.s: EngineRemastered/Main/main.cpp.s
+.PHONY : EngineRemastered/Main/main.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/main.cpp.s
-.PHONY : Engine-Remastered/Main/main.cpp.s
+EngineRemastered/Main/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/main.cpp.s
+.PHONY : EngineRemastered/Main/main.cpp.s
 
-Engine-Remastered/Main/module.o: Engine-Remastered/Main/module.cpp.o
-.PHONY : Engine-Remastered/Main/module.o
+EngineRemastered/Main/module.o: EngineRemastered/Main/module.cpp.o
+.PHONY : EngineRemastered/Main/module.o
 
 # target to build an object file
-Engine-Remastered/Main/module.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/module.cpp.o
-.PHONY : Engine-Remastered/Main/module.cpp.o
+EngineRemastered/Main/module.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/module.cpp.o
+.PHONY : EngineRemastered/Main/module.cpp.o
 
-Engine-Remastered/Main/module.i: Engine-Remastered/Main/module.cpp.i
-.PHONY : Engine-Remastered/Main/module.i
+EngineRemastered/Main/module.i: EngineRemastered/Main/module.cpp.i
+.PHONY : EngineRemastered/Main/module.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/module.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/module.cpp.i
-.PHONY : Engine-Remastered/Main/module.cpp.i
+EngineRemastered/Main/module.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/module.cpp.i
+.PHONY : EngineRemastered/Main/module.cpp.i
 
-Engine-Remastered/Main/module.s: Engine-Remastered/Main/module.cpp.s
-.PHONY : Engine-Remastered/Main/module.s
+EngineRemastered/Main/module.s: EngineRemastered/Main/module.cpp.s
+.PHONY : EngineRemastered/Main/module.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/module.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/module.cpp.s
-.PHONY : Engine-Remastered/Main/module.cpp.s
+EngineRemastered/Main/module.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/module.cpp.s
+.PHONY : EngineRemastered/Main/module.cpp.s
 
-Engine-Remastered/Main/objects/object.o: Engine-Remastered/Main/objects/object.cpp.o
-.PHONY : Engine-Remastered/Main/objects/object.o
+EngineRemastered/Main/objects/object.o: EngineRemastered/Main/objects/object.cpp.o
+.PHONY : EngineRemastered/Main/objects/object.o
 
 # target to build an object file
-Engine-Remastered/Main/objects/object.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/objects/object.cpp.o
-.PHONY : Engine-Remastered/Main/objects/object.cpp.o
+EngineRemastered/Main/objects/object.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/objects/object.cpp.o
+.PHONY : EngineRemastered/Main/objects/object.cpp.o
 
-Engine-Remastered/Main/objects/object.i: Engine-Remastered/Main/objects/object.cpp.i
-.PHONY : Engine-Remastered/Main/objects/object.i
+EngineRemastered/Main/objects/object.i: EngineRemastered/Main/objects/object.cpp.i
+.PHONY : EngineRemastered/Main/objects/object.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/objects/object.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/objects/object.cpp.i
-.PHONY : Engine-Remastered/Main/objects/object.cpp.i
+EngineRemastered/Main/objects/object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/objects/object.cpp.i
+.PHONY : EngineRemastered/Main/objects/object.cpp.i
 
-Engine-Remastered/Main/objects/object.s: Engine-Remastered/Main/objects/object.cpp.s
-.PHONY : Engine-Remastered/Main/objects/object.s
+EngineRemastered/Main/objects/object.s: EngineRemastered/Main/objects/object.cpp.s
+.PHONY : EngineRemastered/Main/objects/object.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/objects/object.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/objects/object.cpp.s
-.PHONY : Engine-Remastered/Main/objects/object.cpp.s
+EngineRemastered/Main/objects/object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/objects/object.cpp.s
+.PHONY : EngineRemastered/Main/objects/object.cpp.s
 
-Engine-Remastered/Main/objects/vertexBuffer.o: Engine-Remastered/Main/objects/vertexBuffer.cpp.o
-.PHONY : Engine-Remastered/Main/objects/vertexBuffer.o
+EngineRemastered/Main/objects/vertexBuffer.o: EngineRemastered/Main/objects/vertexBuffer.cpp.o
+.PHONY : EngineRemastered/Main/objects/vertexBuffer.o
 
 # target to build an object file
-Engine-Remastered/Main/objects/vertexBuffer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o
-.PHONY : Engine-Remastered/Main/objects/vertexBuffer.cpp.o
+EngineRemastered/Main/objects/vertexBuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o
+.PHONY : EngineRemastered/Main/objects/vertexBuffer.cpp.o
 
-Engine-Remastered/Main/objects/vertexBuffer.i: Engine-Remastered/Main/objects/vertexBuffer.cpp.i
-.PHONY : Engine-Remastered/Main/objects/vertexBuffer.i
+EngineRemastered/Main/objects/vertexBuffer.i: EngineRemastered/Main/objects/vertexBuffer.cpp.i
+.PHONY : EngineRemastered/Main/objects/vertexBuffer.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/objects/vertexBuffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.i
-.PHONY : Engine-Remastered/Main/objects/vertexBuffer.cpp.i
+EngineRemastered/Main/objects/vertexBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.i
+.PHONY : EngineRemastered/Main/objects/vertexBuffer.cpp.i
 
-Engine-Remastered/Main/objects/vertexBuffer.s: Engine-Remastered/Main/objects/vertexBuffer.cpp.s
-.PHONY : Engine-Remastered/Main/objects/vertexBuffer.s
+EngineRemastered/Main/objects/vertexBuffer.s: EngineRemastered/Main/objects/vertexBuffer.cpp.s
+.PHONY : EngineRemastered/Main/objects/vertexBuffer.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/objects/vertexBuffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.s
-.PHONY : Engine-Remastered/Main/objects/vertexBuffer.cpp.s
+EngineRemastered/Main/objects/vertexBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.s
+.PHONY : EngineRemastered/Main/objects/vertexBuffer.cpp.s
 
-Engine-Remastered/Main/objects/vertexReader.o: Engine-Remastered/Main/objects/vertexReader.cpp.o
-.PHONY : Engine-Remastered/Main/objects/vertexReader.o
+EngineRemastered/Main/objects/vertexReader.o: EngineRemastered/Main/objects/vertexReader.cpp.o
+.PHONY : EngineRemastered/Main/objects/vertexReader.o
 
 # target to build an object file
-Engine-Remastered/Main/objects/vertexReader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o
-.PHONY : Engine-Remastered/Main/objects/vertexReader.cpp.o
+EngineRemastered/Main/objects/vertexReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/objects/vertexReader.cpp.o
+.PHONY : EngineRemastered/Main/objects/vertexReader.cpp.o
 
-Engine-Remastered/Main/objects/vertexReader.i: Engine-Remastered/Main/objects/vertexReader.cpp.i
-.PHONY : Engine-Remastered/Main/objects/vertexReader.i
+EngineRemastered/Main/objects/vertexReader.i: EngineRemastered/Main/objects/vertexReader.cpp.i
+.PHONY : EngineRemastered/Main/objects/vertexReader.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/objects/vertexReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexReader.cpp.i
-.PHONY : Engine-Remastered/Main/objects/vertexReader.cpp.i
+EngineRemastered/Main/objects/vertexReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/objects/vertexReader.cpp.i
+.PHONY : EngineRemastered/Main/objects/vertexReader.cpp.i
 
-Engine-Remastered/Main/objects/vertexReader.s: Engine-Remastered/Main/objects/vertexReader.cpp.s
-.PHONY : Engine-Remastered/Main/objects/vertexReader.s
+EngineRemastered/Main/objects/vertexReader.s: EngineRemastered/Main/objects/vertexReader.cpp.s
+.PHONY : EngineRemastered/Main/objects/vertexReader.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/objects/vertexReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/objects/vertexReader.cpp.s
-.PHONY : Engine-Remastered/Main/objects/vertexReader.cpp.s
+EngineRemastered/Main/objects/vertexReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/objects/vertexReader.cpp.s
+.PHONY : EngineRemastered/Main/objects/vertexReader.cpp.s
 
-Engine-Remastered/Main/universalConstructors/buffers.o: Engine-Remastered/Main/universalConstructors/buffers.cpp.o
-.PHONY : Engine-Remastered/Main/universalConstructors/buffers.o
+EngineRemastered/Main/universalConstructors/buffers.o: EngineRemastered/Main/universalConstructors/buffers.cpp.o
+.PHONY : EngineRemastered/Main/universalConstructors/buffers.o
 
 # target to build an object file
-Engine-Remastered/Main/universalConstructors/buffers.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o
-.PHONY : Engine-Remastered/Main/universalConstructors/buffers.cpp.o
+EngineRemastered/Main/universalConstructors/buffers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o
+.PHONY : EngineRemastered/Main/universalConstructors/buffers.cpp.o
 
-Engine-Remastered/Main/universalConstructors/buffers.i: Engine-Remastered/Main/universalConstructors/buffers.cpp.i
-.PHONY : Engine-Remastered/Main/universalConstructors/buffers.i
+EngineRemastered/Main/universalConstructors/buffers.i: EngineRemastered/Main/universalConstructors/buffers.cpp.i
+.PHONY : EngineRemastered/Main/universalConstructors/buffers.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/universalConstructors/buffers.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.i
-.PHONY : Engine-Remastered/Main/universalConstructors/buffers.cpp.i
+EngineRemastered/Main/universalConstructors/buffers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.i
+.PHONY : EngineRemastered/Main/universalConstructors/buffers.cpp.i
 
-Engine-Remastered/Main/universalConstructors/buffers.s: Engine-Remastered/Main/universalConstructors/buffers.cpp.s
-.PHONY : Engine-Remastered/Main/universalConstructors/buffers.s
+EngineRemastered/Main/universalConstructors/buffers.s: EngineRemastered/Main/universalConstructors/buffers.cpp.s
+.PHONY : EngineRemastered/Main/universalConstructors/buffers.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/universalConstructors/buffers.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.s
-.PHONY : Engine-Remastered/Main/universalConstructors/buffers.cpp.s
+EngineRemastered/Main/universalConstructors/buffers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.s
+.PHONY : EngineRemastered/Main/universalConstructors/buffers.cpp.s
 
-Engine-Remastered/Main/universalConstructors/imageReader.o: Engine-Remastered/Main/universalConstructors/imageReader.cpp.o
-.PHONY : Engine-Remastered/Main/universalConstructors/imageReader.o
+EngineRemastered/Main/universalConstructors/imageReader.o: EngineRemastered/Main/universalConstructors/imageReader.cpp.o
+.PHONY : EngineRemastered/Main/universalConstructors/imageReader.o
 
 # target to build an object file
-Engine-Remastered/Main/universalConstructors/imageReader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o
-.PHONY : Engine-Remastered/Main/universalConstructors/imageReader.cpp.o
+EngineRemastered/Main/universalConstructors/imageReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o
+.PHONY : EngineRemastered/Main/universalConstructors/imageReader.cpp.o
 
-Engine-Remastered/Main/universalConstructors/imageReader.i: Engine-Remastered/Main/universalConstructors/imageReader.cpp.i
-.PHONY : Engine-Remastered/Main/universalConstructors/imageReader.i
+EngineRemastered/Main/universalConstructors/imageReader.i: EngineRemastered/Main/universalConstructors/imageReader.cpp.i
+.PHONY : EngineRemastered/Main/universalConstructors/imageReader.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/universalConstructors/imageReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.i
-.PHONY : Engine-Remastered/Main/universalConstructors/imageReader.cpp.i
+EngineRemastered/Main/universalConstructors/imageReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.i
+.PHONY : EngineRemastered/Main/universalConstructors/imageReader.cpp.i
 
-Engine-Remastered/Main/universalConstructors/imageReader.s: Engine-Remastered/Main/universalConstructors/imageReader.cpp.s
-.PHONY : Engine-Remastered/Main/universalConstructors/imageReader.s
+EngineRemastered/Main/universalConstructors/imageReader.s: EngineRemastered/Main/universalConstructors/imageReader.cpp.s
+.PHONY : EngineRemastered/Main/universalConstructors/imageReader.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/universalConstructors/imageReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.s
-.PHONY : Engine-Remastered/Main/universalConstructors/imageReader.cpp.s
+EngineRemastered/Main/universalConstructors/imageReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.s
+.PHONY : EngineRemastered/Main/universalConstructors/imageReader.cpp.s
 
-Engine-Remastered/Main/universalConstructors/proxy.o: Engine-Remastered/Main/universalConstructors/proxy.cpp.o
-.PHONY : Engine-Remastered/Main/universalConstructors/proxy.o
+EngineRemastered/Main/universalConstructors/proxy.o: EngineRemastered/Main/universalConstructors/proxy.cpp.o
+.PHONY : EngineRemastered/Main/universalConstructors/proxy.o
 
 # target to build an object file
-Engine-Remastered/Main/universalConstructors/proxy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o
-.PHONY : Engine-Remastered/Main/universalConstructors/proxy.cpp.o
+EngineRemastered/Main/universalConstructors/proxy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o
+.PHONY : EngineRemastered/Main/universalConstructors/proxy.cpp.o
 
-Engine-Remastered/Main/universalConstructors/proxy.i: Engine-Remastered/Main/universalConstructors/proxy.cpp.i
-.PHONY : Engine-Remastered/Main/universalConstructors/proxy.i
+EngineRemastered/Main/universalConstructors/proxy.i: EngineRemastered/Main/universalConstructors/proxy.cpp.i
+.PHONY : EngineRemastered/Main/universalConstructors/proxy.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/universalConstructors/proxy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.i
-.PHONY : Engine-Remastered/Main/universalConstructors/proxy.cpp.i
+EngineRemastered/Main/universalConstructors/proxy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.i
+.PHONY : EngineRemastered/Main/universalConstructors/proxy.cpp.i
 
-Engine-Remastered/Main/universalConstructors/proxy.s: Engine-Remastered/Main/universalConstructors/proxy.cpp.s
-.PHONY : Engine-Remastered/Main/universalConstructors/proxy.s
+EngineRemastered/Main/universalConstructors/proxy.s: EngineRemastered/Main/universalConstructors/proxy.cpp.s
+.PHONY : EngineRemastered/Main/universalConstructors/proxy.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/universalConstructors/proxy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.s
-.PHONY : Engine-Remastered/Main/universalConstructors/proxy.cpp.s
+EngineRemastered/Main/universalConstructors/proxy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.s
+.PHONY : EngineRemastered/Main/universalConstructors/proxy.cpp.s
 
-Engine-Remastered/Main/universalConstructors/uCommands.o: Engine-Remastered/Main/universalConstructors/uCommands.cpp.o
-.PHONY : Engine-Remastered/Main/universalConstructors/uCommands.o
+EngineRemastered/Main/universalConstructors/uCommands.o: EngineRemastered/Main/universalConstructors/uCommands.cpp.o
+.PHONY : EngineRemastered/Main/universalConstructors/uCommands.o
 
 # target to build an object file
-Engine-Remastered/Main/universalConstructors/uCommands.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o
-.PHONY : Engine-Remastered/Main/universalConstructors/uCommands.cpp.o
+EngineRemastered/Main/universalConstructors/uCommands.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o
+.PHONY : EngineRemastered/Main/universalConstructors/uCommands.cpp.o
 
-Engine-Remastered/Main/universalConstructors/uCommands.i: Engine-Remastered/Main/universalConstructors/uCommands.cpp.i
-.PHONY : Engine-Remastered/Main/universalConstructors/uCommands.i
+EngineRemastered/Main/universalConstructors/uCommands.i: EngineRemastered/Main/universalConstructors/uCommands.cpp.i
+.PHONY : EngineRemastered/Main/universalConstructors/uCommands.i
 
 # target to preprocess a source file
-Engine-Remastered/Main/universalConstructors/uCommands.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.i
-.PHONY : Engine-Remastered/Main/universalConstructors/uCommands.cpp.i
+EngineRemastered/Main/universalConstructors/uCommands.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.i
+.PHONY : EngineRemastered/Main/universalConstructors/uCommands.cpp.i
 
-Engine-Remastered/Main/universalConstructors/uCommands.s: Engine-Remastered/Main/universalConstructors/uCommands.cpp.s
-.PHONY : Engine-Remastered/Main/universalConstructors/uCommands.s
+EngineRemastered/Main/universalConstructors/uCommands.s: EngineRemastered/Main/universalConstructors/uCommands.cpp.s
+.PHONY : EngineRemastered/Main/universalConstructors/uCommands.s
 
 # target to generate assembly for a file
-Engine-Remastered/Main/universalConstructors/uCommands.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.s
-.PHONY : Engine-Remastered/Main/universalConstructors/uCommands.cpp.s
+EngineRemastered/Main/universalConstructors/uCommands.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.s
+.PHONY : EngineRemastered/Main/universalConstructors/uCommands.cpp.s
 
 # Help Target
 help:
@@ -611,57 +611,57 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... EngineRemastered"
 	@echo "... app"
-	@echo "... Engine-Remastered/Main/app.o"
-	@echo "... Engine-Remastered/Main/app.i"
-	@echo "... Engine-Remastered/Main/app.s"
-	@echo "... Engine-Remastered/Main/app/commands.o"
-	@echo "... Engine-Remastered/Main/app/commands.i"
-	@echo "... Engine-Remastered/Main/app/commands.s"
-	@echo "... Engine-Remastered/Main/app/depthBuffer.o"
-	@echo "... Engine-Remastered/Main/app/depthBuffer.i"
-	@echo "... Engine-Remastered/Main/app/depthBuffer.s"
-	@echo "... Engine-Remastered/Main/app/devices.o"
-	@echo "... Engine-Remastered/Main/app/devices.i"
-	@echo "... Engine-Remastered/Main/app/devices.s"
-	@echo "... Engine-Remastered/Main/app/draw.o"
-	@echo "... Engine-Remastered/Main/app/draw.i"
-	@echo "... Engine-Remastered/Main/app/draw.s"
-	@echo "... Engine-Remastered/Main/app/pipeline.o"
-	@echo "... Engine-Remastered/Main/app/pipeline.i"
-	@echo "... Engine-Remastered/Main/app/pipeline.s"
-	@echo "... Engine-Remastered/Main/app/swapchain.o"
-	@echo "... Engine-Remastered/Main/app/swapchain.i"
-	@echo "... Engine-Remastered/Main/app/swapchain.s"
-	@echo "... Engine-Remastered/Main/app/validation.o"
-	@echo "... Engine-Remastered/Main/app/validation.i"
-	@echo "... Engine-Remastered/Main/app/validation.s"
-	@echo "... Engine-Remastered/Main/main.o"
-	@echo "... Engine-Remastered/Main/main.i"
-	@echo "... Engine-Remastered/Main/main.s"
-	@echo "... Engine-Remastered/Main/module.o"
-	@echo "... Engine-Remastered/Main/module.i"
-	@echo "... Engine-Remastered/Main/module.s"
-	@echo "... Engine-Remastered/Main/objects/object.o"
-	@echo "... Engine-Remastered/Main/objects/object.i"
-	@echo "... Engine-Remastered/Main/objects/object.s"
-	@echo "... Engine-Remastered/Main/objects/vertexBuffer.o"
-	@echo "... Engine-Remastered/Main/objects/vertexBuffer.i"
-	@echo "... Engine-Remastered/Main/objects/vertexBuffer.s"
-	@echo "... Engine-Remastered/Main/objects/vertexReader.o"
-	@echo "... Engine-Remastered/Main/objects/vertexReader.i"
-	@echo "... Engine-Remastered/Main/objects/vertexReader.s"
-	@echo "... Engine-Remastered/Main/universalConstructors/buffers.o"
-	@echo "... Engine-Remastered/Main/universalConstructors/buffers.i"
-	@echo "... Engine-Remastered/Main/universalConstructors/buffers.s"
-	@echo "... Engine-Remastered/Main/universalConstructors/imageReader.o"
-	@echo "... Engine-Remastered/Main/universalConstructors/imageReader.i"
-	@echo "... Engine-Remastered/Main/universalConstructors/imageReader.s"
-	@echo "... Engine-Remastered/Main/universalConstructors/proxy.o"
-	@echo "... Engine-Remastered/Main/universalConstructors/proxy.i"
-	@echo "... Engine-Remastered/Main/universalConstructors/proxy.s"
-	@echo "... Engine-Remastered/Main/universalConstructors/uCommands.o"
-	@echo "... Engine-Remastered/Main/universalConstructors/uCommands.i"
-	@echo "... Engine-Remastered/Main/universalConstructors/uCommands.s"
+	@echo "... EngineRemastered/Main/app.o"
+	@echo "... EngineRemastered/Main/app.i"
+	@echo "... EngineRemastered/Main/app.s"
+	@echo "... EngineRemastered/Main/app/commands.o"
+	@echo "... EngineRemastered/Main/app/commands.i"
+	@echo "... EngineRemastered/Main/app/commands.s"
+	@echo "... EngineRemastered/Main/app/depthBuffer.o"
+	@echo "... EngineRemastered/Main/app/depthBuffer.i"
+	@echo "... EngineRemastered/Main/app/depthBuffer.s"
+	@echo "... EngineRemastered/Main/app/devices.o"
+	@echo "... EngineRemastered/Main/app/devices.i"
+	@echo "... EngineRemastered/Main/app/devices.s"
+	@echo "... EngineRemastered/Main/app/draw.o"
+	@echo "... EngineRemastered/Main/app/draw.i"
+	@echo "... EngineRemastered/Main/app/draw.s"
+	@echo "... EngineRemastered/Main/app/pipeline.o"
+	@echo "... EngineRemastered/Main/app/pipeline.i"
+	@echo "... EngineRemastered/Main/app/pipeline.s"
+	@echo "... EngineRemastered/Main/app/swapchain.o"
+	@echo "... EngineRemastered/Main/app/swapchain.i"
+	@echo "... EngineRemastered/Main/app/swapchain.s"
+	@echo "... EngineRemastered/Main/app/validation.o"
+	@echo "... EngineRemastered/Main/app/validation.i"
+	@echo "... EngineRemastered/Main/app/validation.s"
+	@echo "... EngineRemastered/Main/main.o"
+	@echo "... EngineRemastered/Main/main.i"
+	@echo "... EngineRemastered/Main/main.s"
+	@echo "... EngineRemastered/Main/module.o"
+	@echo "... EngineRemastered/Main/module.i"
+	@echo "... EngineRemastered/Main/module.s"
+	@echo "... EngineRemastered/Main/objects/object.o"
+	@echo "... EngineRemastered/Main/objects/object.i"
+	@echo "... EngineRemastered/Main/objects/object.s"
+	@echo "... EngineRemastered/Main/objects/vertexBuffer.o"
+	@echo "... EngineRemastered/Main/objects/vertexBuffer.i"
+	@echo "... EngineRemastered/Main/objects/vertexBuffer.s"
+	@echo "... EngineRemastered/Main/objects/vertexReader.o"
+	@echo "... EngineRemastered/Main/objects/vertexReader.i"
+	@echo "... EngineRemastered/Main/objects/vertexReader.s"
+	@echo "... EngineRemastered/Main/universalConstructors/buffers.o"
+	@echo "... EngineRemastered/Main/universalConstructors/buffers.i"
+	@echo "... EngineRemastered/Main/universalConstructors/buffers.s"
+	@echo "... EngineRemastered/Main/universalConstructors/imageReader.o"
+	@echo "... EngineRemastered/Main/universalConstructors/imageReader.i"
+	@echo "... EngineRemastered/Main/universalConstructors/imageReader.s"
+	@echo "... EngineRemastered/Main/universalConstructors/proxy.o"
+	@echo "... EngineRemastered/Main/universalConstructors/proxy.i"
+	@echo "... EngineRemastered/Main/universalConstructors/proxy.s"
+	@echo "... EngineRemastered/Main/universalConstructors/uCommands.o"
+	@echo "... EngineRemastered/Main/universalConstructors/uCommands.i"
+	@echo "... EngineRemastered/Main/universalConstructors/uCommands.s"
 .PHONY : help
 
 

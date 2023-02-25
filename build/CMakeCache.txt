@@ -328,13 +328,13 @@ boost_headers_DIR:PATH=/usr/local/lib/cmake/boost_headers-1.81.0
 boost_python_DIR:PATH=/usr/local/lib/cmake/boost_python-1.81.0
 
 //Value Computed by CMake
-pybind11_BINARY_DIR:STATIC=/Users/brianmasse/Developer/Software/Engine-Remastered/build/dependencies/include/pybind11
+pybind11_BINARY_DIR:STATIC=/Users/brianmasse/Developer/Software/Engine-Remastered/build/EngineRemastered/dependencies/include/pybind11
 
 //Value Computed by CMake
 pybind11_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-pybind11_SOURCE_DIR:STATIC=/Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11
+pybind11_SOURCE_DIR:STATIC=/Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/include/pybind11
 
 
 ########################
@@ -520,7 +520,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/Users/brianmasse/opt/minico
 HAS_FLTO:INTERNAL=1
 //Test HAS_FLTO_THIN
 HAS_FLTO_THIN:INTERNAL=1
-PYBIND11_INCLUDE_DIR:INTERNAL=/Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include
+PYBIND11_INCLUDE_DIR:INTERNAL=/Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/include/pybind11/include
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 PYTHON_INCLUDE_DIRS:INTERNAL=/Users/brianmasse/opt/miniconda3/python.app/Contents/include/python3.9
@@ -544,7 +544,7 @@ boost_python_DIR-ADVANCED:INTERNAL=1
 //True if pybind11 and all required components found on the system
 pybind11_FOUND:INTERNAL=TRUE
 //Directory where pybind11 headers are located
-pybind11_INCLUDE_DIR:INTERNAL=/Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include
+pybind11_INCLUDE_DIR:INTERNAL=/Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/include/pybind11/include
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=/Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/include;/Users/brianmasse/opt/miniconda3/python.app/Contents/include/python3.9
+pybind11_INCLUDE_DIRS:INTERNAL=/Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/include/pybind11/include;/Users/brianmasse/opt/miniconda3/python.app/Contents/include/python3.9
 

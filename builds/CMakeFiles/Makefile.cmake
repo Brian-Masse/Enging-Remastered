@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/Users/brianmasse/Developer/Software/Engine-Remastered/CMakeLists.txt"
+  "/Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/include/pybind11/CMakeLists.txt"
+  "/Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/include/pybind11/tools/FindPythonLibsNew.cmake"
+  "/Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/include/pybind11/tools/JoinPaths.cmake"
+  "/Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/include/pybind11/tools/pybind11Common.cmake"
+  "/Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/include/pybind11/tools/pybind11Tools.cmake"
   "CMakeFiles/3.25.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeSystem.cmake"
-  "/Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/CMakeLists.txt"
-  "/Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/tools/FindPythonLibsNew.cmake"
-  "/Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/tools/JoinPaths.cmake"
-  "/Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/tools/pybind11Common.cmake"
-  "/Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/include/pybind11/tools/pybind11Tools.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/local/Cellar/cmake/3.25.1/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -74,7 +74,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "dependencies/include/pybind11/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "EngineRemastered/dependencies/include/pybind11/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

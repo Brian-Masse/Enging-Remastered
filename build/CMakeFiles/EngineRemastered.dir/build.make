@@ -69,288 +69,288 @@ include CMakeFiles/EngineRemastered.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/EngineRemastered.dir/flags.make
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/module.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/module.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/module.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/module.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/module.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/module.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/module.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/module.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/main.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/main.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/main.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/main.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/main.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/main.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/main.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/main.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/validation.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/validation.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/validation.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/validation.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/validation.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/validation.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/validation.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/validation.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/depthBuffer.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/depthBuffer.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/depthBuffer.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/depthBuffer.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/depthBuffer.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/depthBuffer.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/depthBuffer.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/depthBuffer.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/commands.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/commands.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/commands.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/commands.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/commands.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/commands.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/commands.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/commands.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/devices.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/devices.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/devices.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/devices.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/devices.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/devices.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/devices.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/devices.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/draw.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/draw.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/draw.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/draw.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/draw.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/draw.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/draw.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/draw.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/pipeline.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/pipeline.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/pipeline.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/pipeline.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/pipeline.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/pipeline.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/pipeline.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/pipeline.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/swapchain.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/swapchain.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/swapchain.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/swapchain.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/swapchain.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/swapchain.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/app/swapchain.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/app/swapchain.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/object.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/object.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/object.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/object.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/object.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/object.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/object.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/object.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/vertexBuffer.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/vertexBuffer.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/vertexBuffer.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/vertexBuffer.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/vertexBuffer.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/vertexBuffer.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/vertexBuffer.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/vertexBuffer.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/vertexReader.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/vertexReader.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/vertexReader.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/vertexReader.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/vertexReader.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/vertexReader.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/objects/vertexReader.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/objects/vertexReader.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/imageReader.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/imageReader.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/imageReader.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/imageReader.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/imageReader.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/imageReader.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/imageReader.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/imageReader.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/proxy.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/proxy.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/proxy.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/proxy.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/proxy.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/proxy.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/proxy.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/proxy.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/buffers.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/buffers.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/buffers.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/buffers.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/buffers.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/buffers.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/buffers.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/buffers.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.s
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/uCommands.cpp
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o -MF CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o.d -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/uCommands.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o: CMakeFiles/EngineRemastered.dir/flags.make
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/uCommands.cpp
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o: CMakeFiles/EngineRemastered.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o -MF CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o.d -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o -c /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/uCommands.cpp
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/uCommands.cpp > CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.i
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/uCommands.cpp > CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.i
 
-CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/Engine-Remastered/Main/universalConstructors/uCommands.cpp -o CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.s
+CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/Main/universalConstructors/uCommands.cpp -o CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.s
 
 # Object files for target EngineRemastered
 EngineRemastered_OBJECTS = \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o" \
-"CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o"
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o" \
+"CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o"
 
 # External object files for target EngineRemastered
 EngineRemastered_EXTERNAL_OBJECTS =
 
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/module.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/main.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/validation.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/depthBuffer.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/commands.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/devices.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/draw.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/pipeline.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/app/swapchain.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/object.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexBuffer.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/objects/vertexReader.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/imageReader.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/proxy.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/buffers.cpp.o
-EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/Engine-Remastered/Main/universalConstructors/uCommands.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/module.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/main.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o
+EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o
 EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/build.make
 EngineRemastered.cpython-39-darwin.so: /usr/local/lib/libboost_python311-mt.dylib
-EngineRemastered.cpython-39-darwin.so: /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/library/libglfw.3.3.dylib
-EngineRemastered.cpython-39-darwin.so: /Users/brianmasse/Developer/Software/Engine-Remastered/dependencies/library/Vulkan/libvulkan.1.3.231.dylib
+EngineRemastered.cpython-39-darwin.so: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/library/libglfw.3.3.dylib
+EngineRemastered.cpython-39-darwin.so: /Users/brianmasse/Developer/Software/Engine-Remastered/EngineRemastered/dependencies/library/Vulkan/libvulkan.1.3.231.dylib
 EngineRemastered.cpython-39-darwin.so: CMakeFiles/EngineRemastered.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX shared library EngineRemastered.cpython-39-darwin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EngineRemastered.dir/link.txt --verbose=$(VERBOSE)

@@ -7,9 +7,9 @@ set(CMAKE_CXX_STANDARD 17)
 set( APP_NAME "app")
 set( MOD_NAME "EngineRemastered")
 
-set( BASE "${PROJECT_SOURCE_DIR}/Engine-Remastered" )
+set( BASE "${PROJECT_SOURCE_DIR}/EngineRemastered" )
 set( MAIN "${BASE}/Main" )
-set( DEPENDENCIES "${PROJECT_SOURCE_DIR}/dependencies" )
+set( DEPENDENCIES "${PROJECT_SOURCE_DIR}/EngineRemastered/dependencies" )
 
 set( COMPILE_FLAGS "-g -Wall" )
 
@@ -93,9 +93,7 @@ target_link_libraries(
 #app
 add_executable(
     ${APP_NAME}
-
     ${CPP_FILES}
-
 )
 
 target_include_directories(

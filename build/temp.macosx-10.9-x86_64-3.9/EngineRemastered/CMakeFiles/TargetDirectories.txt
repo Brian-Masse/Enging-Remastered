@@ -1,0 +1,6 @@
+/Users/brianmasse/Developer/Software/Engine-Remastered/build/temp.macosx-10.9-x86_64-3.9/EngineRemastered/CMakeFiles/EngineRemastered.dir
+/Users/brianmasse/Developer/Software/Engine-Remastered/build/temp.macosx-10.9-x86_64-3.9/EngineRemastered/CMakeFiles/app.dir
+/Users/brianmasse/Developer/Software/Engine-Remastered/build/temp.macosx-10.9-x86_64-3.9/EngineRemastered/CMakeFiles/edit_cache.dir
+/Users/brianmasse/Developer/Software/Engine-Remastered/build/temp.macosx-10.9-x86_64-3.9/EngineRemastered/CMakeFiles/rebuild_cache.dir
+/Users/brianmasse/Developer/Software/Engine-Remastered/build/temp.macosx-10.9-x86_64-3.9/EngineRemastered/EngineRemastered/dependencies/include/pybind11/CMakeFiles/edit_cache.dir
+/Users/brianmasse/Developer/Software/Engine-Remastered/build/temp.macosx-10.9-x86_64-3.9/EngineRemastered/EngineRemastered/dependencies/include/pybind11/CMakeFiles/rebuild_cache.dir
