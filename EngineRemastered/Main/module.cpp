@@ -28,13 +28,17 @@ void sum( int x, int y ) {
     cout << x + y << endl;
 }
 
-PYBIND11_MODULE(EngineRemastered, module) {
+void testFunc() {
+    cout << "Hello World ! Cant wait for this to work!" << endl;
+}
 
-    module.doc() = "EngineRemastered";
+PYBIND11_MODULE(_EngineRemastered, module) {
+
+    module.doc() = "_EngineRemastered";
 
     pybind11::class_<EngineRemastered> (module, "EngineRemasteredApp")
         .def ( pybind11::init<> ()) 
-        .def ( "sum", sum)
+        .def ( "setPath", &EngineRemastered::setPath )
         .def ( "initApp", &EngineRemastered::initialization )
         .def ( "runApp", &EngineRemastered::run )
         .def ( "createObj", &EngineRemastered::createObject, "function");

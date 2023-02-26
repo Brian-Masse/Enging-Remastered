@@ -23,7 +23,7 @@ using namespace std;
 
 //MARK: Proxy Functions
 
-string getAbsoluteDirectory( string pathFromEntry, string fileName ) {
+string getAbsoluteDirectory( string absolutePath, string pathFromEntry, string fileName ) {
     ostringstream pathName;
     char buf [PATH_MAX];
     uint32_t bufSize = PATH_MAX;
@@ -39,7 +39,7 @@ string getAbsoluteDirectory( string pathFromEntry, string fileName ) {
     //     }
     // }
     
-    pathName << buf << "/../EngineRemastered/" << pathFromEntry << fileName;
+    pathName << absolutePath << "/EngineRemastered/" << pathFromEntry << fileName;
 
     cout << pathName.str() << endl;
 

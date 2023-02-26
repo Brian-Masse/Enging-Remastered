@@ -47,93 +47,18 @@
     },
 
     {
-      "label": "Make Clean",
+      "label": "Compile Package",
       "type": "shell",
-      "command": "make clean",
+      "command": "rm dist/*.whl && python setup.py bdist_wheel &&  mv dist/*.whl dist/EngineRemastered-0.1.0-py3-none-any.whl && unzip -l dist/*.whl",
       "args": [],
-      "options": {
-        "cwd": "${workspaceFolder}/builds"
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      },
-      "detail": "Clean Build with the Makefile in /builds"
-    },
-
-    {
-      "type": "cppbuild",
-      "label": "C++: clang++ build active Dir",
-      "command": "/usr/bin/clang++",
-      "args": [
-        "-std=c++17",
-        "-fdiagnostics-color=always",
-        "-Wall",
-        "-g",
-        "-w",
-        "-I../../dependencies/include",
-        "-L../../dependencies/library",
-        "../../dependencies/library/libglfw.3.3.dylib",
-        "../../dependencies/library/Vulkan/libvulkan.1.3.231.dylib",
-
-        // "${workspaceFolder}/testing/window/vulkanWindow/window.cpp",
-        "main.cpp",
-        "VertexHandler/*.cpp",
-        "app/*.cpp",
-        "app/Buffers/*.cpp",
-        "app/Constructor/*.cpp",
-        // "ProxyFunctions/*.cpp",
-
-        "-o",
-        "${workspaceFolder}/builds/app"
-        //  "-framework",
-        //  "OpenGL",
-        //  "-framework",
-        //  "Cocoa",
-        //  "-framework",
-        //  "IOKit",
-        //  "-framework",
-        //  "CoreVideo",
-        //  "-framework",
-        //  "CoreFoundation",
-        //  "-Wno-deprecated"
-      ],
-      "options": {
-        "cwd": "${workspaceFolder}/EngineRemastered/Main"
-      },
-      "problemMatcher": ["$gcc"],
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      },
-      "detail": "compiler: /usr/bin/clang++"
-    },
-
-    {
-      "type": "cppbuild",
-      "label": "C++: clang++ build testing",
-      "command": "/usr/bin/clang++",
-      "args": [
-        "-std=c++17",
-        "-fdiagnostics-color=always",
-        "-Wall",
-        "-g",
-        "-w",
-
-        "testing/testing.cpp",
-
-        "-o",
-        "${workspaceFolder}/builds/testing"
-      ],
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "build",
         "isDefault": false
       },
-      "detail": "compiler: /usr/bin/clang++"
+      "detail": "Clean distributions, create wheel file, and print out its contents"
     }
   ]
 }

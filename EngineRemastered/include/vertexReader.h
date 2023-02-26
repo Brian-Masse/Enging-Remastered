@@ -23,5 +23,5 @@
 using namespace std;
 
 
-EngineObject::BufferInformation extractInformation(string fileName);
+EngineObject::BufferInformation extractInformation(DeviceInfo info, string fileName);
 

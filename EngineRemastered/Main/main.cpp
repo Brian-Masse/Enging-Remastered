@@ -21,11 +21,12 @@
 // MARK: Main
 int main()
 {
-    EngineRemastered test = EngineRemastered();
-    
-    test.initialization();
+    EngineRemastered app = EngineRemastered();
+    app.setPath( "/Users/brianmasse/Developer/Software/Engine-Remastered" );
 
-    try { test.run(); }
+    app.initialization();
+
+    try { app.run(); }
 
     catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;

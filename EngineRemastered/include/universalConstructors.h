@@ -31,6 +31,8 @@ struct DeviceInfo {
     VkCommandPool commandPool;
     VkQueue graphicsQueue;
 
+    string path;
+
     int MAX_FRAMES_IN_FLIGHT;
 };
 
@@ -73,7 +75,7 @@ VkCommandBuffer endSingleTimeCommands(DeviceInfo info, VkCommandBuffer commandBu
 
 //MARK: Proxy
 
-string getAbsoluteDirectory( string pathFromEntry, string fileName );
+string getAbsoluteDirectory( string absolutePath, string pathFromEntry, string fileName );
 
 VkResult CreateDebugUtilsMessengerEXT(VkInstance, const VkDebugUtilsMessengerCreateInfoEXT*, const VkAllocationCallbacks*, VkDebugUtilsMessengerEXT*);
 

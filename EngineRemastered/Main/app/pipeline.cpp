@@ -24,11 +24,11 @@ using namespace std;
 
 
 //loading the binary SPV shader files in
-vector<char> readFile(const string& fileName) {
+vector<char> readFile(string absolutePath, const string& fileName) {
     
     string pathToShaders = "Main/app/GraphicsPipeline/SPVFiles/";
 
-    ifstream file( getAbsoluteDirectory(pathToShaders, fileName), ios::ate | ios::binary);
+    ifstream file( getAbsoluteDirectory(absolutePath, pathToShaders, fileName), ios::ate | ios::binary);
 
     if (!file.is_open()) { throw runtime_error( "Failed to Open File!");}
 
@@ -46,8 +46,8 @@ vector<char> readFile(const string& fileName) {
 //MARK: Pipeline
 void EngineRemastered::createGraphicsPipeline() {
 
-    auto vertShaderCode = readFile("vert.spv");
-    auto fragShaderCode = readFile("frag.spv");
+    auto vertShaderCode = readFile(this->path, "vert.spv");
+    auto fragShaderCode = readFile(this->path, "frag.spv");
 
     //programmable functions
 

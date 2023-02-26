@@ -62,7 +62,9 @@ public:
 
     void createObject(string name, string texture, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b);
     void initialization();
+    void setPath(string path);
     void run();;
+
 
 private:
 
@@ -81,6 +83,7 @@ private:
 #endif
 
     uint32_t currentFrame = 0;
+    string path;
 
     VkInstance instance;
     VkDebugUtilsMessengerEXT debugMessenger; 

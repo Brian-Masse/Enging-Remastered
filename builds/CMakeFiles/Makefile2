@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /Users/brianmasse/Developer/Software/Engine-Remastered/builds
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/EngineRemastered.dir/all
+all: CMakeFiles/_EngineRemastered.dir/all
 all: CMakeFiles/app.dir/all
 all: EngineRemastered/dependencies/include/pybind11/all
 .PHONY : all
@@ -73,7 +73,7 @@ preinstall: EngineRemastered/dependencies/include/pybind11/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/EngineRemastered.dir/clean
+clean: CMakeFiles/_EngineRemastered.dir/clean
 clean: CMakeFiles/app.dir/clean
 clean: EngineRemastered/dependencies/include/pybind11/clean
 .PHONY : clean
@@ -94,30 +94,30 @@ EngineRemastered/dependencies/include/pybind11/clean:
 .PHONY : EngineRemastered/dependencies/include/pybind11/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/EngineRemastered.dir
+# Target rules for target CMakeFiles/_EngineRemastered.dir
 
 # All Build rule for target.
-CMakeFiles/EngineRemastered.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/builds/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target EngineRemastered"
-.PHONY : CMakeFiles/EngineRemastered.dir/all
+CMakeFiles/_EngineRemastered.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EngineRemastered.dir/build.make CMakeFiles/_EngineRemastered.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EngineRemastered.dir/build.make CMakeFiles/_EngineRemastered.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/brianmasse/Developer/Software/Engine-Remastered/builds/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target _EngineRemastered"
+.PHONY : CMakeFiles/_EngineRemastered.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/EngineRemastered.dir/rule: cmake_check_build_system
+CMakeFiles/_EngineRemastered.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/brianmasse/Developer/Software/Engine-Remastered/builds/CMakeFiles 18
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/EngineRemastered.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/_EngineRemastered.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/brianmasse/Developer/Software/Engine-Remastered/builds/CMakeFiles 0
-.PHONY : CMakeFiles/EngineRemastered.dir/rule
+.PHONY : CMakeFiles/_EngineRemastered.dir/rule
 
 # Convenience name for target.
-EngineRemastered: CMakeFiles/EngineRemastered.dir/rule
-.PHONY : EngineRemastered
+_EngineRemastered: CMakeFiles/_EngineRemastered.dir/rule
+.PHONY : _EngineRemastered
 
 # clean rule for target.
-CMakeFiles/EngineRemastered.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineRemastered.dir/build.make CMakeFiles/EngineRemastered.dir/clean
-.PHONY : CMakeFiles/EngineRemastered.dir/clean
+CMakeFiles/_EngineRemastered.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EngineRemastered.dir/build.make CMakeFiles/_EngineRemastered.dir/clean
+.PHONY : CMakeFiles/_EngineRemastered.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/app.dir

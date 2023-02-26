@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/commands.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/depthBuffer.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/devices.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/draw.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/pipeline.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/swapchain.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/app/validation.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/main.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/main.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/module.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/module.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/objects/object.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/objects/vertexBuffer.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/objects/vertexReader.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/universalConstructors/buffers.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/universalConstructors/imageReader.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/universalConstructors/proxy.cpp.o.d"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o"
+  "CMakeFiles/_EngineRemastered.dir/EngineRemastered/Main/universalConstructors/uCommands.cpp.o.d"
+  "_EngineRemastered.cpython-39-darwin.so"
+  "_EngineRemastered.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/_EngineRemastered.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

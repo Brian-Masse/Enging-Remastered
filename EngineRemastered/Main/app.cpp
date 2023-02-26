@@ -81,6 +81,10 @@ void EngineRemastered::mainLoop()
     vkDeviceWaitIdle(device);
 }
 
+void EngineRemastered::setPath(string path) {
+    this->path = path;
+}
+
 //returns a list of extensions
 
 void EngineRemastered::createDeviceInfo() {
@@ -89,6 +93,7 @@ void EngineRemastered::createDeviceInfo() {
     info.commandPool = commandPool;
     info.graphicsQueue = graphicsQueue;
     info.MAX_FRAMES_IN_FLIGHT = MAX_FRAMES_IN_FLIGHT;
+    info.path = path;
 }
 
 void EngineRemastered::createDescriptorSetMaterials() {
@@ -143,8 +148,8 @@ void EngineRemastered::createObject(string name, string texture, double sx, doub
 }
 
 void EngineRemastered::createObjects() {
-    createObject("monkey.ply", "base2.png", 1, 1, 1, -0.5, -0.5, 0, 1, 1, 1);
-    createObject("monkey.ply", "base.png", 1, 1, 1, 1, 1, 0, 1, 1, 1);
+    // createObject("monkey.ply", "base2.png", 1, 1, 1, -0.5, -0.5, 0, 1, 1, 1);
+    // createObject("monkey.ply", "base.png", 1, 1, 1, 1, 1, 0, 1, 1, 1);
 }
 
 void EngineRemastered::updateCamera( double x, double y, double z ) {

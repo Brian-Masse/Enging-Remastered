@@ -1,11 +1,11 @@
 # cmake -DCMAKE_INSTALL_PREFIX=~/Installations -DMUQ_USE_PYTHON=ON -DPYTHON_EXECUTABLE=~/opt/miniconda3/bin/python3.9 ../
 cmake_minimum_required(VERSION 3.16)
-project( "Test Project" )
+project( "EngineRemastered" )
 set(CMAKE_CXX_STANDARD 17)
 
 #UNIVERSALS
 set( APP_NAME "app")
-set( MOD_NAME "EngineRemastered")
+set( MOD_NAME "_EngineRemastered")
 
 set( BASE "${PROJECT_SOURCE_DIR}/EngineRemastered" )
 set( MAIN "${BASE}/Main" )
@@ -60,7 +60,7 @@ set( CPP_FILES
 )
 
 pybind11_add_module(
-    EngineRemastered
+    _EngineRemastered
 
     SHARED
 
@@ -68,7 +68,7 @@ pybind11_add_module(
 )
 
 target_include_directories(
-    EngineRemastered
+    _EngineRemastered
     
     PRIVATE ${MAIN}
     PRIVATE ${APP}
@@ -83,7 +83,7 @@ target_include_directories(
 )
 
 target_link_libraries(
-    EngineRemastered
+    _EngineRemastered
 
     PRIVATE ${Boost_LIBRARIES}
     PRIVATE ${DEPEND_LIBRARY}/libglfw.3.3.dylib

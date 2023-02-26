@@ -52,7 +52,7 @@ void EngineObject::cleanup() {
 
 void EngineObject::extractVertices() {
 
-    EngineObject::BufferInformation information = extractInformation(fileName);
+    EngineObject::BufferInformation information = extractInformation(info, fileName);
 
     this->vertices = information.vertexBuffer;
     this->indices = information.indexBuffer;
@@ -70,7 +70,7 @@ void EngineObject::createTextureImage() {
     int textureWidth, textureHeight, textureChannels;
 
     string pathToDir = "Textures/";
-    string fullPath = getAbsoluteDirectory(pathToDir, texture);
+    string fullPath = getAbsoluteDirectory(info.path, pathToDir, texture);
 
     const char* url =  fullPath.c_str();
 

@@ -26,19 +26,19 @@ using namespace std;
 
 //MARK: Open File:
 
-ifstream openFile(string fileName) {
-    ifstream inData;
+// ifstream openFile(string fileName) {
+//     ifstream inData;
     
-    string directory = getAbsoluteDirectory( "VertexMeshes/", fileName);
-    inData.open( directory );
+//     string directory = getAbsoluteDirectory( "VertexMeshes/", fileName);
+//     inData.open( directory );
 
-    ostringstream errorMessage;
-    errorMessage << "could not open file: " << directory;
+//     ostringstream errorMessage;
+//     errorMessage << "could not open file: " << directory;
 
-    if (!inData) { throw runtime_error(errorMessage.str()); }
+//     if (!inData) { throw runtime_error(errorMessage.str()); }
 
-    return inData;
-}
+//     return inData;
+// }
 
 //MARK: helperFunctions
 ifstream& skipLines( ifstream& file, int num ) {
@@ -77,9 +77,19 @@ float extractFloat( ifstream& file, int row, int column ) {
 
 
 //MARK: ReadFile
-EngineObject::BufferInformation extractInformation(string fileName) {
+EngineObject::BufferInformation extractInformation(DeviceInfo info, string fileName) {
 
-    ifstream inData = openFile(fileName);
+    ifstream inData;
+    
+    string directory = getAbsoluteDirectory(info.path, "VertexMeshes/", fileName);
+    inData.open( directory );
+
+    ostringstream errorMessage;
+    errorMessage << "could not open file: " << directory;
+
+    if (!inData) { throw runtime_error(errorMessage.str()); }
+
+
 
     int vertexCount = extractInt( inData, 4, 3 );
 

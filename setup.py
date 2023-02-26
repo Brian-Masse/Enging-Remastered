@@ -115,17 +115,25 @@ class CMakeBuild(build_ext):
 
 setup(
     name="EngineRemastered",
-    version="0.1.0",
+    version="0.2.0",
     author="Brian Masse",
     author_email="brianm25it@gmail.com",
     description="test",
     long_description="",
-    ext_modules=[CMakeExtension("EngineRemastered")],
+    ext_modules=[CMakeExtension("_EngineRemastered")],
     cmdclass={"build_ext": CMakeBuild},
-    # zip_safe=False,
+
+    packages=['EngineRemastered.API'],
+    package_data={
+        'EngineRemastered': ['Main/app/GraphicsPipeline/SPVFiles/*spv'],
+        'EngineRemastered': ['VertexMeshes/*ply'],
+        'EngineRemastered': ['Textures/*png']
+    },
+    zip_safe=False,
+    python_requires=">=3.8",
     # extras_require={"test": ["pytest>=6.0"]},
-    python_requires=">=3.9",
 )
+
 
 
 # setup(
@@ -136,8 +144,12 @@ setup(
 #     author='Brian Masse',
 #     author_email='brianm25it@gmail.com',
 #     license='MIT License',
-#     packages=['EngineRemastered'],
+    # packages=['EngineRemastered'],
 #     install_requires=[],
+
+    # package_data={
+    #     'EngineRemastered': ['t.json']
+    # },
 
 #     classifiers=[
 #         'Development Status :: 1 - Planning',
