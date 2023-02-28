@@ -37,9 +37,10 @@ void EngineRemastered::run() {
 void EngineRemastered::initWindow() {
     glfwInit();
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API); // prevents it from initializing OpenGL
-    glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+    if (resizeable) { glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE); }
+    else if (!resizeable) { glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE); }
 
-    window = glfwCreateWindow(WIDTH, HEIGHT, "Vulkan Window", nullptr, nullptr);
+    window = glfwCreateWindow(WIDTH, HEIGHT, "testing", nullptr, nullptr);
     glfwSetWindowUserPointer(window, this);
     glfwSetFramebufferSizeCallback(window, frameBufferResizeCallback);
 }
@@ -81,8 +82,18 @@ void EngineRemastered::mainLoop()
     vkDeviceWaitIdle(device);
 }
 
+//MARK: API Functions
+
 void EngineRemastered::setPath(string path) {
     this->path = path;
+}
+
+void EngineRemastered::setWindow(int width, int height, string name, bool resizeable, float r, float g, float b ) {
+    this->WIDTH = width;
+    this->HEIGHT = height;
+    this->windowName = name;
+    this->resizeable = resizeable;
+    this->windowColor = { r, g, b };
 }
 
 //returns a list of extensions
@@ -120,10 +131,11 @@ void EngineRemastered::createDescriptorSetMaterials() {
 }
 
 //MARK: Objects
-void EngineRemastered::createObject(string name, string texture, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b) {
+void EngineRemastered::createObject(string name, string texture, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b, bool isAbsolute) {
 
     EngineObject obj;
     obj.info = info;
+    obj.isAbsolute = isAbsolute;
     obj.fileName = name;
     obj.texture = texture;
     obj.init();
@@ -148,7 +160,9 @@ void EngineRemastered::createObject(string name, string texture, double sx, doub
 }
 
 void EngineRemastered::createObjects() {
-    createObject( "cube.ply", "base2.png", 0, 0, 0, 0, 0, 0, 1, 1, 1 );
+    createObject( "cube.ply", "base2.png", 0, 0, 0, 0, 0, 0, 1, 1, 1, false );
+
+
     // createObject("monkey.ply", "base2.png", 1, 1, 1, -0.5, -0.5, 0, 1, 1, 1);
     // createObject("monkey.ply", "base.png", 1, 1, 1, 1, 1, 0, 1, 1, 1);
 }

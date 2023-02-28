@@ -15,7 +15,6 @@
       },
       "detail": "Build with the Makefile in /builds"
     },
-
     {
       "label": "Make Shaders",
       "type": "shell",
@@ -30,7 +29,6 @@
       },
       "detail": "Build Shaders with the Makefile in /builds"
     },
-
     {
       "label": "Run py",
       "type": "shell",
@@ -45,7 +43,6 @@
       },
       "detail": "Clean Build with the Makefile in /builds"
     },
-
     {
       "label": "Compile Package",
       "type": "shell",

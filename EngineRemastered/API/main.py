@@ -1,6 +1,5 @@
 import os
 import sys
-import pkg_resources
 
 current = os.path.dirname(os.path.realpath(__file__))
 parent = os.path.dirname(current)
@@ -10,9 +9,8 @@ import _EngineRemastered as _ER
 
 class EngineRemasteredApp:
 
-    def __init__(this):
-        #start the app
-        # Main/app/GraphicsPipeline/shader.frag
+    #start the app
+    def __init__(this, window ):
 
         # one of these will lead to the site packages folder, where we can access the right data
         p = ""
@@ -23,13 +21,32 @@ class EngineRemasteredApp:
 
         this.app = _ER.EngineRemasteredApp()
         this.app.setPath( p )
+
+
+        this.app.setWindow( 
+            window.size[0], window.size[1], 
+            window.windowName, 
+            window.resizeable,
+            window.color[0], window.color[1], window.color[2]
+        )
+
+
         this.app.initApp()
 
     def addObject( this, object ):
-        this.app.createObj(object.name, "base.png", object.scale[0], object.scale[1], object.scale[1], object.transform[0], object.transform[1], object.transform[2], object.color[0] / 255, object.color[1] / 255, object.color[2] / 255 )
+        this.app.createObj(object.name, "base.png", object.scale[0], object.scale[1], object.scale[1], object.transform[0], object.transform[1], object.transform[2], object.color[0] / 255, object.color[1] / 255, object.color[2] / 255, True )
 
     def startApp(this):
         this.app.runApp()
+        
+
+class EngineWindow: 
+    def __init__(self, size, windowName = "Engine Remastered Window", resizeable = True, color = (0, 0, 0)):
+        self.size = size
+        self.windowName = windowName
+        self.resizeable = resizeable
+        self.color = ( color[0] / 255, color[1] / 255, color[2] / 255)
+
 
 class EngineObject:
     def __init__(this, name, scale, transform, color):
@@ -39,14 +56,25 @@ class EngineObject:
         this.color = color
 
 
-# app = EngineRemasteredApp()
 
-# name = "monkey.ply"
+
+# window = EngineWindow( 
+#     ( 500, 500 ),
+#     windowName="Test Window",
+#     resizeable=True,
+#     color=( 254, 61, 61 )
+#  )
+
+# app = EngineRemasteredApp( window )
+
+# name = "/Users/brianmasse/Desktop/cylander.ply"
+# translate = (0,0,0)
 # scale = (1, 1, 1)
-# transform = (1, 1, 1)
-# color = (255, 1, 1)
+# color = ( 255, 61, 61 )
 
-# object = EngineObject(name, scale, transform, color)
+# monkey = EngineObject(name, scale, translate, color)
 
-# app.addObject(object)
+# app.addObject(monkey)
+
 # app.startApp()
+

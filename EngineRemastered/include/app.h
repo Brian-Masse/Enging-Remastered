@@ -60,16 +60,17 @@ class EngineRemastered
 {
 public:
 
-    void createObject(string name, string texture, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b);
+    void createObject(string name, string texture, double sx, double sy, double sz, double tx, double ty, double tz, double r, double g, double b, bool isAbsolute = true);
     void initialization();
-    void setPath(string path);
     void run();;
+
+    //MARK: API Functions:
+
+    void setPath(string path);
+    void setWindow(int width, int height, string name, bool resizeable, float r, float g, float b );
 
 
 private:
-
-    const int WIDTH = 600;
-    const int HEIGHT = 600;
     const int MAX_FRAMES_IN_FLIGHT = 2;
 
     const vector<const char *> validationLayers = {
@@ -106,6 +107,14 @@ private:
         auto app = reinterpret_cast<EngineRemastered*>(glfwGetWindowUserPointer(window));
         app->frameBufferResized = true;
     }
+
+    //MARK: Window
+    int WIDTH = 600;
+    int HEIGHT = 600;
+    string windowName = "Engine Remastered Window";
+    bool resizeable = true;
+    vec3 windowColor = { 0, 0, 0 };
+
 
     void createInstance();
     void createSurface();

@@ -77,11 +77,15 @@ float extractFloat( ifstream& file, int row, int column ) {
 
 
 //MARK: ReadFile
-EngineObject::BufferInformation extractInformation(DeviceInfo info, string fileName) {
+EngineObject::BufferInformation extractInformation(DeviceInfo info, string fileName, bool absolute) {
 
     ifstream inData;
     
-    string directory = getAbsoluteDirectory(info.path, "VertexMeshes/", fileName);
+    string directory;
+
+    if (!absolute) { directory = getAbsoluteDirectory(info.path, "VertexMeshes/", fileName); }
+    else { directory = fileName; }
+
     inData.open( directory );
 
     ostringstream errorMessage;

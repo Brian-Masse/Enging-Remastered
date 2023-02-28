@@ -63,7 +63,7 @@ void EngineRemastered::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32
     renderPassBeginInfo.renderArea.extent = swapChainExtent;
 
     array<VkClearValue, 2> clearValues = {};
-    clearValues[0].color = {{0.1f, 0.05f, 0.05f, 1.0f}};
+    clearValues[0].color = { {windowColor.r, windowColor.g, windowColor.b} };
     clearValues[1].depthStencil = {1.0f, 0};
 
     renderPassBeginInfo.clearValueCount = clearValues.size();

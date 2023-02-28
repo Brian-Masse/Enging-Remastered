@@ -38,7 +38,11 @@ PYBIND11_MODULE(_EngineRemastered, module) {
 
     pybind11::class_<EngineRemastered> (module, "EngineRemasteredApp")
         .def ( pybind11::init<> ()) 
+
         .def ( "setPath", &EngineRemastered::setPath )
+        .def ( "setWindow", &EngineRemastered::setWindow, "width", "height", "windowName", "resizeable", "r", "g", "b")
+
+
         .def ( "initApp", &EngineRemastered::initialization )
         .def ( "runApp", &EngineRemastered::run )
         .def ( "createObj", &EngineRemastered::createObject, "function");

@@ -77,6 +77,7 @@ class EngineObject {
 
     string texture;
     string fileName;
+    bool isAbsolute = true; //specifies whether the file is user defined or in ER
     DeviceInfo info;
     void init();
     void cleanup();

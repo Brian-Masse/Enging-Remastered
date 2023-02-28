@@ -115,7 +115,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name="EngineRemastered",
-    version="0.5.2",
+    version="1.0.1",
     author="Brian Masse",
     author_email="brianm25it@gmail.com",
     description="test",
@@ -131,7 +131,7 @@ setup(
 
     zip_safe=False,
 
-    python_requires=">=3.9",
+    python_requires=">=3.7",
     # extras_require={"test": ["pytest>=6.0"]},
 )
 

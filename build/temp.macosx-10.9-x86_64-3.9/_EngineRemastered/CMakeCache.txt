@@ -285,7 +285,7 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //No help, variable specified on the command line.
-EXAMPLE_VERSION_INFO:UNINITIALIZED=0.5.2
+EXAMPLE_VERSION_INFO:UNINITIALIZED=1.0.1
 
 //Value Computed by CMake
 EngineRemastered_BINARY_DIR:STATIC=/Users/brianmasse/Developer/Software/Engine-Remastered/build/temp.macosx-10.9-x86_64-3.9/_EngineRemastered

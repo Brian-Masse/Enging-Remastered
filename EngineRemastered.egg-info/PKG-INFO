@@ -1,6 +1,6 @@
 Metadata-Version: 1.2
 Name: EngineRemastered
-Version: 0.5.2
+Version: 1.0.1
 Summary: test
 Home-page: UNKNOWN
 Author: Brian Masse
@@ -8,4 +8,4 @@ Author-email: brianm25it@gmail.com
 License: UNKNOWN
 Description: UNKNOWN
 Platform: UNKNOWN
-Requires-Python: >=3.9
+Requires-Python: >=3.7

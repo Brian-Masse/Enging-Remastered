@@ -52,7 +52,7 @@ void EngineObject::cleanup() {
 
 void EngineObject::extractVertices() {
 
-    EngineObject::BufferInformation information = extractInformation(info, fileName);
+    EngineObject::BufferInformation information = extractInformation(info, fileName, isAbsolute);
 
     this->vertices = information.vertexBuffer;
     this->indices = information.indexBuffer;

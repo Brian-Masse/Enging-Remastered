@@ -91,6 +91,7 @@
     "MIPMAP",
     "multisampling",
     "Rasterization",
+    "resizeable",
     "SFLOAT",
     "stbi",
     "stofloat",
