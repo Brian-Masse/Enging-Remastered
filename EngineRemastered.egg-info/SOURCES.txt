@@ -1,3 +1,4 @@
+LICENSE
 README.md
 setup.py
 EngineRemastered.egg-info/PKG-INFO
@@ -7,6 +8,15 @@ EngineRemastered.egg-info/not-zip-safe
 EngineRemastered.egg-info/top_level.txt
 EngineRemastered/API/__init__.py
 EngineRemastered/API/main.py
+EngineRemastered/API/../Main/app/GraphicsPipeline/SPVFiles/frag.spv
+EngineRemastered/API/../Main/app/GraphicsPipeline/SPVFiles/vert.spv
+EngineRemastered/API/../Textures/base.png
+EngineRemastered/API/../Textures/base2.png
+EngineRemastered/API/../Textures/ramen.png
+EngineRemastered/API/../VertexMeshes/Icosphere.ply
+EngineRemastered/API/../VertexMeshes/cube.ply
+EngineRemastered/API/../VertexMeshes/cylander.ply
+EngineRemastered/API/../VertexMeshes/monkey.ply
 EngineRemastered/Main/app/GraphicsPipeline/SPVFiles/frag.spv
 EngineRemastered/Main/app/GraphicsPipeline/SPVFiles/vert.spv
 EngineRemastered/Textures/base.png

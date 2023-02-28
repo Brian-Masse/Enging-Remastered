@@ -148,6 +148,7 @@ void EngineRemastered::createObject(string name, string texture, double sx, doub
 }
 
 void EngineRemastered::createObjects() {
+    createObject( "cube.ply", "base2.png", 0, 0, 0, 0, 0, 0, 1, 1, 1 );
     // createObject("monkey.ply", "base2.png", 1, 1, 1, -0.5, -0.5, 0, 1, 1, 1);
     // createObject("monkey.ply", "base.png", 1, 1, 1, 1, 1, 0, 1, 1, 1);
 }

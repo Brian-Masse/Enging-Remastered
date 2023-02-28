@@ -41,8 +41,6 @@ string getAbsoluteDirectory( string absolutePath, string pathFromEntry, string f
     
     pathName << absolutePath << "/EngineRemastered/" << pathFromEntry << fileName;
 
-    cout << pathName.str() << endl;
-
     return pathName.str();
 }
 

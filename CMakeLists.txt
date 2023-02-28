@@ -59,6 +59,8 @@ set( CPP_FILES
 
 )
 
+
+# this creates a dynamic linked library (.so file)
 pybind11_add_module(
     _EngineRemastered
 
@@ -84,38 +86,37 @@ target_include_directories(
 
 target_link_libraries(
     _EngineRemastered
-
-    PRIVATE ${Boost_LIBRARIES}
+    
     PRIVATE ${DEPEND_LIBRARY}/libglfw.3.3.dylib
     PRIVATE ${DEPEND_LIBRARY}/Vulkan/libvulkan.1.3.231.dylib
 )
 
 #app
-add_executable(
-    ${APP_NAME}
-    ${CPP_FILES}
-)
+# add_executable(
+#     ${APP_NAME}
+#     ${CPP_FILES}
+# )
 
-target_include_directories(
-    ${APP_NAME}
-    PRIVATE ${MAIN}
-    PRIVATE ${APP}
-    PRIVATE ${OBJECT}
-    PRIVATE ${UCONSTRUCTORS}
+# target_include_directories(
+#     ${APP_NAME}
+#     PRIVATE ${MAIN}
+#     PRIVATE ${APP}
+#     PRIVATE ${OBJECT}
+#     PRIVATE ${UCONSTRUCTORS}
     
-    PRIVATE ${INCLUDES}
-    PRIVATE ${DEPEND_INCLUDES}
-    PRIVATE ${DEPEND_INCLUDES}/Vulkan
-    PRIVATE ${DEPEND_INCLUDES}/pybind11/include
-    PRIVATE ${DEPEND_LIBRARY}
-)
+#     PRIVATE ${INCLUDES}
+#     PRIVATE ${DEPEND_INCLUDES}
+#     PRIVATE ${DEPEND_INCLUDES}/Vulkan
+#     PRIVATE ${DEPEND_INCLUDES}/pybind11/include
+#     PRIVATE ${DEPEND_LIBRARY}
+# )
 
-target_link_libraries(
-    ${APP_NAME}
+# target_link_libraries(
+#     ${APP_NAME}
 
-    PRIVATE ${Boost_LIBRARIES}
-    PRIVATE ${DEPEND_LIBRARY}/libglfw.3.3.dylib
-    PRIVATE ${DEPEND_LIBRARY}/Vulkan/libvulkan.1.3.231.dylib
+#     # PRIVATE ${Boost_LIBRARIES}
+#     PRIVATE ${DEPEND_LIBRARY}/libglfw.3.3.dylib
+#     PRIVATE ${DEPEND_LIBRARY}/Vulkan/libvulkan.1.3.231.dylib
 
-    PRIVATE pybind11::embed
-)
+#     PRIVATE pybind11::embed
+# )

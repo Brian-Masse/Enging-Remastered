@@ -115,7 +115,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name="EngineRemastered",
-    version="0.2.0",
+    version="0.5.2",
     author="Brian Masse",
     author_email="brianm25it@gmail.com",
     description="test",
@@ -124,13 +124,14 @@ setup(
     cmdclass={"build_ext": CMakeBuild},
 
     packages=['EngineRemastered.API'],
+
     package_data={
-        'EngineRemastered': ['Main/app/GraphicsPipeline/SPVFiles/*spv'],
-        'EngineRemastered': ['VertexMeshes/*ply'],
-        'EngineRemastered': ['Textures/*png']
+        'EngineRemastered.API': ['../Main/app/GraphicsPipeline/SPVFiles/*spv', '../Textures/*png', '../VertexMeshes/*ply'],
     },
+
     zip_safe=False,
-    python_requires=">=3.8",
+
+    python_requires=">=3.9",
     # extras_require={"test": ["pytest>=6.0"]},
 )
 

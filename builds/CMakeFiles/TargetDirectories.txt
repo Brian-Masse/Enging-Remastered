@@ -1,5 +1,4 @@
 /Users/brianmasse/Developer/Software/Engine-Remastered/builds/CMakeFiles/_EngineRemastered.dir
-/Users/brianmasse/Developer/Software/Engine-Remastered/builds/CMakeFiles/app.dir
 /Users/brianmasse/Developer/Software/Engine-Remastered/builds/CMakeFiles/edit_cache.dir
 /Users/brianmasse/Developer/Software/Engine-Remastered/builds/CMakeFiles/rebuild_cache.dir
 /Users/brianmasse/Developer/Software/Engine-Remastered/builds/EngineRemastered/dependencies/include/pybind11/CMakeFiles/edit_cache.dir

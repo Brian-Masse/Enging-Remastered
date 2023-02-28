@@ -37,3 +37,16 @@ class EngineObject:
         this.scale = scale
         this.transform = transform
         this.color = color
+
+
+# app = EngineRemasteredApp()
+
+# name = "monkey.ply"
+# scale = (1, 1, 1)
+# transform = (1, 1, 1)
+# color = (255, 1, 1)
+
+# object = EngineObject(name, scale, transform, color)
+
+# app.addObject(object)
+# app.startApp()

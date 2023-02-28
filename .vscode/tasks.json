@@ -49,7 +49,7 @@
     {
       "label": "Compile Package",
       "type": "shell",
-      "command": "rm dist/*.whl && python setup.py bdist_wheel &&  mv dist/*.whl dist/EngineRemastered-0.1.0-py3-none-any.whl && unzip -l dist/*.whl",
+      "command": "rm dist/*.whl && python setup.py bdist_wheel && python wheelNamer.py && unzip -l dist/* && delocate-wheel -w dist -v dist/*.whl",
       "args": [],
       "options": {
         "cwd": "${workspaceFolder}"
