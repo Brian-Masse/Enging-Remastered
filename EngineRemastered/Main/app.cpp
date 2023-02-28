@@ -40,7 +40,7 @@ void EngineRemastered::initWindow() {
     if (resizeable) { glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE); }
     else if (!resizeable) { glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE); }
 
-    window = glfwCreateWindow(WIDTH, HEIGHT, "testing", nullptr, nullptr);
+    window = glfwCreateWindow(WIDTH, HEIGHT, "Engine Remastered Window", nullptr, nullptr);
     glfwSetWindowUserPointer(window, this);
     glfwSetFramebufferSizeCallback(window, frameBufferResizeCallback);
 }

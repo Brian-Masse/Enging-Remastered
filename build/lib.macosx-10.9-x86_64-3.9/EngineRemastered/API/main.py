@@ -58,23 +58,23 @@ class EngineObject:
 
 
 
-# window = EngineWindow( 
-#     ( 500, 500 ),
-#     windowName="Test Window",
-#     resizeable=True,
-#     color=( 254, 61, 61 )
-#  )
+window = EngineWindow( 
+    ( 500, 500 ),
+    windowName="Test Window",
+    resizeable=True,
+    color=( 5, 5, 5 )
+ )
 
-# app = EngineRemasteredApp( window )
+app = EngineRemasteredApp( window )
 
-# name = "/Users/brianmasse/Desktop/cylander.ply"
-# translate = (0,0,0)
-# scale = (1, 1, 1)
-# color = ( 255, 61, 61 )
+name = "/Users/brianmasse/Desktop/monkey.ply"
+translate = (0,0,0)
+scale = (1, 1, 1)
+color = ( 255, 61, 61 )
 
-# monkey = EngineObject(name, scale, translate, color)
+monkey = EngineObject(name, scale, translate, color)
 
-# app.addObject(monkey)
+app.addObject(monkey)
 
-# app.startApp()
+app.startApp()
 
