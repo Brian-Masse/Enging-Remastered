@@ -8,7 +8,9 @@ Engine Remastered is meant to serve as the foundation for a variety of different
 
 ## **Installation**
 
-`pip install Engine Remastered`
+```
+pip install Engine Remastered
+```
 
 will install the main C++ library, the python API, pre-made shader files, sample Object data, and sample textures. It intentionally has no external dependencies to make it easier to ship with other software. Instead, it includes all of its necessary dynamic and static libraries in a distributable `_EngineRemastered.so` This file does not specify any of the API, and instead only represents the c++ backend, the python API is accessed with `Engine Remastered`
 
@@ -20,7 +22,9 @@ Currently EngineRemastered requires python>=python3.9
 
 To create a render first import the python package
 
-`import EngineRemastered.API.main as ER`
+```
+import EngineRemastered.API.main as ER
+```
 
 this will only include relevant python classes / functions, you do not need to manually link any of your frontend code to the c++ code base.
 
@@ -82,6 +86,8 @@ app.startApp()
 ```
 
 Congratulations!! You should now see the object file you specified displayed on screen! You can move around this virtual space using (w) and (s) for front and back movement, and the arrow keys for left, right, up, and down. You just created your first render with Engine Remastered!
+
+![Image](https://github.com/Brian-Masse/Enging-Remastered/blob/main/EngineRemastered/extra/example.png)
 
 ## **Future**
 
