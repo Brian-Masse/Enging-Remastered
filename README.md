@@ -4,7 +4,9 @@
 
 A Low-Level Graphics Renderer built for MacOS using C and C++, packaged in a simple python API. It aims to bridge low level performance with high level convenience.
 
-Engine Remastered is meant to serve as the foundation for a variety of different projects, from Game Engines to data visualizers. The entire code base is intrinsically object oriented, allowing the Engine to easily scale up or down with user demands.
+Engine Remastered is a graphics engine written in ```C/C++```, accessible through a ```python package```. It was designed to fill the space between the explicit control of developing low-level graphics engines and the convenience of working with high-level APIs in the context of macOS rendering. The code base is written in ```C and C++```, using the ```Vulkan SDK``` to communicate with ```Metal``` to gain access to sophisticated, low-level hardware control in MacOS, and exposed through a high-level, minimal ```python API```. This gives users the opportunity to easily create graphic-baed systems, such as game engines and data visualizers, while still leveraging the performance capabilities of the C code base. 
+
+Engine-Remastered was a 12 week independent project conducted as part of the Phillips Academy Andover course CSC600. The project was designed and proposed in collaboration with a faculty advisor, Dr. Nick Zufelt, who also broadly oversaw the development and publish process. It is now independently maintained.
 
 ## **Installation**
 
